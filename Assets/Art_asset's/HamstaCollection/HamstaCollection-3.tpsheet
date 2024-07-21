@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4c7211835ffb55534e4f08773d6be9de:897c49ea973a7713b5041c8147fbd5cb:dc4d4fb80022af2d7028e0e4b7be6166$
+#
+:format=40300
+:texture=HamstaCollection-3.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+PARTY_Asset_Rare_PinkMoth;10;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_SealSpots;278;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_SealStripes;546;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Siam;10;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Skeleton;278;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_SpaceMan;546;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Tanuki;10;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Tiger;278;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Waffle;546;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Zombie;10;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_Dark_night;10;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_DragonGreen;10;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_Lava;278;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_Ninja;546;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_Tattoo;278;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_TigerPink;278;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Unique_Totoro;546;463;258;307; 0.5;0.5; 0;0;0;0

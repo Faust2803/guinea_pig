@@ -1,0 +1,1574 @@
+fileFormatVersion: 2
+guid: f6ec6022bca4e3d4b9b0c54850dbde06
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arrow
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 16
+        width: 63
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50793654, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b6ebd9a12057e429507c5491137868
+      internalID: -1079030131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backcard
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1317
+        width: 94
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 38, y: 42, z: 38, w: 42}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07af0a3023c97dd4db76655adb1f9ac2
+      internalID: -1530997050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backforall
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 1317
+        width: 94
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 36, y: 41, z: 36, w: 37}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b645b9c9638934f856bb1ecc1606f8
+      internalID: 1651070969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-hp2
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 791
+        width: 94
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d422eddbe373540844c0bf28749788
+      internalID: 18517218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-hp3
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 791
+        width: 94
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09cbb77d4e6d1a4e9745c302853c201
+      internalID: 2059979311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-hp4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 791
+        width: 94
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e554efa3212d1764f967dfab717c3eee
+      internalID: 1733080072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-hp5
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 791
+        width: 94
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec7b8dc9b197b64e8143b857c17ae3c
+      internalID: 1480189862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-market
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 791
+        width: 253
+        height: 219
+      alignment: 9
+      pivot: {x: 0.49407116, y: 0.5707763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087575103fa404347ab63c7044c87dfd
+      internalID: 161204852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-news
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1604
+        width: 239
+        height: 223
+      alignment: 9
+      pivot: {x: 0.50209206, y: 0.5246637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a280dd35ccc1d8642a24265ffa3952ea
+      internalID: 345007243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-profile
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 536
+        width: 208
+        height: 253
+      alignment: 9
+      pivot: {x: 0.5048077, y: 0.5019763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14a99605e6a59c408c23aa34fd7b826
+      internalID: 473434430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-setting
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 62
+        width: 230
+        height: 254
+      alignment: 9
+      pivot: {x: 0.4869565, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232275b64c0e6d441b02493458b3da8c
+      internalID: 892952222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-wallet
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 857
+        width: 245
+        height: 223
+      alignment: 9
+      pivot: {x: 0.5020408, y: 0.5246637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb2800128bf6d642bab0379c59d284d
+      internalID: 926925674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundedCorner-5px@2x
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1917
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 25, z: 23, w: 24}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352e93c54fd2a1e49a201038091a3883
+      internalID: -1208374938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-BeanOne
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1407
+        width: 109
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49541286, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d393d05d5fef1ad49bb63a3ccdc2e4e6
+      internalID: 782355549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-CrossIcon
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1888
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2f69bfe30b50443b4bbb70467026a8
+      internalID: -2129623570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-GoldenBeanOne
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1297
+        width: 109
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5045872, y: 0.5092593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffc019114f914347bf1ff0200b6e99b
+      internalID: -1309180022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-HamsterPartyLogo
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 318
+        width: 767
+        height: 468
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50106835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e773787994013154a9e0225204d02897
+      internalID: -1922140443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-ShineBlickSmall
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 8
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56c23d7b9228014e9695ed352a6e65b
+      internalID: 873979870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1040
+        width: 232
+        height: 241
+      alignment: 9
+      pivot: {x: 0.50431037, y: 0.49377593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277f766392cbad14aaf744dcc12055f9
+      internalID: -450395563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ava
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 349
+        width: 194
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82605d9c0598ac54f9b83dda3ce12aa6
+      internalID: -836804872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back-buypng
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1531
+        width: 192
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 63, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a283d3a225f78934f8e4c487983598e1
+      internalID: -1509940934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back-vishak
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 63
+        width: 248
+        height: 253
+      alignment: 9
+      pivot: {x: 0.49596775, y: 0.5059289}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf73a82ee218044e9e27d139806ffbd
+      internalID: 1163537800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: choose-stroke
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1835
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 15, y: 20, z: 15, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0211b84c4f105514fbdc78a806778537
+      internalID: -1631249825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-earn
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1410
+        width: 234
+        height: 183
+      alignment: 9
+      pivot: {x: 0.4957265, y: 0.4863388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7756f3967e7bb43befef7eddd17dff
+      internalID: -2058179663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-hp
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1967
+        width: 98
+        height: 80
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8ae0efac470184d95760d5f6a49842
+      internalID: -210119321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-info
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1399
+        width: 189
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5132275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142e20c3fb6814b46b0a4bbb0e1734e3
+      internalID: -702096980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-lock
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 1016
+        width: 193
+        height: 247
+      alignment: 9
+      pivot: {x: 0.4974093, y: 0.5060729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50080e6f87f5384d88f2b450a87dd78
+      internalID: 211591416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-vishak
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1261
+        width: 164
+        height: 136
+      alignment: 9
+      pivot: {x: 0.4695122, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff087b91d4aa014581902bed1e559bd
+      internalID: -1221573881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-wallet-conect
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 791
+        width: 250
+        height: 223
+      alignment: 9
+      pivot: {x: 0.492, y: 0.5246637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ee73a3d30cf3c49a18b9d6783324d6
+      internalID: -1556542755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stick-game
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 804
+        width: 181
+        height: 234
+      alignment: 9
+      pivot: {x: 0.49171272, y: 0.4957265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3275cb1e9886d4e42ae965a7c25e509f
+      internalID: -972566552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stick-star
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1012
+        width: 211
+        height: 247
+      alignment: 9
+      pivot: {x: 0.48815167, y: 0.5020243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141ee80bc04c96345aa6a2a4cce0f945
+      internalID: 367643396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backbought
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1370
+        width: 232
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 58, y: 0, z: 58, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f5e570002dff04b9a1f4e8b58ea451
+      internalID: 1472562225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_tutor
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1265
+        width: 217
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339993e39d22548409d98020bc8c1c7d
+      internalID: -1642918811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OkCheck
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1455
+        width: 178
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f6690517ca31b4189b0c39acb04658
+      internalID: -475185265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin-resouces
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 545
+        width: 244
+        height: 244
+      alignment: 9
+      pivot: {x: 0.50409836, y: 0.4918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603d9d3e6ec5d454e85338b466c75214
+      internalID: 1677227560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumperSolo_HeightBar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 788
+        width: 243
+        height: 1259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2f63ce6a6f4724eb69d920e42db9cf
+      internalID: -1366434792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumperSolo_HeightBar_Hamsta
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1517
+        width: 116
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fc71224aebea145a745c84f6cde725
+      internalID: 1336060302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumperSolo_HeightBar_Liderboard_Icon
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1427
+        width: 160
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771416cc897deeb4a9c2f17e2ce7a668
+      internalID: 1094787147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hamstagothi_Brush
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1829
+        width: 216
+        height: 218
+      alignment: 9
+      pivot: {x: 0.4861111, y: 0.5229358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef9beb40b8249a4f9faeb659c5f168a
+      internalID: -1057991278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hamstagothi_Disco
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1399
+        width: 199
+        height: 210
+      alignment: 9
+      pivot: {x: 0.4924623, y: 0.52380955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024d64632cabac04594dc6139d59f804
+      internalID: -952059910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hamstagothi_Hand
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 117
+        width: 206
+        height: 201
+      alignment: 9
+      pivot: {x: 0.49029127, y: 0.5273632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734eb0fdd1d19ca41927d91ba13028bb
+      internalID: 206152473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hamstagotchi_icon
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 320
+        width: 249
+        height: 223
+      alignment: 9
+      pivot: {x: 0.48594376, y: 0.48878923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6a587f37d255e4ebecbafc381e388d
+      internalID: 1771709290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parachute
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 318
+        width: 241
+        height: 216
+      alignment: 9
+      pivot: {x: 0.5020747, y: 0.4675926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b618a3ebbf57d4fbc400f7f5bf16d9
+      internalID: 1247059514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocket
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 552
+        width: 191
+        height: 237
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.51476794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e140b54bdb19b3409fadb4575794fee
+      internalID: 1194648506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shot
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1082
+        width: 98
+        height: 233
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51502144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a85485b6ee28f458a180aa3d879f06
+      internalID: 1940979728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeanForEat
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 1616
+        width: 192
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5104167, y: 0.5165877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240b3a703c2e27249bf413fece787d35
+      internalID: 1526057760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamstaOfTheDay_1
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 319
+        width: 312
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54241073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b764c56d6b60649b5c88c85907670f
+      internalID: 1064286802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liderboard_Icon
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1829
+        width: 245
+        height: 218
+      alignment: 9
+      pivot: {x: 0.4979592, y: 0.5504587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e554bcd545e184691cbf0785ec777a
+      internalID: 1404430952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Liderboard_Sticker
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1167
+        width: 228
+        height: 201
+      alignment: 9
+      pivot: {x: 0.50438595, y: 0.47014925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f215acb3587fd946a3b5790fcdd97ae
+      internalID: -1898004929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection_icon
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 65
+        width: 234
+        height: 251
+      alignment: 9
+      pivot: {x: 0.47863248, y: 0.49800798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e77ec201eb6ea74381a0e94fe3cdf39
+      internalID: 1716957145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: missions_icon
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 79
+        width: 222
+        height: 238
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49579832}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcaca32c18be73943b588e20242f02fa
+      internalID: -2048764035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToTheMoon_icon
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 62
+        width: 241
+        height: 254
+      alignment: 9
+      pivot: {x: 0.4979253, y: 0.503937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae88715f4938f5428f6c8074c3fbe25
+      internalID: 136552139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flag-body
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1983
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 0, z: 30, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fa8ccf04b14574fabc3273baf38fbe
+      internalID: -1942521674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stick_crown
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1830
+        width: 202
+        height: 217
+      alignment: 9
+      pivot: {x: 0.48762375, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f361c15cb356c847aca04bfd46aed6c
+      internalID: -990484844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutor_Icon_Airdrop
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1253
+        width: 380
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19d7fbfb6261184d945565a2bfebea4
+      internalID: -89314262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutor_Icon_Care
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 825
+        width: 340
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1500c2bffa813314693782ecd167ebac
+      internalID: -129969551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutor_Icon_Collect
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1657
+        width: 448
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad219eafe7faa408009472f01f8712
+      internalID: 1383963218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutor_Icon_Farm
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 865
+        width: 356
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9a56904680c3e48afad209b1f8126e
+      internalID: -1669542111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutor_Icon_Jackpot
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1595
+        width: 451
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995feaa86566bc443bfd7b54692e8ce1
+      internalID: -477023390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burger-icon
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1611
+        width: 200
+        height: 217
+      alignment: 9
+      pivot: {x: 0.475, y: 0.5299539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabbd4ae44299ce498d106f5b7e3c438
+      internalID: -1046801664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: done-icon
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1258
+        width: 164
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a815c0e2dea24d41a57112cfcb079c6
+      internalID: 937823473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinPile_Icon
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1283
+        width: 149
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bcf2f365dc49944807222a923db5e3
+      internalID: -38743095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moon
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 545
+        width: 244
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc4242251bec2d4b86e78d72a55f6a6
+      internalID: -1686542964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ava-frame big
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 60
+        width: 246
+        height: 256
+      alignment: 9
+      pivot: {x: 0.50406504, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2faaa741496bf243afc27cfb57d5d13
+      internalID: 131127859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3f25c8fe78ad0674e8c37092f34571ab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      1: -450395563
+      BeanForEat: 1526057760
+      CoinPile_Icon: -38743095
+      HamstaOfTheDay_1: 1064286802
+      Hamstagotchi_icon: 1771709290
+      Hamstagothi_Brush: -1057991278
+      Hamstagothi_Disco: -952059910
+      Hamstagothi_Hand: 206152473
+      JumperSolo_HeightBar: -1366434792
+      JumperSolo_HeightBar_Hamsta: 1336060302
+      JumperSolo_HeightBar_Liderboard_Icon: 1094787147
+      Liderboard_Icon: 1404430952
+      Liderboard_Sticker: -1898004929
+      OkCheck: -475185265
+      Parachute: 1247059514
+      Rocket: 1194648506
+      RoundedCorner-5px@2x: -1208374938
+      Shot: 1940979728
+      ToTheMoon_icon: 136552139
+      Tutor_Icon_Airdrop: -89314262
+      Tutor_Icon_Care: -129969551
+      Tutor_Icon_Collect: 1383963218
+      Tutor_Icon_Farm: -1669542111
+      Tutor_Icon_Jackpot: -477023390
+      UI-BeanOne: 782355549
+      UI-CrossIcon: -2129623570
+      UI-GoldenBeanOne: -1309180022
+      UI-HamsterPartyLogo: -1922140443
+      UI-ShineBlickSmall: 873979870
+      arrow: -1079030131
+      arrow_tutor: -1642918811
+      ava: -836804872
+      ava-frame big: 131127859
+      back-buypng: -1509940934
+      back-vishak: 1163537800
+      backbought: 1472562225
+      backcard: -1530997050
+      backforall: 1651070969
+      burger-icon: -1046801664
+      choose-stroke: -1631249825
+      coin-resouces: 1677227560
+      collection_icon: 1716957145
+      done-icon: 937823473
+      flag-body: -1942521674
+      icon-earn: -2058179663
+      icon-hp: -210119321
+      icon-hp2: 18517218
+      icon-hp3: 2059979311
+      icon-hp4: 1733080072
+      icon-hp5: 1480189862
+      icon-info: -702096980
+      icon-lock: 211591416
+      icon-market: 161204852
+      icon-news: 345007243
+      icon-profile: 473434430
+      icon-setting: 892952222
+      icon-vishak: -1221573881
+      icon-wallet: 926925674
+      icon-wallet-conect: -1556542755
+      missions_icon: -2048764035
+      moon: -1686542964
+      stick-game: -972566552
+      stick-star: 367643396
+      stick_crown: -990484844
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

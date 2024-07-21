@@ -1,0 +1,357 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5005eb82b15c4efda9fd57cadc4279bb, type: 3}
+  m_Name: SoundConfig
+  m_EditorClassIdentifier: 
+  _soundData:
+  - EditorLabel: Black hole
+    _clip:
+    - {fileID: 8300000, guid: e56db3e263d2a2a499ba804d8744a36b, type: 3}
+    _idData:
+      _key: Blackhole
+      _id: 0
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Sparks (Electr.)
+    _clip:
+    - {fileID: 8300000, guid: 7238e3ba6547e6a48bb65fd6524fa5d6, type: 3}
+    _idData:
+      _key: SparksElectr_
+      _id: 1
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Hit Into Player
+    _clip:
+    - {fileID: 8300000, guid: 8bbe164edcee50d45bc3fbbd05e3fa39, type: 3}
+    _idData:
+      _key: HitIntoPlayer
+      _id: 2
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Pigeon Space Suit (Attack)
+    _clip:
+    - {fileID: 8300000, guid: 094a363c361869140b17ad38fe8195dc, type: 3}
+    _idData:
+      _key: PigeonSpaceSuitAttack
+      _id: 3
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: UFO
+    _clip:
+    - {fileID: 8300000, guid: ca806481cfc090d499de3d808ce954c1, type: 3}
+    _idData:
+      _key: UFO
+      _id: 4
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Jump (Default)
+    _clip:
+    - {fileID: 8300000, guid: 5c085c354b1dbbf469eaebc42c2988ad, type: 3}
+    - {fileID: 8300000, guid: 23fbfaf124d4c3848af522c7c06a7e1f, type: 3}
+    - {fileID: 8300000, guid: d06a39f27deb6aa41bd6e5bbd7235ab0, type: 3}
+    - {fileID: 8300000, guid: bfc44a1dc5ab6f94f987f4f4fa5ad6c3, type: 3}
+    _idData:
+      _key: JumpDefault
+      _id: 5
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Jump (Booster)
+    _clip:
+    - {fileID: 8300000, guid: 42e772965fb0da148a2abac624cb62a5, type: 3}
+    - {fileID: 8300000, guid: 18d69cf39930c4e4fb9dc367210835e1, type: 3}
+    - {fileID: 8300000, guid: 10f70dcc340c9df499a233b9b1bb7d8a, type: 3}
+    - {fileID: 8300000, guid: cda050348e80156408bc5ebfec433a98, type: 3}
+    _idData:
+      _key: JumpBooster
+      _id: 6
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Jump Breakable
+    _clip:
+    - {fileID: 8300000, guid: afb814ec179e4444e907cd0d972eed30, type: 3}
+    _idData:
+      _key: JumpBreakable
+      _id: 7
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Jump Cloud
+    _clip:
+    - {fileID: 8300000, guid: 489f6f960f3c6a64d85c95663b78bdd9, type: 3}
+    _idData:
+      _key: JumpCloud
+      _id: 8
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Peas ability
+    _clip:
+    - {fileID: 8300000, guid: 33fa968336440124abf821470fde01c8, type: 3}
+    _idData:
+      _key: Peasability
+      _id: 9
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Corn ability
+    _clip:
+    - {fileID: 8300000, guid: 8d838142c809ba64693f142e49088904, type: 3}
+    - {fileID: 8300000, guid: 8940e7c8a9ccadd4d8c34549dd131383, type: 3}
+    _idData:
+      _key: Cornability
+      _id: 10
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Seed ability
+    _clip:
+    - {fileID: 8300000, guid: 56f3bddb052f6c047bb1ba595789d625, type: 3}
+    - {fileID: 8300000, guid: 50449f41b15f3a54e8db554235851730, type: 3}
+    - {fileID: 8300000, guid: 102d0d70b0fc536428b6089df3fa74df, type: 3}
+    _idData:
+      _key: Seedability
+      _id: 11
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Victory
+    _clip:
+    - {fileID: 8300000, guid: 3c900cb8ff5ecf24796f153ea2b3b4ef, type: 3}
+    _idData:
+      _key: Victory
+      _id: 12
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: GoldenBean
+    _clip:
+    - {fileID: 8300000, guid: e4945d6ccb8cded409cbeeb3a039737a, type: 3}
+    _idData:
+      _key: GoldenBean
+      _id: 13
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Jumper Music
+    _clip:
+    - {fileID: 8300000, guid: 1908ca12b95cd2e4ea5fc4a3474dc6a5, type: 3}
+    _idData:
+      _key: JumperMusic
+      _id: 14
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Loose
+    _clip:
+    - {fileID: 8300000, guid: d6a6073d8c8bb1e409b7dfc44929833b, type: 3}
+    _idData:
+      _key: Loose
+      _id: 15
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Space ambient
+    _clip:
+    - {fileID: 8300000, guid: e7437b95ee053b643bba46b52ebb3f8d, type: 3}
+    _idData:
+      _key: Spaceambient
+      _id: 16
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Chomp (Tamagoch)
+    _clip:
+    - {fileID: 8300000, guid: 91bc71e9c96499c42abaccfc7aefd8e4, type: 3}
+    - {fileID: 8300000, guid: 27a5d49921a9f824b92d9cc29f2da721, type: 3}
+    - {fileID: 8300000, guid: e2ee7b8dffb3ccf4fafd801b83d9ecd2, type: 3}
+    - {fileID: 8300000, guid: 7235b55f1ad68e94aa2e0b92b8bb1b8f, type: 3}
+    _idData:
+      _key: ChompTamagoch
+      _id: 17
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Cute (Tamagoch)
+    _clip:
+    - {fileID: 8300000, guid: d22708963dbd92e438ea54dd7cb1ca0b, type: 3}
+    - {fileID: 8300000, guid: 636f36da953983141ba46d6467f2e137, type: 3}
+    - {fileID: 8300000, guid: 150d39fc29fd6e147b30a145b1fea268, type: 3}
+    - {fileID: 8300000, guid: aec55c33b9549e5428a1b2e56f9b34bf, type: 3}
+    _idData:
+      _key: CuteTamagoch
+      _id: 18
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: Scratch ham
+    _clip:
+    - {fileID: 8300000, guid: d7ebb32f10fa8eb459a0d5ae67d55b2a, type: 3}
+    _idData:
+      _key: Scratchham
+      _id: 19
+    _soundType: 1
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: LobbyLoop
+    _clip:
+    - {fileID: 8300000, guid: ef8426449c10f8b41ae8a8bab9a47df6, type: 3}
+    _idData:
+      _key: LobbyLoop
+      _id: 20
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: FinalLoop
+    _clip:
+    - {fileID: 8300000, guid: 9e20bdb47c6ecc345b9b7113580102f6, type: 3}
+    _idData:
+      _key: FinalLoop
+      _id: 21
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: UI_ButtonClick
+    _clip:
+    - {fileID: 8300000, guid: 8f7af6f25fcd48f448046a21df2d489a, type: 3}
+    _idData:
+      _key: UI_ButtonClick
+      _id: 22
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: UI_ButtonBuy
+    _clip:
+    - {fileID: 8300000, guid: 834c53ae386dcb94ebe8f16654106e77, type: 3}
+    _idData:
+      _key: UI_ButtonBuy
+      _id: 23
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  - EditorLabel: UI_ButtonCancel
+    _clip:
+    - {fileID: 8300000, guid: a2d908e50c82c6f458d4bcfbcd06d8b8, type: 3}
+    _idData:
+      _key: UI_ButtonCancel
+      _id: 24
+    _soundType: 0
+    _settings:
+      _volume: 1
+      _pitch: 1
+      _is3D: 0
+      _minDistance: 10
+      _maxDistance: 500
+  _path: Assets/Scripts/Managers/SoundManager/Enums/
+  _namespace: Managers.SoundManager.Enums

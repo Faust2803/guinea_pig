@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2861c22df756bd4e97c5563f016b9a7, type: 3}
+  m_Name: 1. Troposphere
+  m_EditorClassIdentifier: 
+  Height: 50
+  Color: {r: 0.22745098, g: 0.68235296, b: 0.9411765, a: 1}
+  MaxStackBlocks: 5
+  MaxEmptyCellsOnOneLine:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0023612976
+      value: 3.1493835
+      inSlope: 0.09955591
+      outSlope: 0.09955591
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0024217
+      value: 3.2489455
+      inSlope: 0.09955591
+      outSlope: 0.09955591
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Density:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.004273221
+      value: 0.69887286
+      inSlope: 0.054994535
+      outSlope: 0.054994535
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6513633
+      value: 0.7344593
+      inSlope: 0.054377943
+      outSlope: 0.054377943
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0094101
+      value: 0.75370836
+      inSlope: 0.05376135
+      outSlope: 0.05376135
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 1
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  FollowWinLine: 1
+  PlatformOffsetRange: {x: 1, y: 1.7}
+  Obstacles:
+  - Prefabs:
+    - {fileID: 8677195993829614627, guid: 7b094a6157d256e44b02445a66f8f824, type: 3}
+    Rate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 4
+    MinYDifference: 4
+    UseUniqueXPos: 1
+    CanBeInvert: 0
+    ChangeSizeOnInvert: 0
+    DisblePlatfromGenWithObstacles: 1
+    UniquePos: 0
+  Platforms:
+    Default: {fileID: 3016383460543507885, guid: fa0cf41af85a7454c8cf99a0f7681795, type: 3}
+    MaxDefaultPlatformsCount: 30
+    Breakable:
+      Prefabs:
+      - {fileID: 5176963021783934244, guid: 4f3cae655691bab4c84196b762a1f4ef, type: 3}
+      Rate:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.0025138855
+          value: 0.45
+          inSlope: 0.32831895
+          outSlope: 0.32831895
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.06839889
+        - serializedVersion: 3
+          time: 1
+          value: 0.55
+          inSlope: -0.08915508
+          outSlope: -0.08915508
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.077051565
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      MinYDifference: 2
+      UseUniqueXPos: 0
+      CanBeInvert: 0
+      ChangeSizeOnInvert: 1
+      DisblePlatfromGenWithObstacles: 0
+      UniquePos: 0
+    Booster:
+      Prefabs:
+      - {fileID: 7648530555221087384, guid: 3fad4284ef7624545b523c374d749fe5, type: 3}
+      Rate:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0.1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0.15
+          inSlope: 0.050000004
+          outSlope: 1
+          tangentMode: 5
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      MinYDifference: 2
+      UseUniqueXPos: 0
+      CanBeInvert: 0
+      ChangeSizeOnInvert: 1
+      DisblePlatfromGenWithObstacles: 0
+      UniquePos: 0
+  ForceStablePath: 1
+  SmogChildIdEnabled: 0
+  UIPosCursor: {x: 0, y: 0}
+  Audio:
+  - Sound: 14
+    Volume:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - Sound: 16
+    Volume:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

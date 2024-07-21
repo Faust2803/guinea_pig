@@ -1,0 +1,61 @@
+include:
+  - project: vireye/devops/ci-cd
+    file: globals.yml  
+  - project: vireye/devops/ci-cd
+    file: landings-placeholder-ci-cd.yml
+
+variables:
+  GIT_DEPTH: "1"
+
+sync_dev_with_main:
+  rules:
+    - when: never
+
+build:
+  rules:
+    - if: "$CI_PIPELINE_SOURCE == 'merge_request_event' && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME == 'dev' || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'main'"
+      when: never
+    - if: $CI_COMMIT_REF_NAME == "dev"
+      variables:
+        AWS_ECR_REGISTRY_URL: "$AWS_DEV_REGISTRY_URL_FRANKFURT"
+        ROBOTS_TXT: "$DEV_ROBOTS_TXT"
+      changes:
+        - WebGL/**/*       
+    - if: $CI_COMMIT_REF_NAME == "main"
+      variables:
+        AWS_ECR_REGISTRY_URL: "$AWS_PROD_NEW_REGISTRY_URL_FRANKFURT"
+        ROBOTS_TXT: "$PROD_ROBOTS_TXT"
+      changes:
+        - WebGL/**/*      
+    - if: $CI_COMMIT_BRANCH
+      when: never
+
+deploy-dev:
+  variables:
+    AWS_ENV: "dev"
+    LANDING_URL: "mini-app-game.hamstamania.dev.gamemob.tech"
+  rules:
+    - if: "$CI_PIPELINE_SOURCE == 'merge_request_event' && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME == 'dev' || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'main'"
+      when: never
+    - if: $CI_COMMIT_REF_NAME == "dev"
+      variables:
+        ANSIBLE_INVENTORY_FILE: "$INVENTORY_FILE_DEV"
+        ANSIBLE_VAULT_PASSWORD: "$ANSIBLE_DEV_VAULT_PASSWORD"
+      changes:
+        - WebGL/**/*      
+    - if: $CI_COMMIT_BRANCH
+      when: never
+
+deploy-prod:
+  variables:
+    AWS_ENV: "management"
+    LANDING_URL: "mini-app-game.hamstamania.vireye.com"
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "main"
+      variables:
+        ANSIBLE_INVENTORY_FILE: "$INVENTORY_FILE_PROD_NEW"
+        ANSIBLE_VAULT_PASSWORD: "$ANSIBLE_PROD_VAULT_PASSWORD"
+      changes:
+        - WebGL/**/*      
+    - if: $CI_COMMIT_BRANCH
+      when: never    

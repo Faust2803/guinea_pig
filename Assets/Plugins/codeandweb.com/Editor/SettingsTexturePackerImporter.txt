@@ -1,0 +1,47 @@
+version: 2
+tpsheetFileNames:
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-0.tpsheet
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-1.tpsheet
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-2.tpsheet
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-3.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Airdrop/Airdrop.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Alien/Alien_atlas.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Blackhole/Blackhole_atlas.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/PigeonPlatform/PigeonPlatform_atlas.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/PigeonSpacesuit/PideonSpacesuit_atlas.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Separator/Separator_atlas.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Smog/Dust/Dust_project.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Smog/Sun/Sun_project.tpsheet
+- Assets/Art_asset's/Sprites/Jumper/Solo/Termosphere/Termosphere.tpsheet
+- Assets/Art_asset's/UI/Hamsta_data.tpsheet
+textureFileNames:
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-0.png
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-1.png
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-2.png
+- Assets/Art_asset's/HamstaCollection/HamstaCollection-3.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Airdrop/Airdrop.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Alien/Alien_atlas.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Blackhole/Blackhole_atlas.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/PigeonPlatform/PigeonPlatform_atlas.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/PigeonSpacesuit/PideonSpacesuit_atlas.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Separator/Separator_atlas.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Smog/Dust/Dust_project.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Smog/Sun/Sun_project.png
+- Assets/Art_asset's/Sprites/Jumper/Solo/Termosphere/Termosphere.png
+- Assets/Art_asset's/UI/Hamsta_atlas.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:ece69a3f43e9d4d19ae76586a108d7de:ce9dac19ff952fe94a7c3d54b0f3d976:dc4823949c68240400963ecd48945a51$
+#
+:format=40300
+:texture=Dust_project.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Pollution_DUST_F1_T8;6;875;1000;143; 0.5;0.6573426573426573; 0;0;0;0
+Pollution_DUST_F2_T8;6;725;1000;143; 0.5;0.6573426573426573; 0;0;0;0
+Pollution_DUST_F3_T8;6;575;1000;143; 0.5;0.6573426573426573; 0;0;0;0
+Pollution_DUST_F4_T8;6;425;1000;143; 0.5;0.6573426573426573; 0;0;0;0

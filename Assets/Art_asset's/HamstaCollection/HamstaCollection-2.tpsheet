@@ -1,0 +1,57 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4c7211835ffb55534e4f08773d6be9de:897c49ea973a7713b5041c8147fbd5cb:dc4d4fb80022af2d7028e0e4b7be6166$
+#
+:format=40300
+:texture=HamstaCollection-2.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+PARTY_Asset_Common_LightBrown;10;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Lines_Black_White_BG;10;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Lines_Pink_Blue_BG;10;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Lines_Red_Blue_BG;10;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_MonoColorBlue;10;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_MonoColorGreen;10;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_MonoColorRed;278;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_MonoColorYellow;546;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Points_Gray_Bluegray_BG;814;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Purple_T-Shirt;1082;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Rainbow;1350;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Red_T-Shirt;1618;1731;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Stars_Gradient_Color_Blue_Red;278;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Stars_Gradient_Color_Orange_Purple;278;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Stars_Gradient_Color_Pink_Purple;278;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Stars_Green;278;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Stars_Red;278;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_TwoColorsBlue;546;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_TwoColorsBrown;814;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_TwoColorsGray;1082;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_TwoColorsTurquoise;1350;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_White;1618;1414;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Common_Yellow_T-Shirt;546;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Adam;546;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Aloha;546;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Avocado;546;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Casper;814;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Cheese;1082;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Dalmation;1350;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Feathers;1618;1097;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Fiance;814;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Flintstone;814;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Jaguar;814;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Monkey;1082;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_MUA;1350;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Multicolor;1618;780;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_Mummy;1082;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_NaturalGrayRed;1082;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_NaturalRedBlack;1350;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_NaturalRedBrown;1350;146;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_NaturalRedWhite;1618;463;258;307; 0.5;0.5; 0;0;0;0
+PARTY_Asset_Rare_OceanBlue;1618;146;258;307; 0.5;0.5; 0;0;0;0

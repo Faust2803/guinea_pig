@@ -1,0 +1,45 @@
+body { padding: 0; margin: 0 }
+#unity-container { position: fixed; width: 100%; height: 100%; }
+#unity-canvas { width: 100%; height: 100%; background: linear-gradient(#265AD0, #3BAEF1) }
+#unity-loading-root {width: 100%; height: 100%; display: none;}
+#unity-logo 
+{ 
+    width: 390px;
+    height: 239px;
+    top: 10%;
+    background: url('UI-HamsterPartyLogo.png') no-repeat center;
+	background-size: 195px 120px;
+    display: block;
+    position: absolute;
+	top: calc(7% - 60px);
+    left: calc(50% - 195px);
+}
+#unity-game-logo 
+{ 
+	width: 300px; 
+	height: 293px; 
+	background: url('ezgif.com-optipng.png') no-repeat center;
+	background-size: 250px 244px;
+	display: block;
+    position: absolute;
+	top: calc(45% - 150px);
+    left: calc(50% - 150px);
+}
+#unity-loading-bar { position: absolute; left: 50%; bottom: 10%; transform: translate(-50%, -50%);}
+#unity-progress-bar-empty { 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 207px; 
+    height: 29px; 
+    background: url('UI-ProgressBar_Empty.png') no-repeat;
+	border-image-slice: 30 fill;
+}
+#unity-progress-bar-full {
+    display: block;
+    height: 17px;
+    background-color: #5DEF34;
+    transform: translate(5px, 6px);
+    margin-right: 10px;
+}
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+#unity-project-version {position: absolute; left: 2%; bottom: 2%; transform: translate(0%, -50%); font-weight: bold;}

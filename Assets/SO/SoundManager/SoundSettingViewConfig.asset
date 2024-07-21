@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1393967b8746fb8af9e66128a86a87, type: 3}
+  m_Name: SoundSettingViewConfig
+  m_EditorClassIdentifier: 
+  _data:
+  - SoundType: 0
+    Name: 
+    ColorBodyFront: {r: 0, g: 0, b: 0, a: 0}
+    ColorBodyBack: {r: 0, g: 0, b: 0, a: 0}
+    _soundType: 0
+    _name: MUSIC
+    _colorBodyFront: {r: 0.3647059, g: 0.93333334, b: 0.21176471, a: 1}
+    _colorBodyBack: {r: 0.31764707, g: 0.6784314, b: 0.21960784, a: 1}
+  - SoundType: 0
+    Name: SOUND
+    ColorBodyFront: {r: 0, g: 0, b: 0, a: 0}
+    ColorBodyBack: {r: 0, g: 0, b: 0, a: 0}
+    _soundType: 1
+    _name: SOUND
+    _colorBodyFront: {r: 1, g: 0.9019608, b: 0.2509804, a: 1}
+    _colorBodyBack: {r: 0.7529412, g: 0.68235296, b: 0.20392157, a: 1}
+  _defaultData:
+    SoundType: 0
+    Name: 
+    ColorBodyFront: {r: 0, g: 0, b: 0, a: 0}
+    ColorBodyBack: {r: 0, g: 0, b: 0, a: 0}
+    _soundType: 100
+    _name: Uknown
+    _colorBodyFront: {r: 0.7210518, g: 0.9716981, b: 0.1787558, a: 1}
+    _colorBodyBack: {r: 0.9433962, g: 0.86026305, b: 0.12904951, a: 1}

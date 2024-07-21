@@ -1,0 +1,954 @@
+fileFormatVersion: 2
+guid: b79d823cf0581374c90d803c111e4143
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Black
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 1005
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ddd8269793d8b489dd81f4b845e3b1
+      internalID: -1487194292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Brick
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 688
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8a49ad33a96e04e89f8b3f22e09a6b
+      internalID: 832476618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Checker
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 371
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c57102bba187de47a9686648412e1e7
+      internalID: -1896726330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Flowers_Multicolored_Beige_BG
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 54
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d21d351665ec1f4fa421151bdc2216e
+      internalID: -232007472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Blue_Green
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1378
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7979283ce122df46980b4a4d930c891
+      internalID: 108629517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Blue_Red
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1731
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40da734524b15dc47b85409fbb64d56a
+      internalID: 1701768590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Green_Blue
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1061
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8618e82ae11d94694f5017d936f48f
+      internalID: 55357238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Navy_Red
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 744
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b318404b6de7ac946aba3493f589857b
+      internalID: -1270857528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Pink_Purple
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1414
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d769c031690c047b73cec8b8d9529f
+      internalID: -609131535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Purple_Green
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1097
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d844352a7d03fab4a91f224ada8ed3f9
+      internalID: 1198888545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Purple_Green-1
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1731
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca2147560f190d449435963f1283dd1
+      internalID: -1035597999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Red_Blue
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1731
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd63427f2dc815741ad94999196f2590
+      internalID: -685191577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Red_Green
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 1414
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caec7d69d672ab84680bbd25e385dd79
+      internalID: 764275553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Red_Yellow
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 1097
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b259e1824e125dc4b9ad36a5deeb9e89
+      internalID: -1741856215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Yellow_Blue
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 427
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8f2f239b4dd884f95dee5171f09f8f
+      internalID: -790528228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Yellow_Green
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 780
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cda40023f9c6ba41a9d62a3debfa10e
+      internalID: -694577012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Yellow_Pink
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 110
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666133c1b5e934d4c81803cc1c4e1b43
+      internalID: -1477674344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Gradient_Color_Yellow_Red
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 780
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7408eb89b5dcb04a866b9c0d627d4be
+      internalID: 324634984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Green_T-Shirt
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 463
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935eb99b4b0067b46af65b6212e0c5d0
+      internalID: -805445154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Grey
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 146
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeab3dfe97be6c2408d20c6aae78de50
+      internalID: 108914221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_HipsterRed
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 1322
+        width: 258
+        height: 351
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b403a3ac7aee3324bb88de71d84c8396
+      internalID: -2147099686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Common_Romper
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 17
+        width: 277
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2ac19bcf32dbd4dbffc12ebe2b0896
+      internalID: -136797950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Event_Christmas_Deer
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 809
+        width: 258
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f69bbe477fc45e4aa6c17333f3d23af
+      internalID: -1366718093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Albino
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1683
+        width: 258
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122f3dc8771eea3488cb0bdc1a8251e0
+      internalID: -1417551885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Bee
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 448
+        width: 258
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bb1e73787c9234b9e47a4db69401ce
+      internalID: 696241993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Cashier
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1695
+        width: 258
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428d3d8fdf4b5aa4795265bf21d31abe
+      internalID: -1171374328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_ChineseDragon
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 62
+        width: 258
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc625e0f33785294697504e10211723f
+      internalID: 565821588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Elvis
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 403
+        width: 258
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f766ffc48bfb9d4c8f9ef9e9bf46571
+      internalID: -195058540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_FitnessVHSPink
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1220
+        width: 258
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c348bb3993c3f408a115fedf8edf49
+      internalID: -1900069984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_FitnessVHSWhite
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1643
+        width: 259
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b869040d8763a5479c8a80d2382f339
+      internalID: 899823812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Ladybug
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1257
+        width: 258
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5952b4c96d57e74fa906f10084350c0
+      internalID: -326783280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Maid
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 893
+        width: 258
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f31f9e61779ee4e9c53e3ba80638d7
+      internalID: -918635837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Poop
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1632
+        width: 258
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0f4c4990fed504fbebabff06860cb3
+      internalID: -1287528554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Rare_Pope
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1238
+        width: 258
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a333de04bf65bd14286716720353695b
+      internalID: -707963717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Unique_Kitsune
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 530
+        width: 263
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6cda9c6a65a2b468bfd0f2f7177333
+      internalID: -766548864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Unique_Mario
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 834
+        width: 258
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3700a3dd40dc1b41ad8945f42511634
+      internalID: -1216230834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PARTY_Asset_Unique_Yakudza
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 167
+        width: 258
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80527a59b0cf1cb4bb6d3f38103ade44
+      internalID: 1422450189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 462187dc6a42d2e4bb3c6c6027384b87
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PARTY_Asset_Common_Black: -1487194292
+      PARTY_Asset_Common_Brick: 832476618
+      PARTY_Asset_Common_Checker: -1896726330
+      PARTY_Asset_Common_Flowers_Multicolored_Beige_BG: -232007472
+      PARTY_Asset_Common_Gradient_Color_Blue_Green: 108629517
+      PARTY_Asset_Common_Gradient_Color_Blue_Red: 1701768590
+      PARTY_Asset_Common_Gradient_Color_Green_Blue: 55357238
+      PARTY_Asset_Common_Gradient_Color_Navy_Red: -1270857528
+      PARTY_Asset_Common_Gradient_Color_Pink_Purple: -609131535
+      PARTY_Asset_Common_Gradient_Color_Purple_Green: 1198888545
+      PARTY_Asset_Common_Gradient_Color_Purple_Green-1: -1035597999
+      PARTY_Asset_Common_Gradient_Color_Red_Blue: -685191577
+      PARTY_Asset_Common_Gradient_Color_Red_Green: 764275553
+      PARTY_Asset_Common_Gradient_Color_Red_Yellow: -1741856215
+      PARTY_Asset_Common_Gradient_Color_Yellow_Blue: -790528228
+      PARTY_Asset_Common_Gradient_Color_Yellow_Green: -694577012
+      PARTY_Asset_Common_Gradient_Color_Yellow_Pink: -1477674344
+      PARTY_Asset_Common_Gradient_Color_Yellow_Red: 324634984
+      PARTY_Asset_Common_Green_T-Shirt: -805445154
+      PARTY_Asset_Common_Grey: 108914221
+      PARTY_Asset_Common_HipsterRed: -2147099686
+      PARTY_Asset_Common_Romper: -136797950
+      PARTY_Asset_Event_Christmas_Deer: -1366718093
+      PARTY_Asset_Rare_Albino: -1417551885
+      PARTY_Asset_Rare_Bee: 696241993
+      PARTY_Asset_Rare_Cashier: -1171374328
+      PARTY_Asset_Rare_ChineseDragon: 565821588
+      PARTY_Asset_Rare_Elvis: -195058540
+      PARTY_Asset_Rare_FitnessVHSPink: -1900069984
+      PARTY_Asset_Rare_FitnessVHSWhite: 899823812
+      PARTY_Asset_Rare_Ladybug: -326783280
+      PARTY_Asset_Rare_Maid: -918635837
+      PARTY_Asset_Rare_Poop: -1287528554
+      PARTY_Asset_Rare_Pope: -707963717
+      PARTY_Asset_Unique_Kitsune: -766548864
+      PARTY_Asset_Unique_Mario: -1216230834
+      PARTY_Asset_Unique_Yakudza: 1422450189
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
