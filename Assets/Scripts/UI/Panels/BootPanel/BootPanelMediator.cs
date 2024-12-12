@@ -21,7 +21,6 @@ namespace UI.Panels.BootPanel
             _adressableLoaderManager.LoadAdressabless(AssetLabel.Main);
             Target.LoadGameButton.onClick.AddListener(GoToLobby);
             
-            //_analyticsManager.LoadingScreen();
         }
         
         protected override void CloseStart()
@@ -37,10 +36,10 @@ namespace UI.Panels.BootPanel
             _adressableLoaderManager.OnLoadingDataComplite -= LoadAdressabeCompleat;
             _adressableLoaderManager.OnLoadingProgress -= LoadAdressabeProgress;
 
-            GoToLobby();
+            //GoToLobby();
 
-            //Target.LoadGameButton.gameObject.SetActive(true);
-            //Target.LoadObject.SetActive(false);
+            Target.LoadGameButton.gameObject.SetActive(true);
+            Target.LoadObject.SetActive(false);
         }
         
         private void LoadAdressabeProgress(float persent, float loaded, float all)

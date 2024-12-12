@@ -14,9 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResourceIcon:
   - {fileID: 1217581229, guid: abd8b4714e7d0f345bbb4e580ab2bf69, type: 3}
-  - {fileID: 1217581229, guid: abd8b4714e7d0f345bbb4e580ab2bf69, type: 3}
-  - {fileID: 1677227560, guid: f6ec6022bca4e3d4b9b0c54850dbde06, type: 3}
-  - {fileID: -1723855065, guid: abd8b4714e7d0f345bbb4e580ab2bf69, type: 3}
-  - {fileID: -1276793900, guid: abd8b4714e7d0f345bbb4e580ab2bf69, type: 3}
-  - {fileID: -401510155, guid: abd8b4714e7d0f345bbb4e580ab2bf69, type: 3}
-  - {fileID: -38743095, guid: f6ec6022bca4e3d4b9b0c54850dbde06, type: 3}

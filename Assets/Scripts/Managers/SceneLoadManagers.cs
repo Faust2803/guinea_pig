@@ -5,8 +5,7 @@ namespace Managers
 {
     public class SceneLoadManagers : IInitializable
     {
-        private string activeSceneName =>
-            SceneManager.GetActiveScene().name;
+        private string activeSceneName => SceneManager.GetActiveScene().name;
 
         public void Initialize()
         {
