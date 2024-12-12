@@ -13,13 +13,19 @@ namespace UI.Panels.BootPanel
         {
             base.ShowStart();
 
-            //Target.CollectionWindowButton.onClick.AddListener(OnCollectionWindowButton);
+            Target.PlayWindowButton.onClick.AddListener(OnPlayButton);
         }
 
         protected override void CloseStart()
         {
             base.CloseStart();
-            //Target.CollectionWindowButton.onClick.RemoveListener(OnCollectionWindowButton);
+            Target.PlayWindowButton.onClick.RemoveListener(OnPlayButton);
+        }
+
+        private void OnPlayButton()
+        {
+            _uiManager.CloseAllPanels();
+            _sceneLoadManagers.LoadScene(Scene.Game);
         }
 
         private async void ResetProgressButton()
