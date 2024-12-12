@@ -1,10 +1,4 @@
-﻿
-using Common.Statistic;
-using DataModels.Achievement;
-using Managers;
-using Managers.Analytics;
-using UI.Windows;
-using UI.Windows.SimpleDialogWindow;
+﻿using Managers;
 using UnityEngine;
 using Zenject;
 
@@ -14,15 +8,7 @@ namespace UI.Panels.BootPanel
     {
         [Inject] private AdressableLoaderManager _adressableLoaderManager;
         [Inject] private SceneLoadManagers _sceneLoadManagers;
-        [Inject] private INetworkManager _networkManager;
-        [Inject] PlayerManager _playerManager;
-        [Inject] AuthorizationManager _authorizationManager;
-        [Inject] private IStatisticManager _statisticManager;
-        [Inject] private AnalyticsManager _analyticsManager;
-        [Inject] private AchievementManager _achievementManager;
-       
 
-       
         protected override void ShowStart()
         {
             base.ShowStart();
@@ -65,28 +51,9 @@ namespace UI.Panels.BootPanel
 
         private async void GoToLobby()
         {
-            var authToken = await _authorizationManager.Authorization();
-            Debug.Log($"Auth token = {authToken}");
-            var authResult = await _networkManager.Authorization(authToken);
-            Debug.Log($"Auth Result == [{authResult}]");
-            await _playerManager.SetUpAllPlayerData(authResult);
-            await _statisticManager.Initialize();
-
-            _analyticsManager.EnterPlayScreen();
-            
-            var result = await _achievementManager.GetAchievementsList();
-            if (result)
-            {
-                await _achievementManager.CheckAchievementTarget(new AchievementTarget(TargetType.PlayGame, 1));
-            }
-            
-            
             CloseSelf();
             _sceneLoadManagers.LoadScene(Scene.Lobby);
             
         }
-
-        
-        
     }
 }

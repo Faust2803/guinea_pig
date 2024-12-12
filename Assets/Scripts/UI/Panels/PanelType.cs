@@ -4,8 +4,6 @@
     {
         BootPanel,
         BottomLobbyPanel,
-        TopLobbyPanel,
-        GamePanel,
-        TamagochiPanel
+        TopLobbyPanel
     }
 }

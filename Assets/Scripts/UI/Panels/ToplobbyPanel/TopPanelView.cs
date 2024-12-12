@@ -6,7 +6,6 @@ namespace UI.Panels.ToplobbyPanel
 {
     public class TopPanelView : BasePanelView
     {
-        public LayerSettings[] Map;
 
         [SerializeField] private Transform  _currencyItemTransform;
         [SerializeField] private GameObject  _currencyItem;

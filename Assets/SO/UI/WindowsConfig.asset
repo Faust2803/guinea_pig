@@ -13,21 +13,7 @@ MonoBehaviour:
   m_Name: WindowsConfig
   m_EditorClassIdentifier: 
   WindowsPrefab:
-  - {fileID: 5956868408103590295, guid: 493ed3490f826834397f504c04ff7425, type: 3}
-  - {fileID: 5956868408103590295, guid: 79bfd4d1dc111f14e8f3b4e918f2e9b1, type: 3}
-  - {fileID: 5956868408103590295, guid: 3e118c8abaf1fa4409c69915bea34f78, type: 3}
-  - {fileID: 5956868408103590295, guid: 9530e794e2f97444d94ca2e7bba6f489, type: 3}
-  - {fileID: 5956868408103590295, guid: 335957f11debc9f468159e5e91a8a6ab, type: 3}
-  - {fileID: 5956868408103590295, guid: b6aeee36f02946c4d97d2eeccc3d1d0e, type: 3}
   - {fileID: 2798389819012078762, guid: 66f7699a7b646544fb1bb4f8a54bab4c, type: 3}
   - {fileID: 5956868408103590295, guid: 14744bbaaebc32749b273998210e8d4f, type: 3}
   - {fileID: 2739506990042971288, guid: f1b0460761f284e3dae13fa6edcdd0a4, type: 3}
-  - {fileID: 8705299449609262988, guid: 359523c997ad3a446a3660f40ef229e2, type: 3}
-  - {fileID: 5956868408103590295, guid: 24d855751b7b93d4e929b4c87095dff4, type: 3}
-  - {fileID: 5956868408103590295, guid: ba477a2e193adae4bb1410c1d21200c2, type: 3}
-  - {fileID: 5956868408103590295, guid: f3746e9993ff5ae4a831989c608e04d1, type: 3}
-  - {fileID: 7829900786345277971, guid: b15c920f33d4f2d498af8c58142e2e95, type: 3}
-  - {fileID: 5956868408103590295, guid: 1611170717475e9458d55fbbc5d287ea, type: 3}
-  - {fileID: 5956868408103590295, guid: 4b7b2a5bd7e0b5a4ca95d496b594e007, type: 3}
-  - {fileID: 751311055339128857, guid: 791ef3f70b448fb4893874f9db7f6894, type: 3}
   - {fileID: 5956868408103590295, guid: dfa7b21c3bbfc9f44bd29167efcc9624, type: 3}
