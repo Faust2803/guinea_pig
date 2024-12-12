@@ -16,7 +16,7 @@ namespace Installers
         {
             //Bind Factory
             Container.BindFactory< CharacterType, BaseCharacterView, FactoryCharacter>().FromMethod(InitCharacter);
-            Container.BindFactory< EnvironmentType, GameObject, FactoryEnvironment>().FromMethod(InitEnvironment);
+            Container.BindFactory< EnvironmentType, EnvironmentView, FactoryEnvironment>().FromMethod(InitEnvironment);
         }
 
         private BaseCharacterView InitCharacter(DiContainer container, CharacterType character)
@@ -25,10 +25,10 @@ namespace Installers
             return Container.InstantiatePrefabForComponent<BaseCharacterView>(level);
         }
         
-        private GameObject InitEnvironment(DiContainer container, EnvironmentType environment)
+        private EnvironmentView InitEnvironment(DiContainer container, EnvironmentType environment)
         {
             var level = _environmentConfig.EnvironmentPrefab[(int)environment];
-            return Container.InstantiatePrefabForComponent<GameObject>(level);
+            return Container.InstantiatePrefabForComponent<EnvironmentView>(level);
         }
     }
 }

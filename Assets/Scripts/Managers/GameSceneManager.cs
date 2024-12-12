@@ -24,21 +24,24 @@ namespace Managers
             
             //_uiManager.OpenPanel(PanelType.TopLobbyPanel);
 
-            _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
-            _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
+            //_audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
+            //_audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
+            var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
+            var character = LoadCharacterPrefab(CharacterType.InGameCharacter);
         }
         
-        private BaseCharacterView LoadPrefab(CharacterType type)
+        private BaseCharacterView LoadCharacterPrefab(CharacterType type)
         {
             var view = _factoryCharacter.Create(type);
             view.gameObject.transform.SetParent(_gameArea,false);
             return view;
         }
         
-        private void LoadEnvironmentPrefab(EnvironmentType type)
+        private EnvironmentView LoadEnvironmentPrefab(EnvironmentType type)
         {
             var view = _factoryEnvironment.Create(type);
             view.gameObject.transform.SetParent(_gameArea,false);
+            return view;
         }
 
         private void OnDestroy()

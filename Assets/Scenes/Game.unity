@@ -179,7 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 0ee4f9bae41379246b03b60aa9922862, type: 2}
   _monoInstallers:
   - {fileID: 1429613843}
   _installerPrefabs: []
@@ -211,7 +212,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1429613844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212426405
@@ -481,8 +483,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429613844}
-  - component: {fileID: 1429613843}
   - component: {fileID: 1429613842}
+  - component: {fileID: 1429613843}
   m_Layer: 0
   m_Name: GameInstaller
   m_TagString: Untagged
@@ -502,7 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _components: []
+  _components:
+  - {fileID: 1429613843}
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 605407704}
@@ -532,7 +535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 605407705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830177726
 GameObject:
@@ -626,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 0}
+  - {fileID: 3347101389967017371}
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 0}
@@ -676,13 +679,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddcca92bb086d54eb9c2684800f3aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameArea: {fileID: 0}
+  _gameArea: {fileID: 16120950}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 605407705}
-  - {fileID: 1429613844}
   - {fileID: 1212426408}
   - {fileID: 16120950}
   - {fileID: 1410979092}
