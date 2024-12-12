@@ -1,4 +1,4 @@
-using DataModels.PlayerData;
+using DataModels.ResourcesData;
 using SO.Scripts;
 using TMPro;
 using UnityEngine;

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DataModels.ResourcesData;
 using Managers;
 using Zenject;
 
