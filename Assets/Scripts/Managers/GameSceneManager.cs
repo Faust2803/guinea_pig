@@ -24,8 +24,8 @@ namespace Managers
             
             //_uiManager.OpenPanel(PanelType.TopLobbyPanel);
 
-            //_audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
-            //_audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
+            _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
+            _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
             var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
             var character = LoadCharacterPrefab(CharacterType.InGameCharacter);
         }
