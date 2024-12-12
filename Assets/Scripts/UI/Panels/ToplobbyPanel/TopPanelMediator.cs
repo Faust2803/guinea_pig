@@ -1,8 +1,5 @@
 ﻿using System.Collections.Generic;
-using DataModels.PlayerData;
-using Game.Jumper;
 using Managers;
-using UnityEngine;
 using Zenject;
 
 namespace UI.Panels.ToplobbyPanel

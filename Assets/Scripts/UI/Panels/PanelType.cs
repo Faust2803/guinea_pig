@@ -4,6 +4,7 @@
     {
         BootPanel,
         BottomLobbyPanel,
-        TopLobbyPanel
+        TopLobbyPanel,
+        GamePanel
     }
 }
