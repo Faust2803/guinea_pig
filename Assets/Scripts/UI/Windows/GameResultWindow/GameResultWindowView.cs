@@ -8,7 +8,10 @@ namespace UI.Windows.GameResultWindow
 {
     public class GameResultWindowView : BaseWindowView
     {
-
+        protected override void CreateMediator()
+        {
+            _mediator = new GameResultWindowMediator();
+        }
         
     }
 }

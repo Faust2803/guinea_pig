@@ -1,5 +1,4 @@
-﻿using Game.Jumper;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace UI.Panels.ToplobbyPanel
