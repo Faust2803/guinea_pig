@@ -1,12 +1,13 @@
-using Game;
+using Game.Character;
+using Game.Character.Player;
+using Game.Environment;
 using Managers.SoundManager.Base;
-using UI.Panels;
 using UI.Windows;
 using UnityEngine;
 using Util;
 using Zenject;
 
-namespace Managers
+namespace Managers.SceneManagers
 {
     public class GameSceneManager : MonoBehaviour
     {
@@ -26,11 +27,38 @@ namespace Managers
 
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
-            var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
-            var character = LoadCharacterPrefab(CharacterType.InGameCharacter);
+            
+            LoadEnvironmentPrefab(EnvironmentType.Environment1);
+            CreatePlayerCharacter(CharacterType.InGameCharacter);
+            CreatePlayerCharacter(CharacterType.Enemy1);
+            CreatePlayerCharacter(CharacterType.Enemy2);
+            CreatePlayerCharacter(CharacterType.Enemy3);
+
+
         }
         
-        private BaseCharacterView LoadCharacterPrefab(CharacterType type)
+        private void CreatePlayerCharacter(CharacterType type, object data = null)
+        {
+            var playerCharacter = GetCharacter(type);
+            if (playerCharacter == null) return;
+            playerCharacter.SetData(data);
+            //playerCharacter.Show();
+        }
+        
+        private CharacterMediator GetCharacter(CharacterType type)
+        {
+            var view = LoadCharacterPrefab(type);
+            if (view == null) return null;
+        
+            view.Init();
+            CharacterMediator mediator;
+            view.OnCreateMediator(out mediator);
+            mediator.SetType(type);
+            
+            return mediator;
+        }
+        
+        private CharacterView LoadCharacterPrefab(CharacterType type)
         {
             var view = _factoryCharacter.Create(type);
             view.gameObject.transform.SetParent(_gameArea,false);

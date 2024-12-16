@@ -1,7 +1,8 @@
-﻿using UnityEngine.SceneManagement;
+﻿
+using UnityEngine.SceneManagement;
 using Zenject;
 
-namespace Managers
+namespace Managers.SceneManagers
 {
     public class SceneLoadManagers : IInitializable
     {

@@ -1,4 +1,4 @@
-﻿namespace Game
+﻿namespace Game.Environment
 {
     public enum EnvironmentType
     {

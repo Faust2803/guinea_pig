@@ -3,7 +3,7 @@ using UI.Panels;
 using UnityEngine;
 using Zenject;
 
-namespace Managers
+namespace Managers.SceneManagers
 {
     public class LobbySceneManager : MonoBehaviour
     {

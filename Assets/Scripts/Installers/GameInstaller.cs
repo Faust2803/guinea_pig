@@ -1,4 +1,6 @@
 ﻿using Game;
+using Game.Character;
+using Game.Environment;
 using SO.Scripts;
 using UI.Windows;
 using UnityEngine;
@@ -15,14 +17,14 @@ namespace Installers
         public override void InstallBindings()
         {
             //Bind Factory
-            Container.BindFactory< CharacterType, BaseCharacterView, FactoryCharacter>().FromMethod(InitCharacter);
+            Container.BindFactory< CharacterType, CharacterView, FactoryCharacter>().FromMethod(InitCharacter);
             Container.BindFactory< EnvironmentType, EnvironmentView, FactoryEnvironment>().FromMethod(InitEnvironment);
         }
 
-        private BaseCharacterView InitCharacter(DiContainer container, CharacterType character)
+        private CharacterView InitCharacter(DiContainer container, CharacterType character)
         {
             var level = _characterConfig.CharacterPrefab[(int)character];
-            return Container.InstantiatePrefabForComponent<BaseCharacterView>(level);
+            return Container.InstantiatePrefabForComponent<CharacterView>(level);
         }
         
         private EnvironmentView InitEnvironment(DiContainer container, EnvironmentType environment)

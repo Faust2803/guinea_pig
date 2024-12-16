@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Managers;
+using Managers.SceneManagers;
 using Managers.SoundManager.Base;
 using UI.Panels;
 using Zenject;

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterPrefab:
   - {fileID: 7013717658453171983, guid: a673f1cbd2a007c44bfb0b0c60fa1385, type: 3}
-  - {fileID: 7013717658453171983, guid: a673f1cbd2a007c44bfb0b0c60fa1385, type: 3}
+  - {fileID: 7013717658453171983, guid: be61500c24b7a3c4e88c0a36e1ee2594, type: 3}
+  - {fileID: 7013717658453171983, guid: 69d67025ddaa99b44989d3d15696b4ec, type: 3}
+  - {fileID: 7013717658453171983, guid: 9ccade8b9ddc01b42bd5139e02f924fb, type: 3}
