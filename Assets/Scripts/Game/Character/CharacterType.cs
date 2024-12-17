@@ -6,5 +6,6 @@
         Enemy1,
         Enemy2,
         Enemy3,
+        LobbyPlayerCharacter
     }
 }

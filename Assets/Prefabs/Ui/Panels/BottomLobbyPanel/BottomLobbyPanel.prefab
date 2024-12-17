@@ -2135,6 +2135,7 @@ MonoBehaviour:
   _deleteAfterClose: 1
   _openCloseDuration: 0.1
   _playWindowButton: {fileID: 406498210984034643}
+  _achievmentsCompleatPointer: {fileID: 2975347750680187453}
 --- !u!114 &4121025991132148340
 MonoBehaviour:
   m_ObjectHideFlags: 0

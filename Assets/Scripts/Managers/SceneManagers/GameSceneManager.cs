@@ -26,9 +26,9 @@ namespace Managers.SceneManagers
         {
             LoadEnvironmentPrefab(EnvironmentType.Environment1);
             CreateCharacter(CharacterType.InGameCharacter);
-            CreateCharacter(CharacterType.Enemy1);
-            CreateCharacter(CharacterType.Enemy2);
-            CreateCharacter(CharacterType.Enemy3);
+            // CreateCharacter(CharacterType.Enemy1);
+            // CreateCharacter(CharacterType.Enemy2);
+            // CreateCharacter(CharacterType.Enemy3);
         }
 
         private void OnDestroy()

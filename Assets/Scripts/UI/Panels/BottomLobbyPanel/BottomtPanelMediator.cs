@@ -15,6 +15,7 @@ namespace UI.Panels.BootPanel
             base.ShowStart();
 
             Target.PlayWindowButton.onClick.AddListener(OnPlayButton);
+            Target.AchievmentsCompleatPointer(true);
         }
 
         protected override void CloseStart()

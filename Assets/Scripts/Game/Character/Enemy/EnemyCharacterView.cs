@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 namespace Game.Character.Enemy
 {
     public class EnemyCharacterView : CharacterView
@@ -7,6 +9,5 @@ namespace Game.Character.Enemy
         {
             _mediator = new EnemyCharacterMediator();
         }
-        
     }
 }

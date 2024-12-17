@@ -23,7 +23,7 @@ namespace Managers.SceneManagers
         protected override void Init()
         {
             LoadEnvironmentPrefab(EnvironmentType.LobbyEnvironment);
-            CreateCharacter(CharacterType.InGameCharacter);
+            CreateCharacter(CharacterType.LobbyPlayerCharacter);
         }
 
         private void OnDestroy()

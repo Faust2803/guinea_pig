@@ -10,7 +10,7 @@ namespace Managers.SceneManagers
 
         public void Initialize()
         {
-            LoadScene(Scene.Boot);
+            LoadScene(Scene.Game);
         }
 
         public void LoadScene(Scene scene)
@@ -18,6 +18,7 @@ namespace Managers.SceneManagers
             if (activeSceneName != scene.ToString())
             {
                 SceneManager.LoadScene(scene.ToString());
+                ///SceneManager.LoadScene("ttt");
                 
             }
         }

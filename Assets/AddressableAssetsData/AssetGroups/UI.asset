@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: UI
   m_GUID: b42c24f9137ee1445bf83c948cbebf78
   m_SerializeEntries:
-  - m_GUID: e13580e6eac4eca4e94861839076cacf
-    m_Address: Assets/Prefabs/Ui/Panels/BootPanel/BootPanel.prefab
+  - m_GUID: 04387156fde39eb4a9e8a08c0f28f1d3
+    m_Address: Assets/Prefabs/Ui/Panels/TopLobbyPanel/TopLobbyPanel.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Main
@@ -27,8 +27,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - Main
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 04387156fde39eb4a9e8a08c0f28f1d3
-    m_Address: Assets/Prefabs/Ui/Panels/TopLobbyPanel/TopLobbyPanel.prefab
+  - m_GUID: e13580e6eac4eca4e94861839076cacf
+    m_Address: Assets/Prefabs/Ui/Panels/BootPanel/BootPanel.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Main

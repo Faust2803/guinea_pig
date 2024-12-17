@@ -968,9 +968,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7830203463683870049}
   - component: {fileID: 8117583199093232115}
-  - component: {fileID: 6490320841794572031}
+  - component: {fileID: 5782863326409875150}
   m_Layer: 0
-  m_Name: PlayerCharacter
+  m_Name: LobbyPlayerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1016,7 +1016,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6490320841794572031
+--- !u!114 &5782863326409875150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1025,12 +1025,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7830203463684231489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3795be9d84464576a32d35cd69e72023, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d0fc417b7914542be8f25ac89bc38b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponAttachment: {fileID: 7830203463683870057}
-  _moveSpeed: 5
-  _cameraOffset: {x: 0, y: 30.2, z: -8.68}
+  _weaponAttachment: {fileID: 0}
+  _moveSpeed: 10
 --- !u!1 &7830203463684231491
 GameObject:
   m_ObjectHideFlags: 0
