@@ -9,16 +9,8 @@ using Zenject;
 
 namespace Managers.SceneManagers
 {
-    public class GameSceneManager : MonoBehaviour
+    public class GameBaseSceneManager : BaseSceneManager
     {
-        [Inject] private UiManager _uiManager;
-        [Inject] private PlayerManager _playerManager;
-        [Inject] private ISoundManager _audio;
-        [Inject] private FactoryCharacter _factoryCharacter;
-        [Inject] private FactoryEnvironment _factoryEnvironment;
-
-        [SerializeField] private Transform  _gameArea;
-        
         private async void Start()
         {
             //await _playerManager.UpdatePlayerData();
@@ -27,49 +19,16 @@ namespace Managers.SceneManagers
 
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
-            
+            Init();
+        }
+
+        protected override void Init()
+        {
             LoadEnvironmentPrefab(EnvironmentType.Environment1);
-            CreatePlayerCharacter(CharacterType.InGameCharacter);
-            CreatePlayerCharacter(CharacterType.Enemy1);
-            CreatePlayerCharacter(CharacterType.Enemy2);
-            CreatePlayerCharacter(CharacterType.Enemy3);
-
-
-        }
-        
-        private void CreatePlayerCharacter(CharacterType type, object data = null)
-        {
-            var playerCharacter = GetCharacter(type);
-            if (playerCharacter == null) return;
-            playerCharacter.SetData(data);
-            //playerCharacter.Show();
-        }
-        
-        private CharacterMediator GetCharacter(CharacterType type)
-        {
-            var view = LoadCharacterPrefab(type);
-            if (view == null) return null;
-        
-            view.Init();
-            CharacterMediator mediator;
-            view.OnCreateMediator(out mediator);
-            mediator.SetType(type);
-            
-            return mediator;
-        }
-        
-        private CharacterView LoadCharacterPrefab(CharacterType type)
-        {
-            var view = _factoryCharacter.Create(type);
-            view.gameObject.transform.SetParent(_gameArea,false);
-            return view;
-        }
-        
-        private EnvironmentView LoadEnvironmentPrefab(EnvironmentType type)
-        {
-            var view = _factoryEnvironment.Create(type);
-            view.gameObject.transform.SetParent(_gameArea,false);
-            return view;
+            CreateCharacter(CharacterType.InGameCharacter);
+            CreateCharacter(CharacterType.Enemy1);
+            CreateCharacter(CharacterType.Enemy2);
+            CreateCharacter(CharacterType.Enemy3);
         }
 
         private void OnDestroy()

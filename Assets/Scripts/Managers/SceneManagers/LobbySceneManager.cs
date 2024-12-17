@@ -1,26 +1,29 @@
+using Game.Character;
+using Game.Environment;
 using Managers.SoundManager.Base;
 using UI.Panels;
-using UnityEngine;
-using Zenject;
+
 
 namespace Managers.SceneManagers
 {
-    public class LobbySceneManager : MonoBehaviour
+    public class LobbyBaseSceneManager : BaseSceneManager
     {
-        [Inject] private UiManager _uiManager;
-        [Inject] private PlayerManager _playerManager;
-        [Inject] private ISoundManager _audio;
-
-        
         private async void Start()
         {
-            await _playerManager.UpdatePlayerData();
+            //await _playerManager.UpdatePlayerData();
             
             _uiManager.OpenPanel(PanelType.TopLobbyPanel);
             _uiManager.OpenPanel(PanelType.BottomLobbyPanel);
 
             _audio.PlaySound(SoundManager.Enums.SoundId.LobbyLoop, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.LobbyLoop, 0.5f);
+            Init();
+        }
+
+        protected override void Init()
+        {
+            LoadEnvironmentPrefab(EnvironmentType.LobbyEnvironment);
+            CreateCharacter(CharacterType.InGameCharacter);
         }
 
         private void OnDestroy()

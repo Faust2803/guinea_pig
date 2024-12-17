@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: EnvironmentConfig
   m_EditorClassIdentifier: 
   EnvironmentPrefab:
-  - {fileID: 5251071786453670015, guid: 78e524d9b4e03854d9da1426f6b55651, type: 3}
-  - {fileID: 5251071786453670015, guid: 582068f78663d2b44a21cdfcfa687e18, type: 3}
+  - {fileID: 688560609032210842, guid: 8ec0da7cd7ed05d4ea4b98263072af0e, type: 3}
+  - {fileID: 688560609032210842, guid: ac78bb50fcadb71499cd068f26efd2e3, type: 3}
+  - {fileID: 688560609032210842, guid: 5a70100e41e9aab419f2d7bd43bd838e, type: 3}
+  - {fileID: 688560609032210842, guid: 2ed1caddae3dc144cabd8f933165be22, type: 3}
