@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 namespace Game.Character
 {
     public abstract class CharacterView : BaseGameView
     {
         
+        [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] protected Transform _weaponAttachment;
-        [SerializeField] protected float _moveSpeed = 10f;
+        [SerializeField] protected Animator _animator ;
+        [SerializeField] protected LayerMask _layerMask ;
         
         protected CharacterMediator _mediator;
-        protected Vector3 _moveDirection;
-        protected float _velocity;
 
-        protected const float GRAVITY = -9.81F;
-        
+       
         
         public CharacterMediator Mediator => _mediator;
         public Transform WeaponAttachment => _weaponAttachment;
-        public float MoveSpeed => _moveSpeed;
-        public Vector3 MoveDirection => _moveDirection;
+        public Animator Animator => _animator;
+        public LayerMask LayerMask => _layerMask;
         
 
         public void OnCreateMediator(out CharacterMediator mediator)
@@ -32,6 +33,13 @@ namespace Game.Character
             base.Init();
             _mediator.Mediate(this);
         }
+        
+        private void Update()
+        {
+            _mediator.GameLifeСycle();
+        }
+        
+        public NavMeshAgent NavMeshAgent => _navMeshAgent;
 
     }
 }

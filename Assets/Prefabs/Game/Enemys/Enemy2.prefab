@@ -297,6 +297,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355bd1847e9a40368432d1c23f313716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _navMeshAgent: {fileID: 0}
+  _weaponAttachment: {fileID: 0}
+  _animator: {fileID: 85870148452666392}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 16384
 --- !u!1 &2106585151094639788
 GameObject:
   m_ObjectHideFlags: 0

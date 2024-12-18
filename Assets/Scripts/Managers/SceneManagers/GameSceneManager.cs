@@ -1,11 +1,7 @@
 using Game.Character;
-using Game.Character.Player;
 using Game.Environment;
-using Managers.SoundManager.Base;
-using UI.Windows;
-using UnityEngine;
-using Util;
-using Zenject;
+using UI.Panels;
+
 
 namespace Managers.SceneManagers
 {
@@ -15,7 +11,7 @@ namespace Managers.SceneManagers
         {
             //await _playerManager.UpdatePlayerData();
             
-            //_uiManager.OpenPanel(PanelType.TopLobbyPanel);
+            _uiManager.OpenPanel(PanelType.BottomGamePanelView);
 
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);

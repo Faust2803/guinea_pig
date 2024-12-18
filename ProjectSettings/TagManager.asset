@@ -14,6 +14,8 @@ TagManager:
   - asteroid
   - Booster
   - Destructible
+  - Enemy
+  - EnemySenter
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Camera
   - MainCameraOnly
   - Ground
-  - 
+  - InGameObdject
   - 
   - 
   - 

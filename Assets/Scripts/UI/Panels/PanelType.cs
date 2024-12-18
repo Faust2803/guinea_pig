@@ -5,6 +5,7 @@
         BootPanel,
         BottomLobbyPanel,
         TopLobbyPanel,
-        GamePanel
+        GamePanel,
+        BottomGamePanelView
     }
 }

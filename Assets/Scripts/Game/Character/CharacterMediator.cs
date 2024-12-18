@@ -10,14 +10,16 @@ namespace Game.Character
         
         private CharacterType _characterType;
         
-        public CharacterType CharacterType
-        {
-            get { return _characterType; }
-        }
+        
+        public CharacterType CharacterType => _characterType;
+        public float CharacterMoveSpeed { get; set; }
+
+        protected CharacterStateType CharacterState { get; set; }
 
         public virtual void Mediate(CharacterView value)
         {
             CharacterView =  value;
+            CharacterState = CharacterStateType.Idle;
         }
         
         public virtual void SetData(object data)
@@ -29,6 +31,11 @@ namespace Game.Character
         {
             _characterType = type;
         }
+
+        public virtual void GameLifeСycle()
+        {
+        }
+
     }
     
     public abstract class CharacterMediator<T, Z> : CharacterMediator where T : CharacterView where Z : CharacterData
