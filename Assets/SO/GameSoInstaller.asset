@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterConfig: {fileID: 11400000, guid: 9ffbc971292cb384f8148486be854fb8, type: 2}
   _environmentConfig: {fileID: 11400000, guid: 228c7584335f7074cb8a059b180dd7a2, type: 2}
+  _booletConfig: {fileID: 11400000, guid: f673007cb4ac6cc449e2d368109e7cf8, type: 2}
