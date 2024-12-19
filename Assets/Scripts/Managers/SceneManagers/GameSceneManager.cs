@@ -1,4 +1,5 @@
 using Game.Character;
+using Game.Character.Player;
 using Game.Environment;
 using UI.Panels;
 
@@ -7,6 +8,8 @@ namespace Managers.SceneManagers
 {
     public class GameBaseSceneManager : BaseSceneManager
     {
+        private CharacterMediator _playerCharacterMediator;
+        
         private async void Start()
         {
             //await _playerManager.UpdatePlayerData();
@@ -21,7 +24,7 @@ namespace Managers.SceneManagers
         protected override void Init()
         {
             LoadEnvironmentPrefab(EnvironmentType.Environment1);
-            CreateCharacter(CharacterType.InGameCharacter);
+            _playerCharacterMediator = CreateCharacter(CharacterType.InGameCharacter);
             // CreateCharacter(CharacterType.Enemy1);
             // CreateCharacter(CharacterType.Enemy2);
             // CreateCharacter(CharacterType.Enemy3);
@@ -30,6 +33,7 @@ namespace Managers.SceneManagers
         private void OnDestroy()
         {
             _audio.StopSound(SoundManager.Enums.SoundId.JumperMusic);
+            _playerCharacterMediator.Remove();
         }
     }
 }

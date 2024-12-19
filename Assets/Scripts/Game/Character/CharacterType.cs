@@ -16,6 +16,7 @@
         TakeAim,
         Fire,
         Hit,
-        Death
+        Death,
+        Reload
     }
 }

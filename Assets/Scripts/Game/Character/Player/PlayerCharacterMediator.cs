@@ -1,4 +1,5 @@
 ﻿
+using UI.Panels.BottomGamePanel;
 using UnityEngine;
 
 namespace Game.Character.Player
@@ -13,14 +14,23 @@ namespace Game.Character.Player
             base.Mediate(value);
             CharacterMoveSpeed = Target.NavMeshAgent.acceleration;
             LastClickedObject = Target.gameObject;
+            
+            BottomGamePanelMediator.OnFire += Fire;
+            BottomGamePanelMediator.OnReload += Reload;
         }
-        
+
+        public override void Remove()
+        {
+            BottomGamePanelMediator.OnFire -= Fire;
+            BottomGamePanelMediator.OnReload -= Reload;
+        }
+
         public  override void GameLifeСycle()
         {
             if (Input.GetMouseButton(0))
             {
                 RaycastHit hit;
-                if (Physics.Raycast(Target.Camera.ScreenPointToRay(Input.mousePosition), out hit, 1000, Target.LayerMask))
+                if (Physics.Raycast(Target.Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, Target.LayerMask))
                 {
                     if(hit.collider.gameObject.tag == "Enemy")
                     {
@@ -35,10 +45,8 @@ namespace Game.Character.Player
                         Target.Animator.Play("RunFWD_HG01_Anim 0");
                         CharacterState = CharacterStateType.Run;
                     }
-
                     LastClickedObject = hit.collider.gameObject;
                 }
-                
             }
             else
             {
@@ -47,28 +55,13 @@ namespace Game.Character.Player
                     Target.transform.rotation = Quaternion.Slerp(Target.transform.rotation, 
                         Quaternion.LookRotation(LastClickedObject.transform.position - Target.transform.position),
                         CharacterMoveSpeed * Time.deltaTime);
-                    
-                    // RaycastHit hit;
-                    // var ray = new Ray(Target.transform.position, Target.transform.forward);
-                    // //Debug.DrawRay(Target.transform.position, Target.transform.forward*100, Color.green);
-                    // if (Physics.Raycast(ray, out hit))
-                    // {
-                    //     if (hit.collider.gameObject.tag == "EnemySenter")
-                    //     {
-                    //         Target.Animator.Play("ShootSingleshot_HG01_Anim 0");
-                    //         Debug.Log("hit");
-                    //         
-                    //         
-                    //         CharacterState = CharacterStateType.FireNext;
-                    //     }
-                    //
-                    // }
-                    
+                    Target.transform.eulerAngles = new Vector3(0, Target.transform.eulerAngles.y, 0);
                 }
                 
                 if (Target.NavMeshAgent.velocity.magnitude < 1 )
                 {
-                    if (LastClickedObject.tag != "Enemy")
+                    //if (LastClickedObject.tag != "Enemy")
+                    if (CharacterState != CharacterStateType.Fire && CharacterState != CharacterStateType.Reload)
                     {
                         Target.Animator.Play("IdleNormal02_HG01_Anim 0");
                         CharacterState = CharacterStateType.Idle;
@@ -79,6 +72,20 @@ namespace Game.Character.Player
             }
         }
 
-        float PreviousRotation;
+        private void Fire()
+        {
+            Debug.Log("Fire");
+            CharacterState = CharacterStateType.Fire;
+            Target.NavMeshAgent.enabled = false;
+            Target.Animator.Play("ShootSingleshot_HG01_Anim 0");
+        }
+
+        private void Reload()
+        {
+            Debug.Log("Reload");
+            CharacterState = CharacterStateType.Reload;
+            Target.NavMeshAgent.enabled = false;
+            Target.Animator.Play("Reloading_HG01_Anim 0");
+        }
     }
 }

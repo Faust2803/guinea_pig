@@ -19,12 +19,13 @@ namespace Managers.SceneManagers
 
         protected abstract void Init();
         
-        protected void CreateCharacter(CharacterType type, object data = null)
+        protected CharacterMediator CreateCharacter(CharacterType type, object data = null)
         {
             var playerCharacter = GetCharacter(type);
-            if (playerCharacter == null) return;
+            if (playerCharacter == null) return null;
             playerCharacter.SetData(data);
             //playerCharacter.Show();
+            return playerCharacter;
         }
         
         private CharacterMediator GetCharacter(CharacterType type)

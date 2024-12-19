@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using System;
+using Managers;
 using Managers.SceneManagers;
 using UnityEngine;
 using Zenject;
@@ -7,7 +8,8 @@ namespace UI.Panels.BottomGamePanel
 {
     public class BottomGamePanelMediator : BasePanelMediator<BottomGamePanelView, PanelData>
     {
-
+        public static event Action OnFire;
+        public static event Action OnReload;
         protected override void ShowStart()
         {
             base.ShowStart();
@@ -26,13 +28,13 @@ namespace UI.Panels.BottomGamePanel
 
         private void OnFireButton()
         {
-            
+            OnFire?.Invoke();
 
         }
         
         private void OnReloadButton()
         {
-            
+            OnReload?.Invoke();
 
         }
         

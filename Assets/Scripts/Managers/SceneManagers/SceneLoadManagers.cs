@@ -10,7 +10,7 @@ namespace Managers.SceneManagers
 
         public void Initialize()
         {
-            LoadScene(Scene.Lobby);
+            LoadScene(Scene.Game);
         }
 
         public void LoadScene(Scene scene)

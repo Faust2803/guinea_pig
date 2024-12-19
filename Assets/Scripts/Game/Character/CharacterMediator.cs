@@ -35,6 +35,10 @@ namespace Game.Character
         public virtual void GameLifeСycle()
         {
         }
+        
+        public virtual void Remove()
+        {
+        }
 
     }
     
