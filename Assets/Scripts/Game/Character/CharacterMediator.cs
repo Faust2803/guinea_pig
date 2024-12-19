@@ -1,7 +1,4 @@
-﻿using System;
-using DG.Tweening;
-using UnityEngine;
-
+﻿
 namespace Game.Character
 {
     public class CharacterMediator : BaseGameMediator

@@ -1,11 +1,14 @@
 ﻿
+using Managers.SceneManagers;
 using UI.Panels.BottomGamePanel;
 using UnityEngine;
+using Zenject;
 
 namespace Game.Character.Player
 {
     public class PlayerCharacterMediator : CharacterMediator<PlayerCharacterView, CharacterData>
     {
+        [Inject] protected GameBaseSceneManager _gameBaseSceneManager;
         private GameObject LastClickedObject;
         
         
@@ -77,6 +80,7 @@ namespace Game.Character.Player
             CharacterState = CharacterStateType.Fire;
             Target.NavMeshAgent.enabled = false;
             Target.Animator.Play("ShootSingleshot_HG01_Anim 0");
+            _gameBaseSceneManager.CreateBoolet(Target.WeaponAttachment.transform.position, Target.transform.rotation);
         }
 
         private void Reload()

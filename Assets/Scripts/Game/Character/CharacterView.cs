@@ -10,7 +10,7 @@ namespace Game.Character
         
         [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] protected Transform _weaponAttachment;
-        [SerializeField] protected Animator _animator ;
+        [SerializeField] protected Animator _animator;
         [SerializeField] protected LayerMask _layerMask ;
         
         protected CharacterMediator _mediator;

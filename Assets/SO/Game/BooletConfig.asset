@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1565f5545d4ab6bc6103818d408509, type: 3}
   m_Name: BooletConfig
   m_EditorClassIdentifier: 
-  BooletPrefab: []
+  BooletPrefab:
+  - {fileID: 6616418954208606138, guid: 4c0d75baa62ede3409ec9122dc4587df, type: 3}

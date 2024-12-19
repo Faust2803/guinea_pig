@@ -1,4 +1,5 @@
-﻿using Game;
+﻿using System.Collections.Generic;
+using Game;
 using Game.Character;
 using Game.Environment;
 using SO.Scripts;
@@ -13,7 +14,7 @@ namespace Installers
     {
         [Inject] private CharacterConfig _characterConfig;
         [Inject] private EnvironmentConfig _environmentConfig;
-        [Inject] private BooletConfig _booletConfigConfig;
+        [Inject] private BooletConfig _booletConfig;
         
         public override void InstallBindings()
         {
@@ -37,8 +38,9 @@ namespace Installers
         
         private BooletView InitBoolet(DiContainer container)
         {
-            var boolet = _booletConfigConfig.BooletPrefab[0];
+            var boolet = _booletConfig.BooletPrefab[0];
             return Container.InstantiatePrefabForComponent<BooletView>(boolet);
         }
+        
     }
 }

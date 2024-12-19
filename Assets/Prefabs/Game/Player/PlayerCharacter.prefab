@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 8129718920633106013}
-  _weaponAttachment: {fileID: 7830203463683870057}
+  _weaponAttachment: {fileID: 6721301427587518415}
   _animator: {fileID: 8117583199093232115}
   _layerMask:
     serializedVersion: 2
@@ -1750,6 +1750,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7830203463683870057}
     m_Modifications:
+    - target: {fileID: 959096500854776211, guid: 7ea4ac0022de91142aadeff877fa1824, type: 3}
+      propertyPath: m_Name
+      value: WeaponAttachment
+      objectReference: {fileID: 0}
     - target: {fileID: 7510528619858064960, guid: 7ea4ac0022de91142aadeff877fa1824, type: 3}
       propertyPath: m_Name
       value: PistolPBR
@@ -1810,5 +1814,10 @@ PrefabInstance:
 --- !u!4 &4347834898465208966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7510528619858160224, guid: 7ea4ac0022de91142aadeff877fa1824, type: 3}
+  m_PrefabInstance: {fileID: 6083339663166951654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6721301427587518415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 660482376181374761, guid: 7ea4ac0022de91142aadeff877fa1824, type: 3}
   m_PrefabInstance: {fileID: 6083339663166951654}
   m_PrefabAsset: {fileID: 0}
