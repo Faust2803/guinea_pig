@@ -1,4 +1,5 @@
-﻿using Game.Character;
+﻿using Game;
+using Game.Character;
 using Game.Environment;
 using UI.Panels;
 using UI.Windows;
@@ -10,4 +11,5 @@ namespace Util
     public class FactoryPanel : PlaceholderFactory<PanelType, BasePanelView> { }
     public class FactoryCharacter : PlaceholderFactory<CharacterType, CharacterView> { }
     public class FactoryEnvironment : PlaceholderFactory<EnvironmentType, EnvironmentView> { }
+    public class FactoryBoolet : PlaceholderFactory<BooletView> { }
 }

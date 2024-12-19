@@ -61,12 +61,11 @@ namespace Game.Character.Player
                 if (Target.NavMeshAgent.velocity.magnitude < 1 )
                 {
                     //if (LastClickedObject.tag != "Enemy")
-                    if (CharacterState != CharacterStateType.Fire && CharacterState != CharacterStateType.Reload)
+                    if (LastClickedObject.tag != "Enemy" && CharacterState != CharacterStateType.Fire && CharacterState != CharacterStateType.Reload)
                     {
                         Target.Animator.Play("IdleNormal02_HG01_Anim 0");
                         CharacterState = CharacterStateType.Idle;
                     }
-                    
                 }
 
             }
