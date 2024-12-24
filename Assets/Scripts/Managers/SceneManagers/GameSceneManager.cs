@@ -11,11 +11,12 @@ using Zenject;
 
 namespace Managers.SceneManagers
 {
-    public class GameBaseSceneManager : BaseSceneManager
+    public class GameSceneManager : BaseSceneManager
     {
         [Inject] protected FactoryBoolet _factoryBoolet;
         
         private CharacterMediator _playerCharacterMediator;
+        private List<CharacterMediator>  _enemyCharacterMediatorList = new List<CharacterMediator>();
         private Stack<GameObject> _booletPool = new Stack<GameObject>();
         
         
@@ -32,11 +33,13 @@ namespace Managers.SceneManagers
 
         protected override void Init()
         {
-            LoadEnvironmentPrefab(EnvironmentType.Environment1);
+            var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
             _playerCharacterMediator = CreateCharacter(CharacterType.InGameCharacter);
-            // CreateCharacter(CharacterType.Enemy1);
-            // CreateCharacter(CharacterType.Enemy2);
-            // CreateCharacter(CharacterType.Enemy3);
+            _playerCharacterMediator.GameSceneManager = this;
+            for (var i = 0; i < environment.SpawnPoint.Count; i++)
+            {
+                _enemyCharacterMediatorList.Add(CreateCharacter(environment.EnemyType[i], new CharacterData{transform = environment.SpawnPoint[i]}));
+            }
         }
 
         private void OnDestroy()
@@ -66,6 +69,7 @@ namespace Managers.SceneManagers
         public void RemoveBoolet(GameObject boolet)
         {
             _booletPool.Push(boolet);
+            boolet.SetActive(false);
         }
         
         private BooletView LoadBooletPrefab()

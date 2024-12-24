@@ -21,6 +21,7 @@ namespace Game.Character
         public Transform WeaponAttachment => _weaponAttachment;
         public Animator Animator => _animator;
         public LayerMask LayerMask => _layerMask;
+        public NavMeshAgent NavMeshAgent => _navMeshAgent;
         
 
         public void OnCreateMediator(out CharacterMediator mediator)
@@ -38,8 +39,11 @@ namespace Game.Character
         {
             _mediator.GameLifeСycle();
         }
-        
-        public NavMeshAgent NavMeshAgent => _navMeshAgent;
 
+        public void IsShoot()
+        {
+            Debug.Log("!!!!!!");
+            _mediator.IsShoot();
+        }
     }
 }

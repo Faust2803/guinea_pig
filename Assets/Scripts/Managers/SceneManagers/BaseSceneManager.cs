@@ -55,5 +55,12 @@ namespace Managers.SceneManagers
             view.gameObject.transform.SetParent(_gameArea,false);
             return view;
         }
+        
+        protected EnvironmentView LoadEnvironmentPrefabк (EnvironmentType type)
+        {
+            var view = _factoryEnvironment.Create(type);
+            view.gameObject.transform.SetParent(_gameArea,false);
+            return view;
+        }
     }
 }

@@ -8,7 +8,6 @@ namespace Game.Character.Player
 {
     public class PlayerCharacterMediator : CharacterMediator<PlayerCharacterView, CharacterData>
     {
-        [Inject] protected GameBaseSceneManager _gameBaseSceneManager;
         private GameObject LastClickedObject;
         
         
@@ -39,6 +38,7 @@ namespace Game.Character.Player
                     {
                         Target.NavMeshAgent.enabled = false;
                         Target.Animator.Play("IdleNormal02_HG01_Anim 0");
+                        Target.Animator.SetTrigger("takeAim");
                         CharacterState = CharacterStateType.TakeAim;
                     }
                     else
@@ -79,8 +79,9 @@ namespace Game.Character.Player
             Debug.Log("Fire");
             CharacterState = CharacterStateType.Fire;
             Target.NavMeshAgent.enabled = false;
-            Target.Animator.Play("ShootSingleshot_HG01_Anim 0");
-            _gameBaseSceneManager.CreateBoolet(Target.WeaponAttachment.transform.position, Target.transform.rotation);
+            //Target.Animator.Play("ShootSingleshot_HG01_Anim 0");
+            Target.Animator.SetTrigger("shoot");
+            
         }
 
         private void Reload()

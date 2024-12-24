@@ -40,7 +40,7 @@ namespace Game.Character.Player
             _cameraTransform.rotation = newRotation;
         }
         public Camera Camera => _camera;
-        
 
+        
     }
 }

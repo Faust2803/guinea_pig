@@ -1,9 +1,12 @@
 ﻿
+using Managers.SceneManagers;
+
 namespace Game.Character
 {
     public class CharacterMediator : BaseGameMediator
     {
         public CharacterView CharacterView { get; set; }
+        public GameSceneManager GameSceneManager {get; set;}
         
         private CharacterType _characterType;
         
@@ -36,6 +39,11 @@ namespace Game.Character
         public virtual void Remove()
         {
         }
+        
+        public void IsShoot()
+        {
+            GameSceneManager.CreateBoolet(CharacterView.WeaponAttachment.transform.position, CharacterView.transform.rotation);
+        } 
 
     }
     
