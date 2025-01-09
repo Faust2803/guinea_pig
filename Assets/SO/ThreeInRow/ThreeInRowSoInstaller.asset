@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edbba8072e878f48bc6d5dbc6aa707e, type: 3}
+  m_Name: ThreeInRowSoInstaller
+  m_EditorClassIdentifier: 
+  _cellConfig: {fileID: 11400000, guid: 865d6b2b93006e14082d9164f878163a, type: 2}
+  _levelConfig: {fileID: 11400000, guid: 92e7f8b776b65894691535c03bf48fcb, type: 2}

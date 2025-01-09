@@ -7,15 +7,12 @@ namespace Game.Character
 {
     public abstract class CharacterView : BaseGameView
     {
-        
         [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] protected Transform _weaponAttachment;
         [SerializeField] protected Animator _animator;
         [SerializeField] protected LayerMask _layerMask ;
         
         protected CharacterMediator _mediator;
-
-       
         
         public CharacterMediator Mediator => _mediator;
         public Transform WeaponAttachment => _weaponAttachment;

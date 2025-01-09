@@ -14,6 +14,7 @@ namespace Managers.SceneManagers
         [Inject] protected ISoundManager _audio;
 
         [SerializeField] protected Transform  _gameArea;
+        [SerializeField] protected GameObject  _loadingObject;
 
         
         
