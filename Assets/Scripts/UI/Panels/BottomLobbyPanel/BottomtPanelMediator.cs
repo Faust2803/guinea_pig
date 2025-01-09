@@ -15,6 +15,7 @@ namespace UI.Panels.BootPanel
             base.ShowStart();
 
             Target.PlayWindowButton.onClick.AddListener(OnPlayButton);
+            Target.ThreeInRowButton.onClick.AddListener(ThreeInRowButton);
             Target.AchievmentsCompleatPointer(true);
         }
 
@@ -22,12 +23,19 @@ namespace UI.Panels.BootPanel
         {
             base.CloseStart();
             Target.PlayWindowButton.onClick.RemoveListener(OnPlayButton);
+            Target.ThreeInRowButton.onClick.RemoveListener(ThreeInRowButton);
         }
 
         private void OnPlayButton()
         {
             _uiManager.CloseAllPanels();
             _sceneLoadManagers.LoadScene(Scene.Game);
+        }
+        
+        private void ThreeInRowButton()
+        {
+            _uiManager.CloseAllPanels();
+            _sceneLoadManagers.LoadScene(Scene.ThreeInRow);
         }
 
         private async void ResetProgressButton()

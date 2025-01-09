@@ -179,5 +179,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameSceneManager: {fileID: 0}
   _collider: {fileID: 6164930514204388986}
-  _moveSpeed: 6
+  _moveSpeed: 12
   _removeTime: 5000

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Game;
 using Game.Character;
-using Game.Character.Player;
 using Game.Environment;
 using UI.Panels;
 using UnityEngine;
@@ -14,6 +13,8 @@ namespace Managers.SceneManagers
     public class GameSceneManager : BaseSceneManager
     {
         [Inject] protected FactoryBoolet _factoryBoolet;
+        [Inject] protected FactoryCharacter _factoryCharacter;
+        [Inject] protected FactoryEnvironment _factoryEnvironment;
         
         private CharacterMediator _playerCharacterMediator;
         private List<CharacterMediator>  _enemyCharacterMediatorList = new List<CharacterMediator>();
@@ -31,7 +32,7 @@ namespace Managers.SceneManagers
             Init();
         }
 
-        protected override void Init()
+        private void Init()
         {
             var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
             _playerCharacterMediator = CreateCharacter(CharacterType.InGameCharacter);
@@ -75,6 +76,42 @@ namespace Managers.SceneManagers
         private BooletView LoadBooletPrefab()
         {
             var view = _factoryBoolet.Create();
+            view.gameObject.transform.SetParent(_gameArea,false);
+            return view;
+        }
+        
+        private CharacterMediator CreateCharacter(CharacterType type, object data = null)
+        {
+            var playerCharacter = GetCharacter(type);
+            if (playerCharacter == null) return null;
+            playerCharacter.SetData(data);
+            //playerCharacter.Show();
+            return playerCharacter;
+        }
+        
+        private CharacterMediator GetCharacter(CharacterType type)
+        {
+            var view = LoadCharacterPrefab(type);
+            if (view == null) return null;
+        
+            view.Init();
+            CharacterMediator mediator;
+            view.OnCreateMediator(out mediator);
+            mediator.SetType(type);
+            
+            return mediator;
+        }
+        
+        private CharacterView LoadCharacterPrefab(CharacterType type)
+        {
+            var view = _factoryCharacter.Create(type);
+            view.gameObject.transform.SetParent(_gameArea,false);
+            return view;
+        }
+        
+        private EnvironmentView LoadEnvironmentPrefab(EnvironmentType type)
+        {
+            var view = _factoryEnvironment.Create(type);
             view.gameObject.transform.SetParent(_gameArea,false);
             return view;
         }
