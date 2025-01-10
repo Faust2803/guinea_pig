@@ -310,7 +310,7 @@ MonoBehaviour:
   _element: {fileID: 8666080078489340228}
   _delete: {fileID: 4671118046823460583}
   _deleteEffect: {fileID: 1448010219181767405}
-  _type: 0
+  _moveSpeed: 1.5
 --- !u!1 &4671118046823460583
 GameObject:
   m_ObjectHideFlags: 0

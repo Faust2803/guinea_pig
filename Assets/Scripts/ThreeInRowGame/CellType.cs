@@ -6,6 +6,8 @@
         Green,
         Orange,
         Red,
-        Yellow
+        Yellow,
+        Empty = -1,
+        NotWorking = -2
     }
 }

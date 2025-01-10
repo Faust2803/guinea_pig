@@ -10,7 +10,7 @@ namespace Managers
 
         public void Initialize()
         {
-            LoadScene(Scene.Boot);
+            LoadScene(Scene.ThreeInRow);
         }
 
         public void LoadScene(Scene scene)

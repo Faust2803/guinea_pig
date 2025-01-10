@@ -19,27 +19,36 @@ namespace Installers
         public override void InstallBindings()
         {
             //Bind Factory
-            Container.BindFactory< CharacterType, CharacterView, FactoryCharacter>().FromMethod(InitCharacter);
-            Container.BindFactory< EnvironmentType, EnvironmentView, FactoryEnvironment>().FromMethod(InitEnvironment);
-            Container.BindFactory< BooletView, FactoryBoolet>().FromMethod(InitBoolet);
+            Container.BindFactory< CharacterType, Transform, CharacterMediator, FactoryCharacter>().FromMethod(InitCharacter);
+            Container.BindFactory< EnvironmentType, Transform, EnvironmentView, FactoryEnvironment>().FromMethod(InitEnvironment);
+            Container.BindFactory< Transform, BooletView, FactoryBoolet>().FromMethod(InitBoolet);
         }
 
-        private CharacterView InitCharacter(DiContainer container, CharacterType character)
+        private CharacterMediator InitCharacter(DiContainer container, CharacterType character, Transform transform)
         {
             var level = _characterConfig.CharacterPrefab[(int)character];
-            return Container.InstantiatePrefabForComponent<CharacterView>(level);
+            var view = Container.InstantiatePrefabForComponent<CharacterView>(level);
+            view.Init();
+            var mediator = view.Mediator;
+            mediator.SetType(character);
+            view.gameObject.transform.SetParent(transform,false);
+            return mediator;
         }
         
-        private EnvironmentView InitEnvironment(DiContainer container, EnvironmentType environment)
+        private EnvironmentView InitEnvironment(DiContainer container, EnvironmentType environment, Transform transform)
         {
             var level = _environmentConfig.EnvironmentPrefab[(int)environment];
-            return Container.InstantiatePrefabForComponent<EnvironmentView>(level);
+            var view = Container.InstantiatePrefabForComponent<EnvironmentView>(level);
+            view.gameObject.transform.SetParent(transform,false);
+            return view;
         }
         
-        private BooletView InitBoolet(DiContainer container)
+        private BooletView InitBoolet(DiContainer container, Transform transform)
         {
             var boolet = _booletConfig.BooletPrefab[0];
-            return Container.InstantiatePrefabForComponent<BooletView>(boolet);
+            var view = Container.InstantiatePrefabForComponent<BooletView>(boolet);
+            view.gameObject.transform.SetParent(transform,false);
+            return view;
         }
         
     }

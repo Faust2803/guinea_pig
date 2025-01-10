@@ -20,24 +20,27 @@ namespace Installers
         public override void InstallBindings()
         {
             //Bind Factory
-            Container.BindFactory< CellType, CellMediator, FactoryCellElement>().FromMethod(InitCellElement);
-            Container.BindFactory< int, LevelView, FactoryLevel>().FromMethod(InitGreed);
+            Container.BindFactory< CellType, Transform, CellMediator, FactoryCellElement>().FromMethod(InitCellElement);
+            Container.BindFactory< int, Transform, LevelView, FactoryLevel>().FromMethod(InitGreed);
         }
 
-        private CellMediator InitCellElement(DiContainer container, CellType type)
+        private CellMediator InitCellElement(DiContainer container, CellType type, Transform transform)
         {
             var element = _cellConfig.CellPrefab[(int)type];
             var view = Container.InstantiatePrefabForComponent<CellView>(element);
             view.Init();
             var  mediator = view.Mediator;
             mediator.SetType(type);
+            view.gameObject.transform.SetParent(transform,false);
             return mediator;
         }
         
-        private LevelView InitGreed(DiContainer container, int levelNumber)
+        private LevelView InitGreed(DiContainer container, int levelNumber, Transform transform)
         {
             var level = _levelConfig.LevelPrefab[levelNumber];
-            return Container.InstantiatePrefabForComponent<LevelView>(level);
+            var view = Container.InstantiatePrefabForComponent<LevelView>(level);
+            view.gameObject.transform.SetParent(transform,false);
+            return view;
         }
     }
 }

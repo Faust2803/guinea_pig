@@ -21,11 +21,6 @@ namespace Game.Character
         public NavMeshAgent NavMeshAgent => _navMeshAgent;
         
 
-        public void OnCreateMediator(out CharacterMediator mediator)
-        {
-            mediator = _mediator;
-        }
-
         public override void Init()
         {
             base.Init();

@@ -34,7 +34,7 @@ namespace Managers.SceneManagers
 
         private void Init()
         {
-            var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
+            var environment = _factoryEnvironment.Create(EnvironmentType.Environment1, _gameArea);
             _playerCharacterMediator = CreateCharacter(CharacterType.InGameCharacter);
             _playerCharacterMediator.GameSceneManager = this;
             for (var i = 0; i < environment.SpawnPoint.Count; i++)
@@ -53,14 +53,7 @@ namespace Managers.SceneManagers
         public void CreateBoolet(Vector3 position, Quaternion rotation)
         {
             GameObject boolet;
-            if (_booletPool.Count == 0)
-            {
-                boolet = LoadBooletPrefab().gameObject;
-            }
-            else
-            {
-                boolet = _booletPool.Pop();
-            }
+            boolet = _booletPool.Count == 0 ? _factoryBoolet.Create(_gameArea).gameObject : _booletPool.Pop();
 
             boolet.transform.position = position;
             boolet.transform.rotation = rotation;
@@ -73,47 +66,13 @@ namespace Managers.SceneManagers
             boolet.SetActive(false);
         }
         
-        private BooletView LoadBooletPrefab()
-        {
-            var view = _factoryBoolet.Create();
-            view.gameObject.transform.SetParent(_gameArea,false);
-            return view;
-        }
-        
         private CharacterMediator CreateCharacter(CharacterType type, object data = null)
         {
-            var playerCharacter = GetCharacter(type);
+            var playerCharacter = _factoryCharacter.Create(type, _gameArea);
             if (playerCharacter == null) return null;
             playerCharacter.SetData(data);
             //playerCharacter.Show();
             return playerCharacter;
-        }
-        
-        private CharacterMediator GetCharacter(CharacterType type)
-        {
-            var view = LoadCharacterPrefab(type);
-            if (view == null) return null;
-        
-            view.Init();
-            CharacterMediator mediator;
-            view.OnCreateMediator(out mediator);
-            mediator.SetType(type);
-            
-            return mediator;
-        }
-        
-        private CharacterView LoadCharacterPrefab(CharacterType type)
-        {
-            var view = _factoryCharacter.Create(type);
-            view.gameObject.transform.SetParent(_gameArea,false);
-            return view;
-        }
-        
-        private EnvironmentView LoadEnvironmentPrefab(EnvironmentType type)
-        {
-            var view = _factoryEnvironment.Create(type);
-            view.gameObject.transform.SetParent(_gameArea,false);
-            return view;
         }
     }
 }
