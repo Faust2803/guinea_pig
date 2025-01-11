@@ -30,7 +30,6 @@ namespace Installers
             var view = Container.InstantiatePrefabForComponent<CellView>(element);
             view.Init();
             var  mediator = view.Mediator;
-            mediator.SetType(type);
             view.gameObject.transform.SetParent(transform,false);
             return mediator;
         }

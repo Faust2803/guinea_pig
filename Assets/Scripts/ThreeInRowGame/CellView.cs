@@ -11,14 +11,17 @@ namespace ThreeInRowGame
         [SerializeField] private GameObject _delete;
         [SerializeField] private Animator _deleteEffect;
         [SerializeField] private float _moveSpeed = 1.5F;
+        [SerializeField] private int _deleteTimeout = 1;
         
         private CellMediator _mediator;
         private Tweener _tweener;
+        public event Action MoveCompletedEvent;
         
         
         public GameObject Element => _element;
         public GameObject Delete => _delete;
         public Animator DeleteEffect => _deleteEffect;
+        public int DeleteTimeout => _deleteTimeout;
         
         public CellMediator Mediator => _mediator;
         
@@ -43,7 +46,8 @@ namespace ThreeInRowGame
         private void OnMoveCompleted()
         {
             _tweener.Kill();
-            Debug.Log("MOVE COMPLETE");
+            //Debug.Log("MOVE COMPLETE");
+            MoveCompletedEvent?.Invoke();
         }
         
     }

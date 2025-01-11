@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using ThreeInRowGame;
 using UnityEngine;
 using Util;
@@ -15,10 +16,13 @@ namespace Managers.SceneManagers
 
         private LevelView _level;
         private ThreeInRowModel _model;
-        private LifeState _currentStage = LifeState.Adding;
+        private int _moveElementCounter = 0;
+        
+        //private LifeState _currentStage = LifeState.Adding;
         
         private Dictionary<int, int> _newElementsPosition = new Dictionary<int, int>();
-        private List<CellMediator> _cellMediators = new List<CellMediator>();
+        private Dictionary<int, CellMediator> _cellMediators = new Dictionary<int, CellMediator>();
+        private Dictionary<int, CellMediator> _cellMediatorsPool = new Dictionary<int, CellMediator>();
         
         private void Start()
         {
@@ -30,7 +34,8 @@ namespace Managers.SceneManagers
 
         private void Init()
         {
-            _level = _factoryLevel.Create(0, _gameArea);
+            CellMediator.MoveCompletedEvent += OnMoveElementsCompleat;
+            _level = _factoryLevel.Create(2, _gameArea);
             _model = new ThreeInRowModel(_level.Elements, _level.SpaunElementType);
             _loadingObject.SetActive(false);
             AddCellElements();
@@ -45,7 +50,7 @@ namespace Managers.SceneManagers
                 var element =_factoryElement.Create(modelElements[i].Type, _level.GameArea);
                 FinedStartPosition(modelElements[i]);
                 element.SetData(modelElements[i]);
-                _cellMediators.Add(element);
+                _cellMediators.Add(element.GetHashCode(), element);
             }
             _newElementsPosition.Clear();
         }
@@ -66,29 +71,74 @@ namespace Managers.SceneManagers
                     {
                         _newElementsPosition.Add(cell.Poz_X, 0);
                     }
-                    
                     cell.СoordinatePoz_X = _level.StartElements[k].СoordinatePoz_X;
                     cell.СoordinatePoz_Y = _level.StartElements[k].СoordinatePoz_Y + _newElementsPosition[cell.Poz_X] * 0.5f;
-                    
                 }
             }
         }
 
         private void MoveElements()
         {
-            for (var i = 0; i < _cellMediators.Count; i++)
+            foreach (var element in _cellMediators)
             {
-                _cellMediators[i].Move(_level.Elements);
+                if (element.Value.Move(_level.Elements))
+                {
+                    _moveElementCounter++;
+                }
+            }
+
+            
+            //Debug.Log($" _moveElementCounter = {_moveElementCounter}");
+        }
+
+        private void OnMoveElementsCompleat()
+        {
+            _moveElementCounter--;
+            //Debug.Log($" _moveElementCounter = {_moveElementCounter}");
+            if (_moveElementCounter == 0)
+            {
+                //Debug.Log($" MOVE ENDED");
+                FoundAndDeleteElements();
             }
         }
+
+        private async UniTask FoundAndDeleteElements()
+        {
+            var foundElements = _model.FinedMath();
+            if (foundElements.Count == 0)
+            {
+                return;
+            }
+            await UniTask.Delay(1000);
+            var deletedKey = new List<int>(foundElements.Count);
+            foreach (var value in foundElements)
+            {
+                foreach (var element in _cellMediators)
+                {
+                    if (element.Value.Data.Poz_X == value.Value.x && element.Value.Data.Poz_Y == value.Value.y)
+                    {
+                        Debug.Log($" foundElements key = {value.Key} value = {value.Value} type = {element.Value.Data.Type}");
+                        element.Value.Delete();
+                        deletedKey.Add(element.Key);
+                    }
+                }
+            }
+            await UniTask.Delay(2000);
+            foreach (var t in deletedKey)
+            {
+                _cellMediators.Remove(t, out CellMediator cellMediator);
+                _cellMediatorsPool.Add(t, cellMediator);
+            }
+
+            Debug.Log($" DELETE COMPLEAT");
+        }
+
 
         private void OnDestroy()
         {
             _audio.StopSound(SoundManager.Enums.SoundId.JumperMusic);
+            CellMediator.MoveCompletedEvent -= OnMoveElementsCompleat;
         }
-        
-        
-        
     }
     
     public enum LifeState

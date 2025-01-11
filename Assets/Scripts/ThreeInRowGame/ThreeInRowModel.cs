@@ -42,10 +42,49 @@ namespace ThreeInRowGame
             return newElements;
         }
 
-        public List<Vector2> FinedMath()
+        public Dictionary<int, Vector3> FinedMath()
         {
-            var result = new List<Vector2>();
-
+            var result = new Dictionary<int, Vector3>();
+            for (var i = 0; i < ThreeInRowGameSceneManager.GREED_SIZE; i++)
+            {
+                for (var j = 0; j < ThreeInRowGameSceneManager.GREED_SIZE - 2; j++)
+                {
+                    if (_elements[i, j] != CellType.Empty && _elements[i, j] != CellType.NotWorking )
+                    {
+                        if (_elements[i, j] == _elements[i, j + 1] && _elements[i, j] == _elements[i, j + 2])
+                        {
+                            for (var k = j; k < j + 3; k++)
+                            {
+                                var element = new Vector3(i, k, (float)_elements[i, k]);
+                                if (!result.ContainsKey(element.GetHashCode()))
+                                {
+                                    result.Add(element.GetHashCode(), element);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            for (var j = 0; j < ThreeInRowGameSceneManager.GREED_SIZE; j++)
+            {
+                for (var i = 0; i < ThreeInRowGameSceneManager.GREED_SIZE - 2; i++)
+                {
+                    if (_elements[i, j] != CellType.Empty && _elements[i, j] != CellType.NotWorking )
+                    {
+                        if (_elements[i, j] == _elements[i + 1, j] && _elements[i, j] == _elements[i + 2, j])
+                        {
+                            for (var k = i; k < i + 3; k++)
+                            {
+                                var element = new Vector3(k, j, (float)_elements[k, j]);
+                                if (!result.ContainsKey(element.GetHashCode()))
+                                {
+                                    result.Add(element.GetHashCode(), element);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             return result;
         }
     }
