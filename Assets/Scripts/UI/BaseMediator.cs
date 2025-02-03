@@ -19,9 +19,6 @@ namespace UI
         protected float _moveto;
         protected Action _afterCloseCallback;
         protected object _data;
-        public BaseView View { get; set; }
         
-        public bool DeleteAfterClose => true;
-
     }
 }

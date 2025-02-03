@@ -12,10 +12,8 @@ namespace UI.Panels
         
         private PanelType _panelType;
         
-        public PanelType PanelType
-        {
-            get { return _panelType; }
-        }
+        public PanelType PanelType => _panelType;
+        public bool DeleteAfterClose => PanelView.DeleteAfterClose;
 
         public virtual void Mediate(BasePanelView value)
         {

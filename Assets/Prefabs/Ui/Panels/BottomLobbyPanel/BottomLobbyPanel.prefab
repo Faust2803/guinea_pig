@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 310300616056591404}
   - component: {fileID: 8467167112609061977}
   m_Layer: 0
-  m_Name: AchievemntsButton
+  m_Name: UpgradeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: airdrop
+  m_text: shop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f379f84d4e927a4e98c7979e923446c, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 7948b5219edf66448a0acece412499b8, type: 2}
@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 601062170439092756}
   - component: {fileID: 8396987582921134919}
   m_Layer: 0
-  m_Name: ProfileButton
+  m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Goals
+  m_text: Upgrade
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f379f84d4e927a4e98c7979e923446c, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 7948b5219edf66448a0acece412499b8, type: 2}
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Market
+  m_text: personage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f379f84d4e927a4e98c7979e923446c, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 7948b5219edf66448a0acece412499b8, type: 2}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 2080244313208515169}
   - component: {fileID: 3958621236576642643}
   m_Layer: 0
-  m_Name: MoonButton
+  m_Name: ShopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2136,6 +2136,10 @@ MonoBehaviour:
   _openCloseDuration: 0.1
   _playWindowButton: {fileID: 406498210984034643}
   _achievmentsCompleatPointer: {fileID: 2975347750680187453}
+  _selectPersonagButton: {fileID: 726918029969384796}
+  _settingsButton: {fileID: 8396987582921134919}
+  _upgradeButton: {fileID: 8467167112609061977}
+  _shopButton: {fileID: 3958621236576642643}
 --- !u!114 &4121025991132148340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2387,7 +2391,7 @@ GameObject:
   - component: {fileID: 4663085957339856975}
   - component: {fileID: 726918029969384796}
   m_Layer: 0
-  m_Name: CollectionButton
+  m_Name: PersonageButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

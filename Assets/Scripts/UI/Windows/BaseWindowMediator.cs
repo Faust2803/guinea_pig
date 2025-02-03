@@ -10,10 +10,12 @@ namespace UI.Windows
         
         private WindowType _windowType;
         
-        public WindowType WindowType
-        {
-            get { return _windowType; }
-        }
+        public WindowType WindowType => _windowType;
+        public bool DeleteAfterClose => WindowView.DeleteAfterClose;
+
+        private bool _closeLock;
+        
+        
 
         public virtual void Mediate(BaseWindowView value)
         {
@@ -38,6 +40,8 @@ namespace UI.Windows
             WindowView.ShowStart();
             if(WindowView.CloseButton)
                 WindowView.CloseButton.onClick.AddListener(()=>CloseSelf());
+
+            _closeLock = false;
         }
         
         public void Close(Action callback = null)
@@ -46,7 +50,7 @@ namespace UI.Windows
             {
                 _afterCloseCallback = callback;
             }
-
+            _closeLock = true;
             if(WindowView.CloseButton)
                 WindowView.CloseButton.onClick.RemoveListener(()=>CloseSelf());
             CloseStart();
@@ -96,8 +100,12 @@ namespace UI.Windows
         
         protected virtual void CloseSelf(Action callback = null)
         {
+            // костыль с локом бо почемуто срабатывает дважды при повторном закрытии окна которое не удаляется после закрытия
+            if(_closeLock) return;
             _uiManager.CloseWindow(callback);
         }
+        
+        
     }
     
     public abstract class BaseWindowMediator<T, Z> : BaseWindowMediator where T : BaseWindowView where Z : WindowData

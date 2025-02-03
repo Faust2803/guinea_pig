@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1713039305207624323}
   - component: {fileID: 743613622796039240}
   - component: {fileID: 6060417282345854914}
-  - component: {fileID: 3228111814018841394}
   - component: {fileID: 4668538649479774050}
+  - component: {fileID: 1133835141375638381}
   m_Layer: 0
   m_Name: SettingsWindow
   m_TagString: Untagged
@@ -78,28 +78,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3228111814018841394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2739506990042971288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba0671ccf38544c4aef281fd54a0708c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animationPanel: {fileID: 5871752466196936886}
-  _openAnimation: 1
-  _closeAnimation: 1
-  _deleteAfterClose: 1
-  _openCloseDuration: 0.1
-  _saveAreaPanelTransform: {fileID: 2393506265955045791}
-  _closeButton: {fileID: 6216501367213866024}
-  BtnSliderPrefab: {fileID: 1799312833886138621, guid: 37b891706affb488bb3c0782255e7dbe, type: 3}
-  ParentForSliders: {fileID: 1666112263677890942}
-  Config: {fileID: 11400000, guid: d7dc3151254dc574b928a44d1da701ba, type: 2}
 --- !u!114 &4668538649479774050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +90,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9f77a61c73d44ba5650c955558231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1133835141375638381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739506990042971288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ec9745fc6e4562bb9c2957ed9d2833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationPanel: {fileID: 5871752466196936886}
+  _openAnimation: 1
+  _closeAnimation: 1
+  _deleteAfterClose: 1
+  _openCloseDuration: 0.1
+  _saveAreaPanelTransform: {fileID: 2393506265955045791}
+  _closeButton: {fileID: 6216501367213866024}
 --- !u!1 &8025401877240516544
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseWindowPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6076677132655516027, guid: e953069beca3ba2459cafef06fc5a9ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6882347480325769753, guid: e953069beca3ba2459cafef06fc5a9ff, type: 3}
       propertyPath: m_Type
       value: 2
@@ -324,6 +325,10 @@ PrefabInstance:
     - target: {fileID: 6977386451453992871, guid: e953069beca3ba2459cafef06fc5a9ff, type: 3}
       propertyPath: m_text
       value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977386451453992871, guid: e953069beca3ba2459cafef06fc5a9ff, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 8556056365317941641, guid: e953069beca3ba2459cafef06fc5a9ff, type: 3}
       propertyPath: m_Color.b

@@ -2,23 +2,12 @@
 {
     public enum WindowType
     {
-        CollectionWindow,
-        MarketWindow,
-        NewsWindow,
-        PlayWindow,
-        ProfileWindow,
-        WalletWindow,
-        JumperGameWindow,
+        GameResultWindow,
         SimpleDialogWindow,
-        Settings,
-        Pause,
-        TamagochWindow,
-        LeaderboardWindow,
-        AchievementsWindow,
-        PyramidWindow,
-        RewardWindow,
-        HowToProgressTutorialWindow,
-        HamsterOfMoonWindow,
-        AttentionWindow
+        SettingsWindow,
+        AttentionWindow,
+        ShopWindow,
+        UpgradeWindow,
+        SelectPersonagWindow
     }
 }

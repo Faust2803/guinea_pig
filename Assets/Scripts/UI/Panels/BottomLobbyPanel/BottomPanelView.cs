@@ -10,6 +10,11 @@ namespace UI.Panels.BootPanel
         [SerializeField] private Button  _playWindowButton;
         [SerializeField] private GameObject  _achievmentsCompleatPointer;
         
+        [SerializeField] private Button  _selectPersonagButton;
+        [SerializeField] private Button  _settingsButton;
+        [SerializeField] private Button  _upgradeButton;
+        [SerializeField] private Button  _shopButton;
+        
         private Tweener _tweener;
 
         protected override void CreateMediator()
@@ -18,6 +23,11 @@ namespace UI.Panels.BootPanel
         }
 
         public Button PlayWindowButton => _playWindowButton;
+        
+        public Button SelectPersonagButton => _selectPersonagButton;
+        public Button SettingsButton => _settingsButton;
+        public Button UpgradeButton => _upgradeButton;
+        public Button ShopButton => _shopButton;
 
         public void AchievmentsCompleatPointer(bool value)
         {
