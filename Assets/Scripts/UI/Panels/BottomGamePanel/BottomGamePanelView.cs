@@ -8,6 +8,7 @@ namespace UI.Panels.BottomGamePanel
     {
         [SerializeField] private Button  _fireButton;
         [SerializeField] private Button  _reloadButton;
+        [SerializeField] private Image  _fireButtonLockImage;
        
         
         private Tweener _tweener;
@@ -18,6 +19,7 @@ namespace UI.Panels.BottomGamePanel
         }
 
         public Button FireButton => _fireButton;
+        public GameObject FireButtonLockImage => _fireButtonLockImage.gameObject;
         public Button ReloadButton => _reloadButton;
 
     }

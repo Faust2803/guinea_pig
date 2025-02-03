@@ -25,6 +25,7 @@ namespace Managers.SceneManagers
             //await _playerManager.UpdatePlayerData();
             
            _uiManager.OpenPanel(PanelType.BottomGamePanelView);
+           _uiManager.OpenPanel(PanelType.TopGamePanel);
 
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);

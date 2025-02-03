@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Managers;
 using Managers.SceneManagers;
 using UnityEngine;
@@ -10,12 +11,15 @@ namespace UI.Panels.BottomGamePanel
     {
         public static event Action OnFire;
         public static event Action OnReload;
+
+        private int _sootingDelay = 1000;
         protected override void ShowStart()
         {
             base.ShowStart();
 
             Target.FireButton.onClick.AddListener(OnFireButton);
             Target.ReloadButton.onClick.AddListener(OnReloadButton);
+            Target.FireButtonLockImage.SetActive(false);
 
         }
 
@@ -29,14 +33,24 @@ namespace UI.Panels.BottomGamePanel
         private void OnFireButton()
         {
             OnFire?.Invoke();
-
+            Target.FireButton.enabled = false;
+            Target.FireButtonLockImage.SetActive(true);
+            
+            SootingDelay();
         }
         
         private void OnReloadButton()
         {
             OnReload?.Invoke();
-
+            
         }
+
+        private async UniTask SootingDelay()
+        {
+            await UniTask.Delay(_sootingDelay);
+            Target.FireButton.enabled = true;
+            Target.FireButtonLockImage.SetActive(false);
+        } 
         
 
     }
