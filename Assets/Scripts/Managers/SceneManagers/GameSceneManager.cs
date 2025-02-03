@@ -38,7 +38,10 @@ namespace Managers.SceneManagers
             _playerCharacterMediator.GameSceneManager = this;
             for (var i = 0; i < environment.SpawnPoint.Count; i++)
             {
-                _enemyCharacterMediatorList.Add(CreateCharacter(environment.EnemyType[i], new CharacterData{transform = environment.SpawnPoint[i]}));
+                var enemy = CreateCharacter(environment.EnemyType[i],
+                    new CharacterData { transform = environment.SpawnPoint[i] });
+                _enemyCharacterMediatorList.Add(enemy);
+                
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Managers.SceneManagers;
 using UnityEngine;
 using Zenject;
@@ -11,27 +12,38 @@ namespace Game
         [SerializeField] protected Collider _collider;
         [SerializeField] protected float _moveSpeed;
         [SerializeField] protected int _removeTime = 5000;
-        
+
+        private float _speed;
+        private bool _hit;
 
         private void OnEnable()
         {
+            _speed = _moveSpeed * Time.fixedDeltaTime;
+            Create();
+        }
+        
+        private async void Create()
+        {
+            await Task.Delay(_removeTime);
             Remove();
         }
         
-        private async void Remove()
-        {
-            await Task.Delay(_removeTime);
-            GameSceneManager.RemoveBoolet(gameObject);
-        }
-
-        private void OnDisable()
+        public void Remove()
         {
             GameSceneManager.RemoveBoolet(gameObject);
         }
-
+        
         private void FixedUpdate()
         {
-            transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.forward * _speed);
+        }
+        
+        private void OnTriggerEnter(Collider other)
+        {
+            //if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Player")
+            {
+                GameSceneManager.RemoveBoolet(gameObject);
+            }
         }
     }
 }

@@ -42,8 +42,13 @@ namespace Game.Character
 
         public void IsShoot()
         {
-            Debug.Log("!!!!!!");
+            //Debug.Log("!!!!!!");
             _mediator.IsShoot();
+        }
+        
+        private void OnTriggerEnter(Collider other)
+        {
+            _mediator.Hit(other);
         }
     }
 }

@@ -55,9 +55,11 @@ namespace Game.Character.Player
             {
                 if (CharacterState == CharacterStateType.TakeAim )
                 {
+                    var weaponAttachment = Target.WeaponAttachment.transform;
                     Target.transform.rotation = Quaternion.Slerp(Target.transform.rotation, 
                         Quaternion.LookRotation(LastClickedObject.transform.position - Target.transform.position),
                         CharacterMoveSpeed * Time.deltaTime);
+                    
                     Target.transform.eulerAngles = new Vector3(0, Target.transform.eulerAngles.y, 0);
                 }
                 

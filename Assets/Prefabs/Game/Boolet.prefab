@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 950100687467047030}
   - component: {fileID: 8653269354841307623}
   - component: {fileID: 8048924776408138664}
-  - component: {fileID: 2687228009282137900}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,29 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2687228009282137900
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3344461158620576085}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6616418954208606138
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,9 +97,10 @@ GameObject:
   - component: {fileID: 5185860294539974155}
   - component: {fileID: 6164930514204388986}
   - component: {fileID: 5217240503979286032}
-  m_Layer: 0
+  - component: {fileID: 8269358663032161395}
+  m_Layer: 14
   m_Name: Boolet
-  m_TagString: Untagged
+  m_TagString: Boolet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,11 +136,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5217240503979286032
 MonoBehaviour:
@@ -179,5 +156,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameSceneManager: {fileID: 0}
   _collider: {fileID: 6164930514204388986}
-  _moveSpeed: 6
+  _moveSpeed: 12
   _removeTime: 5000
+--- !u!54 &8269358663032161395
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616418954208606138}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -8,14 +8,14 @@ TagManager:
   - CinemachineTarget
   - ScreenCamera
   - cockpit_capitalLaser
-  - Peas
-  - Corn
   - ship
   - asteroid
   - Booster
   - Destructible
   - Enemy
   - EnemySenter
+  - Boolet
+  - Character
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 ﻿
 using Managers.SceneManagers;
+using UnityEngine;
 
 namespace Game.Character
 {
@@ -43,7 +44,15 @@ namespace Game.Character
         public void IsShoot()
         {
             GameSceneManager.CreateBoolet(CharacterView.WeaponAttachment.transform.position, CharacterView.transform.rotation);
-        } 
+        }
+
+        public void Hit(Collider other)
+        {
+            if (other.gameObject.tag == "Boolet")
+            {
+                
+            }
+        }
 
     }
     
