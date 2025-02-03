@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using Game;
 using UnityEngine;
+using Vector2 = System.Numerics.Vector2;
 
 namespace ThreeInRowGame
 {
@@ -15,6 +17,7 @@ namespace ThreeInRowGame
         
         private CellMediator _mediator;
         private Tweener _tweener;
+        //private Sequence _sequence = DOTween.Sequence();
         public event Action MoveCompletedEvent;
         
         
@@ -37,10 +40,25 @@ namespace ThreeInRowGame
             _mediator = new CellMediator();
         }
 
-        public void Move(GreedElementView element)
+        public void Move(Stack<Vector3> coordinateStack, bool isSwapping = false)
         {
-            _tweener.Kill();
-            _tweener = transform.DOMove(element.transform.position, _moveSpeed).SetEase( Ease.OutExpo ).OnComplete(OnMoveCompleted);
+            if (isSwapping)
+            {
+                _tweener.Kill();
+                _tweener = transform.DOMove(coordinateStack.Pop(), 0.15F).OnComplete(OnMoveCompleted);
+            }
+            else
+            {
+                var _sequence = DOTween.Sequence();
+                while (coordinateStack.Count > 0)
+                {
+                    _sequence.Append(transform.DOMove(coordinateStack.Pop(), 0.2F));
+                }
+
+                //_sequence.SetEase(Ease.OutExpo);
+                _sequence.OnComplete(OnMoveCompleted);
+                _sequence.Play();
+            }
         }
 
         private void OnMoveCompleted()

@@ -1,4 +1,9 @@
-﻿namespace ThreeInRowGame
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+//using System.Numerics;
+
+namespace ThreeInRowGame
 {
     public class CellData
     {
@@ -8,5 +13,9 @@
         public float СoordinatePoz_Y;
         public CellType Type;
         public ElementState State;
+        public Stack<Vector2> MovementStack = new Stack<Vector2>();
+        public Stack<Vector3> CoordinateStack = new Stack<Vector3>();
+        public int MoveDelay;
+
     }
 }

@@ -22,37 +22,30 @@ namespace ThreeInRowGame
         
         public void SetData(CellData data)
         {
-            CellView.Element.SetActive(true);
-            CellView.Delete.SetActive(false);
-            CellView.transform.position = new Vector3(data.СoordinatePoz_X, data.СoordinatePoz_Y, 0);
             _data = data;
-            Data.State = ElementState.GetReadyToMove;
+            CellView.Element.SetActive(false);
+            CellView.Delete.SetActive(false);
+            Data.State = ElementState.New;
         }
 
-        public bool Move(GreedElementView[] positions)
+        public async UniTask ReadyToMove()
         {
-            if (Data.State != ElementState.GetReadyToMove) return false;
-            for (var i = 0; i < positions.Length; i++)
-            {
-                if (positions[i].Poz_X == Data.Poz_X && positions[i].Poz_Y == Data.Poz_Y)
-                {
-                    if (positions[i].СoordinatePoz_X != Data.СoordinatePoz_X || positions[i].СoordinatePoz_Y != Data.СoordinatePoz_Y)
-                    {
-                        CellView.Move(positions[i]);
-                        Data.State = ElementState.Move;
-                        Data.СoordinatePoz_X = positions[i].СoordinatePoz_X;
-                        Data.СoordinatePoz_Y = positions[i].СoordinatePoz_Y;
-                        return true;
-                    }
-                }
-
-            }
-            return false;
+            Data.State = ElementState.GetReadyToMove;
+            await UniTask.Delay(Data.MoveDelay * 200);
+            Data.State = ElementState.Move;
+            CellView.transform.position = new Vector3(Data.СoordinatePoz_X, Data.СoordinatePoz_Y, 0);
+            CellView.Element.SetActive(true);
+            CellView.Move(Data.CoordinateStack);
         }
 
         private void MoveCompleted()
         {
             Data.State = ElementState.GetReadyToMove;
+            Data.MoveDelay = 0;
+            // Data.CoordinateStack.Clear();
+            Data.MovementStack.Clear();
+            Data.СoordinatePoz_X = CellView.transform.position.x;
+            Data.СoordinatePoz_Y = CellView.transform.position.y;
             MoveCompletedEvent?.Invoke();
         }
 
@@ -61,7 +54,7 @@ namespace ThreeInRowGame
             Data.State = ElementState.Deleted;
             CellView.Element.SetActive(false);
             CellView.Delete.SetActive(true);
-            await UniTask.Delay(1000 * CellView.DeleteTimeout);
+            await UniTask.Delay(500);
             CellView.Delete.SetActive(false);
             CellView.gameObject.SetActive(false);
         }

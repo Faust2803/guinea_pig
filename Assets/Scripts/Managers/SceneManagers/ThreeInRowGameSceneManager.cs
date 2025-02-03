@@ -20,7 +20,7 @@ namespace Managers.SceneManagers
         
         //private LifeState _currentStage = LifeState.Adding;
         
-        private Dictionary<int, int> _newElementsPosition = new Dictionary<int, int>();
+        private Dictionary<GreedElementView, int> _newElementsPosition = new Dictionary<GreedElementView, int>();
         private Dictionary<int, CellMediator> _cellMediators = new Dictionary<int, CellMediator>();
         private Dictionary<int, CellMediator> _cellMediatorsPool = new Dictionary<int, CellMediator>();
         
@@ -47,12 +47,26 @@ namespace Managers.SceneManagers
             var modelElements = _model.AddNewElements();
             for (var i = 0; i < modelElements.Count; i++)
             {
-                var element =_factoryElement.Create(modelElements[i].Type, _level.GameArea);
-                FinedStartPosition(modelElements[i]);
+                var element = GetCellMediatorFromPool(modelElements[i].Type) ?? _factoryElement.Create(modelElements[i].Type, _level.GameArea);
                 element.SetData(modelElements[i]);
+                FinedStartPosition(modelElements[i]);
                 _cellMediators.Add(element.GetHashCode(), element);
             }
             _newElementsPosition.Clear();
+        }
+
+        private CellMediator GetCellMediatorFromPool(CellType type)
+        {
+            foreach (var poolElement in _cellMediatorsPool)
+            {
+                if (poolElement.Value.Data.Type == type)
+                {
+                    _cellMediatorsPool.Remove(poolElement.Key, out CellMediator element);
+                    return element;
+                }
+            }
+
+            return null;
         }
 
         private void FinedStartPosition(CellData cell)
@@ -61,18 +75,20 @@ namespace Managers.SceneManagers
             {
                 //todo
                 //if(_level.StartElements[k].IsActive == CellType.NotWorking)continue;
-                if (_level.StartElements[k].Poz_X == cell.Poz_X)
+                if (_level.StartElements[k].Poz_X == (int)cell.MovementStack.Peek().x)
                 {
-                    if (_newElementsPosition.ContainsKey(cell.Poz_X))
-                    {
-                        _newElementsPosition[cell.Poz_X]++;
-                    }
-                    else
-                    {
-                        _newElementsPosition.Add(cell.Poz_X, 0);
-                    }
                     cell.СoordinatePoz_X = _level.StartElements[k].СoordinatePoz_X;
-                    cell.СoordinatePoz_Y = _level.StartElements[k].СoordinatePoz_Y + _newElementsPosition[cell.Poz_X] * 0.5f;
+                    cell.СoordinatePoz_Y = _level.StartElements[k].СoordinatePoz_Y;
+                    
+                    if (!_newElementsPosition.ContainsKey(_level.StartElements[k]))
+                    {
+                        _newElementsPosition.Add(_level.StartElements[k], 0);
+                    }
+
+                    cell.MoveDelay = _newElementsPosition[_level.StartElements[k]];
+                    _newElementsPosition[_level.StartElements[k]]++;
+
+                    return;
                 }
             }
         }
@@ -81,13 +97,12 @@ namespace Managers.SceneManagers
         {
             foreach (var element in _cellMediators)
             {
-                if (element.Value.Move(_level.Elements))
+                if (element.Value.Data.CoordinateStack.Count > 0)
                 {
                     _moveElementCounter++;
                 }
+                element.Value.ReadyToMove();
             }
-
-            
             //Debug.Log($" _moveElementCounter = {_moveElementCounter}");
         }
 
@@ -123,15 +138,16 @@ namespace Managers.SceneManagers
                     }
                 }
             }
-            await UniTask.Delay(2000);
+            await UniTask.Delay(1500);
             foreach (var t in deletedKey)
             {
                 _cellMediators.Remove(t, out CellMediator cellMediator);
                 _cellMediatorsPool.Add(t, cellMediator);
             }
-
             Debug.Log($" DELETE COMPLEAT");
         }
+        
+        
 
 
         private void OnDestroy()
