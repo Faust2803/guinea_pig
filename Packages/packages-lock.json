@@ -1,39 +1,11 @@
 {
   "dependencies": {
-    "com.coffee.ui-effect": {
-      "version": "https://github.com/mob-sakai/UIEffect.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "332340e7bc2f8257816dd28784607a1edf6b6c2a"
-    },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "fbe0bf85155f42f8832205f7b3ac3df571ada33e"
-    },
-    "com.endel.nativewebsocket": {
-      "version": "https://github.com/endel/NativeWebSocket.git#upm",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "c5101c07762251edc82caad9e8a39d51b1229c31"
-    },
-    "com.pusher.pusherwebsocketunity": {
-      "version": "https://github.com/pusher/pusher-websocket-unity.git#2.3.0-beta+230104",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "2c328494766724442d59d8c8455b0d35f1b7ff66"
-    },
-    "com.svermeulen.extenject": {
-      "version": "https://github.com/svermeulen/Extenject.git?path=/UnityProject/Assets/Plugins/Zenject",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "31f06cf81043f04301b1072ec81922b64149ea34"
+      "hash": "8042b29ff87dd5506d7aad72bd6d8d7405985f27"
     },
     "com.unity.2d.animation": {
       "version": "10.1.4",
@@ -485,13 +457,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.unity.uiextensions": {
-      "version": "2.3.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://registry.npmjs.org"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
