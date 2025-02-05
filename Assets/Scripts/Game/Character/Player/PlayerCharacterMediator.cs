@@ -38,7 +38,6 @@ namespace Game.Character.Player
                     {
                         Target.NavMeshAgent.enabled = false;
                         Target.Animator.Play("IdleNormal02_HG01_Anim 0");
-                        Target.Animator.SetTrigger("takeAim");
                         CharacterState = CharacterStateType.TakeAim;
                     }
                     else
@@ -62,8 +61,7 @@ namespace Game.Character.Player
                     
                     Target.transform.eulerAngles = new Vector3(0, Target.transform.eulerAngles.y, 0);
                 }
-                
-                if (Target.NavMeshAgent.velocity.magnitude < 1 )
+                if (Target.NavMeshAgent.velocity.magnitude < 0.2F )
                 {
                     //if (LastClickedObject.tag != "Enemy")
                     if (LastClickedObject.tag != "Enemy" && CharacterState != CharacterStateType.Fire && CharacterState != CharacterStateType.Reload)
