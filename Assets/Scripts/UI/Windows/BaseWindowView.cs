@@ -32,7 +32,11 @@ namespace UI.Windows
         private float bottomUnits, topUnits;
         void Start()
         {
-            canvasScaler = FindObjectOfType<CanvasScaler>();
+            var obj = FindObjectOfType<CanvasScaler>();
+            if (obj == null)
+            {
+                canvasScaler = obj;
+            }
             //ApplyVerticalSafeArea();
         }
     

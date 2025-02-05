@@ -2,7 +2,7 @@
 
 namespace Managers
 {
-    public interface INetworkManager:IDisposable
+    public interface INetworkManager
     {
     }
 }

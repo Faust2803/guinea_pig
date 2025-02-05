@@ -61,17 +61,5 @@ namespace UI.Panels.BootPanel
         {
             _uiManager.OpenWindow(WindowType.ShopWindow);
         }
-
-        private async void ResetProgressButton()
-        {
-            var response = await _playerManager.ResetUser();
-            if (response)
-            {
-                PlayerPrefs.DeleteAll();
-                _uiManager.CloseAllPanels();
-                _sceneLoadManagers.LoadScene(Scene.Boot);
-            }
-        }
-
     }
 }

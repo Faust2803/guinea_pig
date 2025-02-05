@@ -8,7 +8,7 @@ namespace Managers.SceneManagers
 {
     public class LobbyBaseSceneManager : BaseSceneManager
     {
-        private async void Start()
+        private void Start()
         {
             //await _playerManager.UpdatePlayerData();
             

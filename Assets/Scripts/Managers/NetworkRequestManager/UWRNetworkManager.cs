@@ -16,20 +16,20 @@ namespace Managers
 
         [Inject] private UiManager _uiManager;
         
-        public async UniTask<PlayerDataModel> Authorization(string authToken)
-        {
-            /*var result = await SendRequest<AuthDataModel>(HamstaUri.Authorization,
-               null,
-                RequestType.Post
-                );
-            Debug.Log($"Authorization result.success == [{result.success}]");
-            if (result!= null && result.success)
-            {
-               
-                return result.player_data;
-            }*/
-            return null;
-        }
+        // public async UniTask<PlayerDataModel> Authorization(string authToken)
+        // {
+        //     /*var result = await SendRequest<AuthDataModel>(HamstaUri.Authorization,
+        //        null,
+        //         RequestType.Post
+        //         );
+        //     Debug.Log($"Authorization result.success == [{result.success}]");
+        //     if (result!= null && result.success)
+        //     {
+        //        
+        //         return result.player_data;
+        //     }*/
+        //     return null;
+        // }
         
         
 
@@ -68,6 +68,7 @@ namespace Managers
             }
             catch (Exception e)
             {
+                Debug.Log(e);
                 ShowDisconnectWindow();
                 return default(T);
 
@@ -83,10 +84,6 @@ namespace Managers
                 return JsonConvert.DeserializeObject<T>(request.downloadHandler.text);
             }
             return default(T);
-        }
-        
-        public async void Dispose()
-        {
         }
         
         private enum RequestType

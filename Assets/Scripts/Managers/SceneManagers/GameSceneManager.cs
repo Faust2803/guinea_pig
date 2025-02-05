@@ -20,7 +20,7 @@ namespace Managers.SceneManagers
         private Stack<GameObject> _booletPool = new Stack<GameObject>();
         
         
-        private async void Start()
+        private void Start()
         {
             //await _playerManager.UpdatePlayerData();
             

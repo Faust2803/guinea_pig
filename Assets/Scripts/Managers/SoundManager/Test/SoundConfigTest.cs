@@ -14,11 +14,6 @@ namespace Managers.SoundManager.Test
         [SerializeField] private string _name = "SoundIdTest";
         [SerializeField] private AssetReference _rer;
 
-        public void Testtt()
-        {
-            var t = SoundIdTest.ElectricitySparks;
-        }
-
 #if UNITY_EDITOR
         [ContextMenu("Generate")]
         public void Generate()

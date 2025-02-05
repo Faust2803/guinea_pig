@@ -19,9 +19,8 @@ namespace UI.Panels.BootPanel
 
             _adressableLoaderManager.OnLoadingProgress += LoadAdressabeProgress;
             _adressableLoaderManager.OnLoadingDataComplite += LoadAdressabeCompleat;
-            _adressableLoaderManager.LoadAdressabless(AssetLabel.Main);
             Target.LoadGameButton.onClick.AddListener(GoToLobby);
-            
+            _ = _adressableLoaderManager.LoadAdressabless(AssetLabel.Main);
         }
         
         protected override void CloseStart()
@@ -49,7 +48,7 @@ namespace UI.Panels.BootPanel
             Target.ProgressText = $"Loading {persent}% ({loaded}/{all} MB)";
         }
 
-        private async void GoToLobby()
+        private void GoToLobby()
         {
             CloseSelf();
             _sceneLoadManagers.LoadScene(Scene.Lobby);

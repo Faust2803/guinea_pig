@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEngine;
 
 public class WebGLBuilder
@@ -21,7 +22,8 @@ public class WebGLBuilder
         };
 
         PlayerSettings.stripEngineCode = false;
-        PlayerSettings.SetManagedStrippingLevel(BuildTargetGroup.WebGL, ManagedStrippingLevel.Minimal);
+        PlayerSettings.SetManagedStrippingLevel(NamedBuildTarget.WebGL, ManagedStrippingLevel.Low);
+
         // Set WebGL compression format
         PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Gzip;
 

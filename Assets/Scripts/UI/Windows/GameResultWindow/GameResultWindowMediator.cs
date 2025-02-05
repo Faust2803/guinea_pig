@@ -27,16 +27,16 @@ namespace UI.Windows.GameResultWindow
 
         
 
-        private async void OnLobbyClicked ()
-        {
-            _uiManager.ClosePanel(PanelType.GamePanel);
-            scenes.LoadScene(Scene.Lobby);
-        }
-
-        private async void OnRepeatClicked ()
-        {
-           
-        }
+        // private async void OnLobbyClicked ()
+        // {
+        //     _uiManager.ClosePanel(PanelType.GamePanel);
+        //     scenes.LoadScene(Scene.Lobby);
+        // }
+        //
+        // private async void OnRepeatClicked ()
+        // {
+        //    
+        // }
 
         
     }

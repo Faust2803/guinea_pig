@@ -36,7 +36,7 @@ namespace UI.Panels.BottomGamePanel
             Target.FireButton.enabled = false;
             Target.FireButtonLockImage.SetActive(true);
             
-            SootingDelay();
+            ShootingDelay().Forget();
         }
         
         private void OnReloadButton()
@@ -45,13 +45,11 @@ namespace UI.Panels.BottomGamePanel
             
         }
 
-        private async UniTask SootingDelay()
+        private async UniTask ShootingDelay()
         {
             await UniTask.Delay(_sootingDelay);
             Target.FireButton.enabled = true;
             Target.FireButtonLockImage.SetActive(false);
         } 
-        
-
     }
 }
