@@ -32,7 +32,7 @@ namespace UI.Windows
         private float bottomUnits, topUnits;
         void Start()
         {
-            var obj = FindObjectOfType<CanvasScaler>();
+            var obj = FindFirstObjectByType<CanvasScaler>();
             if (obj == null)
             {
                 canvasScaler = obj;

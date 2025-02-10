@@ -52,7 +52,7 @@ namespace Utils.LoadAssetHandler
                 return;
             }
 
-            Handle(operationHandle);
+            Handle(operationHandle).Forget();
         }
 
         private async UniTaskVoid Handle(AsyncOperationHandle operationHandle)

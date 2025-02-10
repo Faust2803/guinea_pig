@@ -8,12 +8,13 @@ namespace DataModels.PlayerData
     {
         public string name;
         public string email;
-
+        public int money;
+        public string id;
+        public int recoveryTime;
+        public int level;
+        public bool isNewUser;
+        public int life;
     }
 
-    [Serializable]
-    public class PlayerNameDataModel
-    {
-        public string nickname;
-    }
+    
 }

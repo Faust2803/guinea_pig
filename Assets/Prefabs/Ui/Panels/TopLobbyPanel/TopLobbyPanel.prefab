@@ -497,7 +497,6 @@ GameObject:
   - component: {fileID: 5770315720740188775}
   - component: {fileID: 3851234810656680436}
   - component: {fileID: 8465377101227092709}
-  - component: {fileID: 6623875303435600175}
   m_Layer: 0
   m_Name: TopLobbyPanel
   m_TagString: Untagged
@@ -548,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.28627452, g: 0.65882355, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -585,29 +584,6 @@ MonoBehaviour:
   _currencyItemTransform: {fileID: 993856432461467528}
   _currencyItem: {fileID: 6420014065456470857, guid: 39dff0bd9df08504ea31007d5c526aa6, type: 3}
   _myRecord: {fileID: 844947751436985527}
---- !u!114 &6623875303435600175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5956868408103590295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb48d82dc0e94a2b9246d17d04f8748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Direction: 1
-  m_Color1: {r: 0.1882353, g: 0.24705882, b: 0.80784315, a: 1}
-  m_Color2: {r: 0.23137255, g: 0.6784314, b: 0.9411765, a: 1}
-  m_Color3: {r: 1, g: 1, b: 1, a: 1}
-  m_Color4: {r: 1, g: 1, b: 1, a: 1}
-  m_Rotation: 0
-  m_Offset1: 0.02
-  m_Offset2: 0
-  m_GradientStyle: 0
-  m_ColorSpace: -1
-  m_IgnoreAspectRatio: 1
 --- !u!1 &5960053866184311504
 GameObject:
   m_ObjectHideFlags: 0
