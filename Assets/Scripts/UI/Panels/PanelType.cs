@@ -6,6 +6,7 @@
         BottomLobbyPanel,
         TopLobbyPanel,
         GamePanel,
-        TamagochiPanel
+        BottomGamePanelView,
+        TopGamePanel
     }
 }

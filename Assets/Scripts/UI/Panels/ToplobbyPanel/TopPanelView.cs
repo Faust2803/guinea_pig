@@ -1,12 +1,10 @@
-﻿using Game.Jumper;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace UI.Panels.ToplobbyPanel
 {
     public class TopPanelView : BasePanelView
     {
-        public LayerSettings[] Map;
 
         [SerializeField] private Transform  _currencyItemTransform;
         [SerializeField] private GameObject  _currencyItem;

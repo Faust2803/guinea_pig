@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: UI
   m_EditorClassIdentifier: 
   m_GroupName: UI
-  m_Data:
-    m_SerializedData: []
   m_GUID: b42c24f9137ee1445bf83c948cbebf78
   m_SerializeEntries:
-  - m_GUID: e13580e6eac4eca4e94861839076cacf
-    m_Address: Assets/Prefabs/Ui/Panels/BootPanel/BootPanel.prefab
+  - m_GUID: 04387156fde39eb4a9e8a08c0f28f1d3
+    m_Address: Assets/Prefabs/Ui/Panels/TopLobbyPanel/TopLobbyPanel.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Main
@@ -29,44 +27,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Main
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 04387156fde39eb4a9e8a08c0f28f1d3
-    m_Address: Assets/Prefabs/Ui/Panels/TopLobbyPanel/TopLobbyPanel.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Main
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 79bfd4d1dc111f14e8f3b4e918f2e9b1
-    m_Address: Assets/Prefabs/Ui/Windows/MarketWindow/MarketWindow.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Main
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3e118c8abaf1fa4409c69915bea34f78
-    m_Address: Assets/Prefabs/Ui/Windows/NewsWindow/NewsWindow.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Main
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9530e794e2f97444d94ca2e7bba6f489
-    m_Address: Assets/Prefabs/Ui/Windows/PlayWindow/PlayWindow.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Main
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 335957f11debc9f468159e5e91a8a6ab
-    m_Address: Assets/Prefabs/Ui/Windows/ProfileWindow/ProfileWindow.prefab
+  - m_GUID: e13580e6eac4eca4e94861839076cacf
+    m_Address: Assets/Prefabs/Ui/Panels/BootPanel/BootPanel.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Main
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e953069beca3ba2459cafef06fc5a9ff
     m_Address: Assets/Prefabs/Ui/Windows/Common/BaseWindowPanel.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Main
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b6aeee36f02946c4d97d2eeccc3d1d0e
-    m_Address: Assets/Prefabs/Ui/Windows/WalletWindow/WalletWindow.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Main

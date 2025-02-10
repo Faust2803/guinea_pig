@@ -46,7 +46,7 @@ namespace Utils.LoadAssetHandler
             _reference = reference;
             _result = default;
             _downloadHandler = new DownloadAssetStatusHandler();
-            Handle();
+            Handle().Forget();
         }
     
         public LoadAssetHandler(string key)
@@ -54,7 +54,7 @@ namespace Utils.LoadAssetHandler
             _reference = key;
             _result = default;
             _downloadHandler = new DownloadAssetStatusHandler();
-            Handle();
+            Handle().Forget();
         }
 
         private async UniTask<T> WaitResult()

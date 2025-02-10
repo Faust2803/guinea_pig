@@ -1,4 +1,5 @@
 ﻿using DataModels.PlayerData;
+using DataModels.ResourcesData;
 using UnityEngine;
 
 namespace SO.Scripts

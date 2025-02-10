@@ -18,7 +18,7 @@ namespace Managers.SoundManager
         public SoundDataProvider (AssetReferenceT<SoundConfig> reference)
         {
             _reference = reference;
-            Initialize();
+            Initialize().Forget();
         }
 
         private async UniTaskVoid Initialize()

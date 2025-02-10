@@ -2,12 +2,20 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - MainLight
   - CinemachineTarget
   - ScreenCamera
   - cockpit_capitalLaser
+  - ship
+  - asteroid
+  - Booster
+  - Destructible
+  - Enemy
+  - EnemySenter
+  - Boolet
+  - Character
   layers:
   - Default
   - TransparentFX
@@ -22,8 +30,8 @@ TagManager:
   - Occluder
   - Camera
   - MainCameraOnly
-  - 
-  - 
+  - Ground
+  - InGameObdject
   - 
   - 
   - 
@@ -45,3 +53,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  m_RenderingLayers:
+  - Default
+  - Screen
+  - Lamps
