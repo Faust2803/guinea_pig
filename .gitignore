@@ -73,4 +73,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 .idea/
+/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-12_5_0.*
+/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-12_5_0.*
 
