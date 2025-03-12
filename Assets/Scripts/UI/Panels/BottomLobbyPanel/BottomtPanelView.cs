@@ -48,7 +48,6 @@ namespace UI.Panels.BootPanel
             _tweener.Kill();
             _tweener = _achievmentsCompleatPointer.transform.DOScale(scale, 0.5f).SetEase( Ease.InOutSine ).SetLoops( -1, LoopType.Yoyo );
             
-            
         }
         
     }

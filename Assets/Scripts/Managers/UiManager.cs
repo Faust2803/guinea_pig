@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Installers;
 using UI.Panels;
 using UI.Windows;
-using UnityEngine;
 using Util;
 using Zenject;
 
@@ -11,10 +10,10 @@ namespace Managers
 {
     public class UiManager:IInitializable
     { 
-        [Inject] private FactoryWindow _factoryWindow;
-        [Inject] private FactoryPanel _factoryPanels;
-        [Inject] private WindowsInstaller _windowPull;
-        [Inject] private PanelsInstaller _panelPull;
+       private readonly FactoryWindow _factoryWindow;
+       private readonly FactoryPanel _factoryPanels;
+       private readonly WindowsInstaller _windowPool;
+       private readonly PanelsInstaller _panelPool;
 
         private BaseWindowMediator _currentWindow;
         private Dictionary<WindowType, BaseWindowMediator> _allWindows;
@@ -25,6 +24,15 @@ namespace Managers
         private Queue<WindowType> _windowsQueue = new Queue<WindowType>();
         private Queue<object> _windowsDataQueue = new Queue<object>();
         private Stack<BaseWindowMediator> _windowsStack = new Stack<BaseWindowMediator>();
+
+        public UiManager(FactoryWindow factoryWindow, FactoryPanel factoryPanels, WindowsInstaller windowPool, PanelsInstaller panelPool)
+        {
+            _factoryWindow = factoryWindow;
+            _factoryPanels = factoryPanels;
+            _windowPool = windowPool;
+            _panelPool = panelPool;
+        }
+       
         public void Initialize()
         {
             _allWindows = new Dictionary<WindowType, BaseWindowMediator>();
@@ -181,14 +189,14 @@ namespace Managers
         private BaseWindowView LoadPrefab(WindowType windowType)
         {
             var view = _factoryWindow.Create(windowType);
-            view.gameObject.transform.SetParent(_windowPull.transform,false);
+            view.gameObject.transform.SetParent(_windowPool.transform,false);
             return view;
         }
         
         private BasePanelView LoadPanelPrefab(PanelType panelType)
         {
             var view = _factoryPanels.Create(panelType);
-            view.gameObject.transform.SetParent(_panelPull.transform,false);
+            view.gameObject.transform.SetParent(_panelPool.transform,false);
             return view;
         }
     }

@@ -37,7 +37,7 @@ namespace Managers.ConfigDataManager
         {
             
             // Настраиваем интервал обновления (в секундах)
-            FirebaseRemoteConfig.DefaultInstance.FetchAsync(TimeSpan.Zero).ContinueWithOnMainThread(fetchTask =>
+            await FirebaseRemoteConfig.DefaultInstance.FetchAsync(TimeSpan.Zero).ContinueWithOnMainThread(fetchTask =>
             {
                 if (fetchTask.IsCompleted)
                 {

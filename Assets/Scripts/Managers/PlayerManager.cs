@@ -11,9 +11,9 @@ namespace Managers
     public class PlayerManager : IDisposable
     {
         
-        [Inject] private UiManager _uiManager;
-        [Inject] private IConfigDataManager _configDataManager;
-        [Inject] private IDatabaseManager _databaseManager;
+        private readonly UiManager _uiManager;
+        private readonly IConfigDataManager _configDataManager;
+        private readonly IDatabaseManager _databaseManager;
 
         private const string USER_ID = "userId";
         
@@ -24,6 +24,13 @@ namespace Managers
         public PlayerDataModel DataModel  { get; private set; }
         
         private string _userId;
+
+        public PlayerManager(UiManager uiManager, IConfigDataManager configDataManager, IDatabaseManager databaseManager)
+        {
+            _uiManager = uiManager;
+            _configDataManager = configDataManager;
+            _databaseManager = databaseManager;
+        }
         
         public void Init()
         {
@@ -116,7 +123,6 @@ namespace Managers
         
         public void SignOut()
         {
-            _uiManager = null;
             DataModel = new PlayerDataModel();
             DataModel.id = _userId;
             DataModel.isNewUser = true;
