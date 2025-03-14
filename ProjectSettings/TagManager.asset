@@ -32,8 +32,8 @@ TagManager:
   - MainCameraOnly
   - Ground
   - InGameObdject
-  - 
-  - 
+  - PlayerLayer
+  - EnemyLayer
   - 
   - 
   - 

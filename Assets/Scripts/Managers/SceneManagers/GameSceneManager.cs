@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Game;
 using Game.Character;
-using Game.Character.Player;
 using Game.Environment;
 using UI.Panels;
 using UnityEngine;
@@ -15,10 +14,10 @@ namespace Managers.SceneManagers
     {
         [Inject] protected FactoryBoolet _factoryBoolet;
         
-        private CharacterMediator _playerCharacterMediator;
-        private List<CharacterMediator>  _enemyCharacterMediatorList = new List<CharacterMediator>();
+        private CharacterView _playerCharacter;
+        private List<CharacterView>  _enemyCharacterList = new List<CharacterView>();
         private Stack<GameObject> _booletPool = new Stack<GameObject>();
-        
+        public EnvironmentView EnvironmentView { get; private set; }
         
         private void Start()
         {
@@ -34,22 +33,20 @@ namespace Managers.SceneManagers
 
         protected override void Init()
         {
-            var environment = LoadEnvironmentPrefab(EnvironmentType.Environment1);
-            _playerCharacterMediator = CreateCharacter(CharacterType.InGameCharacter);
-            _playerCharacterMediator.GameSceneManager = this;
-            for (var i = 0; i < environment.SpawnPoint.Count; i++)
+            EnvironmentView = LoadEnvironmentPrefab(EnvironmentType.Environment1);
+            _playerCharacter = CreateCharacter(CharacterType.InGameCharacter);
+            for (var i = 0; i < EnvironmentView.SpawnPoint.Count; i++)
             {
-                var enemy = CreateCharacter(environment.EnemyType[i],
-                    new CharacterData { transform = environment.SpawnPoint[i] });
-                _enemyCharacterMediatorList.Add(enemy);
-                
+                var enemy = CreateCharacter(EnvironmentView.EnemyType[i],
+                    new CharacterData { transform = EnvironmentView.SpawnPoint[i] });
+                _enemyCharacterList.Add(enemy);
             }
         }
 
         private void OnDestroy()
         {
             _audio.StopSound(SoundManager.Enums.SoundId.JumperMusic);
-            _playerCharacterMediator.Remove();
+            //_playerCharacterMediator.Dest();
             _booletPool.Clear();
         }
         

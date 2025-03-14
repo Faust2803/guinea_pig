@@ -1,28 +1,48 @@
 ﻿
 using System;
+using UI.Panels.BottomGamePanel;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Game.Character.Player
 {
-   public class PlayerCharacterView : CharacterView
+   public class PlayerCharacterView : GameCharacterView
     {
-
-        
         [SerializeField] private float _camSpeedPosition = 3;
         [SerializeField] private float _camSpeedRotation = 5;
         
         private Camera _camera;
         private Transform _cameraTransform;
+        
+        public Camera Camera => _camera;
+        
         private void Start()
         {
             _camera = Camera.main;
             _cameraTransform = _camera.gameObject.transform.parent.transform;
+            BottomGamePanelMediator.OnFire += Fire;
+            BottomGamePanelMediator.OnReload += Reload;
+            base.Start();
         }
         
-        protected override void CreateMediator()
+        public  void Update()
         {
-            _mediator = new PlayerCharacterMediator();
+            base.Update();
+            if (Input.GetMouseButton(0))
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, LayerMask))
+                {
+                    if(hit.collider.gameObject.tag == "Enemy")
+                    {
+                        TakeAim(hit.point, hit.collider.gameObject);
+                    }
+                    else
+                    {
+                        GoToTarget(hit.point, hit.collider.gameObject);
+                    }
+                }
+            }
         }
 
         private void LateUpdate()
@@ -39,8 +59,11 @@ namespace Game.Character.Player
             
             _cameraTransform.rotation = newRotation;
         }
-        public Camera Camera => _camera;
 
-        
+        public void OnDestroy()
+        {
+            BottomGamePanelMediator.OnFire -= Fire;
+            BottomGamePanelMediator.OnReload -= Reload;
+        }
     }
 }

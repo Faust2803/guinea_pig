@@ -19,28 +19,16 @@ namespace Managers.SceneManagers
 
         protected abstract void Init();
         
-        protected CharacterMediator CreateCharacter(CharacterType type, object data = null)
+        protected CharacterView CreateCharacter(CharacterType type, CharacterData data = null)
         {
-            var playerCharacter = GetCharacter(type);
+            var playerCharacter = LoadCharacterPrefab(type);
             if (playerCharacter == null) return null;
-            playerCharacter.SetData(data);
-            //playerCharacter.Show();
+            if (data != null)
+            {
+                playerCharacter.SetData(data);
+            }
             return playerCharacter;
         }
-        
-        private CharacterMediator GetCharacter(CharacterType type)
-        {
-            var view = LoadCharacterPrefab(type);
-            if (view == null) return null;
-        
-            view.Init();
-            CharacterMediator mediator;
-            view.OnCreateMediator(out mediator);
-            mediator.SetType(type);
-            
-            return mediator;
-        }
-        
         
         private CharacterView LoadCharacterPrefab(CharacterType type)
         {
@@ -50,13 +38,6 @@ namespace Managers.SceneManagers
         }
         
         protected EnvironmentView LoadEnvironmentPrefab(EnvironmentType type)
-        {
-            var view = _factoryEnvironment.Create(type);
-            view.gameObject.transform.SetParent(_gameArea,false);
-            return view;
-        }
-        
-        protected EnvironmentView LoadEnvironmentPrefabк (EnvironmentType type)
         {
             var view = _factoryEnvironment.Create(type);
             view.gameObject.transform.SetParent(_gameArea,false);

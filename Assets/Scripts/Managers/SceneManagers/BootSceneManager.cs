@@ -17,7 +17,7 @@ namespace Managers.SceneManagers
 
         private void Awake()
         {
-            Application.targetFrameRate = 60;
+            //Application.targetFrameRate = 60;
         }
 
         private async void Start()
