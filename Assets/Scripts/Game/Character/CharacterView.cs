@@ -1,4 +1,5 @@
-﻿using Managers.SceneManagers;
+﻿using System;
+using Managers.SceneManagers;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
@@ -19,6 +20,10 @@ namespace Game.Character
         public virtual void Remove()
         {
         }
-        
+
+        public void OnDisable()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

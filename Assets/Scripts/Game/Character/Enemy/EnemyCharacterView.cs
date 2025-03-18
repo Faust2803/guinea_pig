@@ -20,7 +20,7 @@ namespace Game.Character.Enemy
         }
         public void Update()
         {
-            base.Update();
+           
             if (LastObject == null)
             {
                 var xs = 25;
@@ -34,22 +34,37 @@ namespace Game.Character.Enemy
                 if(CharacterState ==  CharacterStateType.Run || CharacterState ==  CharacterStateType.Idle)
                 {
                     RaycastHit hit;
+                    
                     if (Physics.SphereCast(transform.position, _detectedRadius, transform.forward, out hit, _detectedDistance, LayerMask))
                     {
                         Debug.Log($"Враг {hit.collider.name} в зоне обнаружения!");
+                        TakeAim(hit.point, hit.collider.gameObject);
+                        
                     }
                     else
                     {
-                        if( NavMeshAgent.velocity.magnitude < 0.5F && !_isPauze)
+                        if(NavMeshAgent.remainingDistance < 0.1F && !_isPauze)
                         {
                             Pauze();
                         }
+                    }
+                }
+                else if(CharacterState ==  CharacterStateType.TakeAim)
+                {
+                    Ray ray = new Ray(WeaponAttachment.position, transform.forward); 
+                    RaycastHit hit; // Данные столкновения
+
+                    Debug.DrawRay(transform.position, transform.forward * _detectedRadius*2, Color.red); 
+                    if (Physics.Raycast(ray, out hit, _detectedRadius*2, LayerMask)) 
+                    {
+                        Debug.Log("Попали в: " + hit.collider.name);
                     }
                 }
                 
                 
                 
             }
+            base.Update();
         }
 
         private async UniTask Pauze()

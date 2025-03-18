@@ -31,7 +31,8 @@ namespace Game.Character.Player
             if (Input.GetMouseButton(0))
             {
                 RaycastHit hit;
-                if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, LayerMask))
+                //if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, LayerMask))
+                if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100))
                 {
                     if(hit.collider.gameObject.tag == "Enemy")
                     {

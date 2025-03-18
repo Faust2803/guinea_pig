@@ -30,6 +30,7 @@ namespace Game.Character
 
         public void Update()
         {
+            Animator.SetFloat("speed", NavMeshAgent.velocity.magnitude);
             if (CharacterState == CharacterStateType.TakeAim )
             {
                 var weaponAttachment = WeaponAttachment.transform;
@@ -38,20 +39,6 @@ namespace Game.Character
                     CharacterMoveSpeed * Time.deltaTime);
                     
                 transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-            }
-            else
-            {
-                if (LastObject != null && NavMeshAgent.velocity.magnitude < 0.1F )
-                {
-                    if ((LastObject.tag != "Enemy" || LastObject.tag != "Player") &&
-                        CharacterState != CharacterStateType.Fire &&
-                        CharacterState != CharacterStateType.Reload &&
-                        CharacterState != CharacterStateType.Idle)
-                    {
-                        Animator.Play("IdleNormal02_HG01_Anim 0");
-                        CharacterState = CharacterStateType.Idle;
-                    }
-                }
             }
         }
 
@@ -74,6 +61,7 @@ namespace Game.Character
             CharacterState = CharacterStateType.Fire;
             NavMeshAgent.enabled = false;
             Animator.SetTrigger("shoot");
+            Animator.SetBool("isShoot", true);
             
         }
 
@@ -83,6 +71,7 @@ namespace Game.Character
             CharacterState = CharacterStateType.Reload;
             NavMeshAgent.enabled = false;
             Animator.Play("Reloading_HG01_Anim 0");
+            Animator.SetBool("isShoot", false);
         }
 
         protected void GoToTarget(Vector3 target, GameObject lastObject = null)
@@ -92,6 +81,7 @@ namespace Game.Character
             Animator.Play("RunFWD_HG01_Anim 0");
             CharacterState = CharacterStateType.Run;
             LastObject = lastObject;
+            Animator.SetBool("isShoot", false);
         }
 
         protected void TakeAim(Vector3 target, GameObject lastObject = null)
@@ -100,6 +90,7 @@ namespace Game.Character
             Animator.Play("IdleNormal02_HG01_Anim 0");
             CharacterState = CharacterStateType.TakeAim;
             LastObject = lastObject;
+            Animator.SetBool("isShoot", false);
         }
     }
 }
