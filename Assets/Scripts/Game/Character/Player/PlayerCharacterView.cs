@@ -3,6 +3,7 @@ using System;
 using UI.Panels.BottomGamePanel;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 namespace Game.Character.Player
 {
@@ -28,7 +29,7 @@ namespace Game.Character.Player
         public  void Update()
         {
             base.Update();
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 RaycastHit hit;
                 //if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, LayerMask))
@@ -40,7 +41,11 @@ namespace Game.Character.Player
                     }
                     else
                     {
-                        GoToTarget(hit.point, hit.collider.gameObject);
+                        if (hit.collider.gameObject.tag == "Ground")
+                        {
+                            GoToTarget(hit.point, hit.collider.gameObject);
+                        }
+                        
                     }
                 }
             }

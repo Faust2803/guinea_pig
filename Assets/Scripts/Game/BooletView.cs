@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using Managers.SceneManagers;
 using UnityEngine;
 using Zenject;
@@ -15,22 +16,33 @@ namespace Game
 
         private float _speed;
         private bool _hit;
+        private CancellationTokenSource _cts;
 
         private void OnEnable()
         {
             _speed = _moveSpeed * Time.fixedDeltaTime;
-            Create();
+            _cts = new CancellationTokenSource(); 
+            Create(_cts.Token).Forget();
         }
         
-        private async void Create()
+        private async UniTask Create(CancellationToken token)
         {
-            await Task.Delay(_removeTime);
-            Remove();
+            try
+            {
+                await UniTask.Delay(_removeTime, cancellationToken: token);
+                Remove();
+            }
+            catch (OperationCanceledException)
+            {
+                
+            }
+            
         }
         
-        public void Remove()
+        private void Remove()
         {
             GameSceneManager.RemoveBoolet(gameObject);
+            _cts.Cancel();
         }
         
         private void FixedUpdate()
@@ -40,10 +52,7 @@ namespace Game
         
         private void OnTriggerEnter(Collider other)
         {
-            //if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Player")
-            {
-                GameSceneManager.RemoveBoolet(gameObject);
-            }
+            Remove();
         }
     }
 }

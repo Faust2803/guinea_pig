@@ -23,7 +23,7 @@ namespace Game.Character
 
         public void OnDisable()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

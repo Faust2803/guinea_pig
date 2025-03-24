@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.05666218, g: 0.11320752, b: 0.027233882, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -278,10 +278,10 @@ Light:
     m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.129
-    m_Bias: 0.05
-    m_NormalBias: 0.01
-    m_NearPlane: 0.2
+    m_Strength: 0.337
+    m_Bias: 5.21
+    m_NormalBias: 0
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -510,6 +510,14 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3558108315218707703, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: far clip plane
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558108315218707703, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: near clip plane
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5662507443279746046, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -553,6 +561,26 @@ PrefabInstance:
     - target: {fileID: 6620645804061730343, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874042889128872224, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874042889128872224, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874042889128872224, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99165994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874042889128872224, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.12888213
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874042889128872224, guid: 9dc6a672e730a07419361e2325aecb8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 14.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
