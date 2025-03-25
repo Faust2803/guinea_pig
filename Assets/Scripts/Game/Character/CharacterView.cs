@@ -14,7 +14,7 @@ namespace Game.Character
         
         public virtual void SetData(CharacterData data)
         {
-            transform.position = data.transform.position;        
+            transform.position = data.transform.position;  
         }
         
         public virtual void Remove()

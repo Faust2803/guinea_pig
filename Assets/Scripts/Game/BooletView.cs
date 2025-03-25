@@ -52,7 +52,11 @@ namespace Game
         
         private void OnTriggerEnter(Collider other)
         {
-            Remove();
+            if (other.name != "EnemyDetector")
+            {
+                Remove();
+            }
+            
         }
     }
 }

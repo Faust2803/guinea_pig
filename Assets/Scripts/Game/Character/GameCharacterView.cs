@@ -21,11 +21,17 @@ namespace Game.Character
         public LayerMask LayerMask => _layerMask;
         public NavMeshAgent NavMeshAgent => _navMeshAgent;
 
+        public void Awake()
+        {
+            NavMeshAgent.enabled = false;
+        }
+
         public void Start()
         {
             CharacterMoveSpeed = NavMeshAgent.acceleration;
             CharacterState = CharacterStateType.Idle;
             Animator.Play("IdleNormal02_HG01_Anim 0");
+            NavMeshAgent.enabled = true;
         }
 
         public void Update()
@@ -33,7 +39,6 @@ namespace Game.Character
             Animator.SetFloat("speed", NavMeshAgent.velocity.magnitude);
             if (CharacterState == CharacterStateType.TakeAim )
             {
-                var weaponAttachment = WeaponAttachment.transform;
                 transform.rotation = Quaternion.Slerp(transform.rotation, 
                     Quaternion.LookRotation(LastObject.transform.position - transform.position),
                     CharacterMoveSpeed * Time.deltaTime);
@@ -53,6 +58,8 @@ namespace Game.Character
         public void IsShoot()
         {
             GameSceneManager.CreateBoolet(WeaponAttachment.transform.position, transform.rotation);
+            Debug.Log("FireCompleated");
+            CharacterState = CharacterStateType.FireCompleated;
         }
         
         protected void Fire()
@@ -91,6 +98,12 @@ namespace Game.Character
             CharacterState = CharacterStateType.TakeAim;
             LastObject = lastObject;
             Animator.SetBool("isShoot", false);
+        }
+
+        protected void Idle()
+        {
+            CharacterState = CharacterStateType.Idle;
+            Animator.Play("IdleNormal02_HG01_Anim 0");
         }
     }
 }

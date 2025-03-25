@@ -15,6 +15,7 @@
         Run,
         TakeAim,
         Fire,
+        FireCompleated,
         Hit,
         Death,
         Reload

@@ -46,7 +46,6 @@ namespace Managers.SceneManagers
         private void OnDestroy()
         {
             _audio.StopSound(SoundManager.Enums.SoundId.JumperMusic);
-            //_playerCharacterMediator.Dest();
             _booletPool.Clear();
         }
         
