@@ -1,78 +1,111 @@
 ﻿
+using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Game.Character.Enemy
 {
     public class EnemyCharacterView : GameCharacterView
     {
+        [Space]
         [SerializeField] private float _lives = 3;
         [SerializeField] private float _boollets = 10;
+        [Space]
         [SerializeField] private float _detectedRadius = 10;
-        [SerializeField] private float _detectedDistance = 2;
         [SerializeField] private int _pauzeTime = 2000;
+        [SerializeField] private EnemyDetector _enemyDetector;
+        [SerializeField] private Vector3 _offset;
+        
         
         private Vector3 _target;
-        private bool _isPauze;
+        private CancellationTokenSource _cts;
+        
+
+        private void Awake()
+        {
+            _enemyDetector.SetDetectedRadius(_detectedRadius);
+        }
         private void Start()
         {
             base.Start();
         }
+
+        private void OnDrawGizmos()
+        {
+            if (CharacterState == CharacterStateType.TakeAim)
+            {
+                // Gizmos.color = Color.red;
+                // Gizmos.DrawLine(transform.position, transform.position * _detectedRadius);
+            }
+            //if (CharacterState == CharacterStateType.Run || CharacterState == CharacterStateType.Idle)
+            {
+                
+                if (_enemyDetector.CharacterView == null)
+                {
+                    return;
+                }
+                Gizmos.color = Color.green;
+                var direction = _enemyDetector.CharacterView.transform.position - transform.position + _offset;
+                if (direction == Vector3.zero)
+                {
+                    direction = transform.forward;
+                }
+                
+                Gizmos.DrawLine(transform.position + _offset, direction * _detectedRadius);
+                
+            }
+        }
+
         public void Update()
         {
-           
             if (LastObject == null)
             {
-                var xs = 25;
-                var xz = 25;
-                
-                _target = new Vector3(Random.Range(-1 * xs, xs), 0, Random.Range(-1 * xz, xz));
+                _target = new Vector3(Random.Range(-1 * GameSceneManager.EnvironmentView.EnemySpaseX, GameSceneManager.EnvironmentView.EnemySpaseX), 0,
+                    Random.Range(-1 * GameSceneManager.EnvironmentView.EnemySpaseZ, GameSceneManager.EnvironmentView.EnemySpaseZ));
                 GoToTarget(_target, GameSceneManager.EnvironmentView.Environment);
+                _cts = null;
             }
             else
             {
-                if(CharacterState ==  CharacterStateType.Run || CharacterState ==  CharacterStateType.Idle)
+                if (_enemyDetector.CharacterView != null)
                 {
-                    RaycastHit hit;
-                    
-                    if (Physics.SphereCast(transform.position, _detectedRadius, transform.forward, out hit, _detectedDistance, LayerMask))
+                    if (CharacterState == CharacterStateType.Run || CharacterState == CharacterStateType.Idle)
                     {
-                        Debug.Log($"Враг {hit.collider.name} в зоне обнаружения!");
-                        TakeAim(hit.point, hit.collider.gameObject);
+                        var direction = _enemyDetector.CharacterView.transform.position - transform.position + _offset;
                         
-                    }
-                    else
-                    {
-                        if(NavMeshAgent.remainingDistance < 0.1F && !_isPauze)
+                        if (Physics.Raycast(transform.position +_offset, direction.normalized, out RaycastHit hit, _detectedRadius*2))
                         {
-                            Pauze();
+                            if (!hit.transform != _enemyDetector.CharacterView.transform) 
+                            {
+                                Debug.Log("Между объектами нет препятствие: " + hit.collider.name);
+                                TakeAim(_enemyDetector.CharacterView.transform.position, _enemyDetector.CharacterView.gameObject);
+                                _cts?.Cancel();
+                            }
                         }
                     }
-                }
-                else if(CharacterState ==  CharacterStateType.TakeAim)
+                } 
+                else if(NavMeshAgent.remainingDistance < 0.1F && _cts == null)
                 {
-                    Ray ray = new Ray(WeaponAttachment.position, transform.forward); 
-                    RaycastHit hit; // Данные столкновения
-
-                    Debug.DrawRay(transform.position, transform.forward * _detectedRadius*2, Color.red); 
-                    if (Physics.Raycast(ray, out hit, _detectedRadius*2, LayerMask)) 
-                    {
-                        Debug.Log("Попали в: " + hit.collider.name);
-                    }
+                    _cts = new CancellationTokenSource(); 
+                    Pauze(_cts.Token).Forget();
                 }
-                
-                
-                
             }
             base.Update();
         }
 
-        private async UniTask Pauze()
+        private async UniTask Pauze(CancellationToken token)
         {
-            _isPauze = true;
-            await UniTask.Delay(_pauzeTime); 
-            LastObject = null;
-            _isPauze = false;
+            try
+            {
+                await UniTask.Delay(_pauzeTime, cancellationToken: token); 
+                LastObject = null;
+            }
+            catch (OperationCanceledException)
+            {
+                
+            }
         }
     }
 }
