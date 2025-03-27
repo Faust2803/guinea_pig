@@ -66,7 +66,6 @@ QualitySettings:
     - GameCoreXboxOne
     - GameCoreScarlett
     - Windows Store Apps
-    - Android
   - serializedVersion: 4
     name: Mobile High
     pixelLightCount: 2
@@ -178,7 +177,6 @@ QualitySettings:
     excludedTargetPlatforms:
     - Android
     - iPhone
-    - Standalone
     - GameCoreXboxOne
     - Nintendo Switch
     - PS4
