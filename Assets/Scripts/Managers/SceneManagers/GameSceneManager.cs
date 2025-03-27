@@ -22,7 +22,7 @@ namespace Managers.SceneManagers
         private void Start()
         {
             //await _playerManager.UpdatePlayerData();
-            
+           
            _uiManager.OpenPanel(PanelType.BottomGamePanelView);
            _uiManager.OpenPanel(PanelType.TopGamePanel);
 

@@ -34,10 +34,32 @@ namespace Game.Character.Player
         public  void Update()
         {
             base.Update();
+            switch (CharacterState)
+            {
+                case CharacterStateType.TakeAim:
+                    RotateToAim();
+                    break;
+                case CharacterStateType.Fire:
+                    if (LastObject.tag == "Enemy")
+                    {
+                        RotateToAim();
+                    }
+                    break;
+                
+                case CharacterStateType.Run :
+                case CharacterStateType.Idle :
+                case CharacterStateType.FireCompleated:
+                case CharacterStateType.Hit:
+                case CharacterStateType.Death:
+                case CharacterStateType.Reload:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            
             if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 RaycastHit hit;
-                //if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, LayerMask))
                 if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100))
                 {
                     if(hit.collider.gameObject.tag == "Enemy")
@@ -54,6 +76,8 @@ namespace Game.Character.Player
                     }
                 }
             }
+            
+            
         }
 
         private void LateUpdate()

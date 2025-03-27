@@ -20,10 +20,5 @@ namespace Game.Character
         public virtual void Remove()
         {
         }
-
-        public void OnDisable()
-        {
-            
-        }
     }
 }

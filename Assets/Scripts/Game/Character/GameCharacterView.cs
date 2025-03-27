@@ -36,14 +36,6 @@ namespace Game.Character
         public void Update()
         {
             Animator.SetFloat("speed", NavMeshAgent.velocity.magnitude);
-            if (CharacterState == CharacterStateType.TakeAim  || CharacterState == CharacterStateType.Fire)
-            {
-                transform.rotation = Quaternion.Slerp(transform.rotation, 
-                    Quaternion.LookRotation(LastObject.transform.position - transform.position),
-                    CharacterMoveSpeed * Time.deltaTime);
-                    
-                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -59,6 +51,15 @@ namespace Game.Character
             GameSceneManager.CreateBoolet(WeaponAttachment.transform.position, transform.rotation);
             Debug.Log("FireCompleated");
             CharacterState = CharacterStateType.FireCompleated;
+        }
+
+        protected void RotateToAim()
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, 
+            Quaternion.LookRotation(LastObject.transform.position - transform.position),
+            CharacterMoveSpeed * Time.deltaTime);
+                    
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
         }
         
         protected void Fire()
@@ -104,6 +105,11 @@ namespace Game.Character
             NavMeshAgent.enabled = true;
             NavMeshAgent.SetDestination(transform.position);
             CharacterState = CharacterStateType.Idle;
+        }
+
+        protected void SetState(CharacterStateType state)
+        {
+            CharacterState = state;
         }
     }
 }
