@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnvironmentPrefab:
   - {fileID: 2536964635974653334, guid: 52457251814516d43959937b7a222823, type: 3}
-  - {fileID: 2087836588836766738, guid: 9d80f7fb9f6a87d49b8485cb743bb3af, type: 3}
+  - {fileID: 2087836588836766738, guid: f83f4b3e56b9bbd42a3ce2d7361851bf, type: 3}
   - {fileID: 2087836588836766738, guid: f83f4b3e56b9bbd42a3ce2d7361851bf, type: 3}
   - {fileID: 2087836588836766738, guid: f83f4b3e56b9bbd42a3ce2d7361851bf, type: 3}

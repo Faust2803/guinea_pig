@@ -1,0 +1,5 @@
+C:/Prodject/GuineaPig/guinea_pig/.utmp/RelWithDebInfo/2y4e2l4m/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Prodject/GuineaPig/guinea_pig/.utmp/RelWithDebInfo/2y4e2l4m/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Prodject/GuineaPig/guinea_pig/.utmp/RelWithDebInfo/2y4e2l4m/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Prodject/GuineaPig/guinea_pig/.utmp/RelWithDebInfo/2y4e2l4m/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Prodject/GuineaPig/guinea_pig/.utmp/RelWithDebInfo/2y4e2l4m/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

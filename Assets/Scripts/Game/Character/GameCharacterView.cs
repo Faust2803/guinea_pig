@@ -31,13 +31,12 @@ namespace Game.Character
             CharacterMoveSpeed = NavMeshAgent.acceleration;
             CharacterState = CharacterStateType.Idle;
             Animator.Play("IdleNormal02_HG01_Anim 0");
-            NavMeshAgent.enabled = true;
         }
 
         public void Update()
         {
             Animator.SetFloat("speed", NavMeshAgent.velocity.magnitude);
-            if (CharacterState == CharacterStateType.TakeAim )
+            if (CharacterState == CharacterStateType.TakeAim  || CharacterState == CharacterStateType.Fire)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, 
                     Quaternion.LookRotation(LastObject.transform.position - transform.position),
@@ -102,8 +101,9 @@ namespace Game.Character
 
         protected void Idle()
         {
+            NavMeshAgent.enabled = true;
+            NavMeshAgent.SetDestination(transform.position);
             CharacterState = CharacterStateType.Idle;
-            Animator.Play("IdleNormal02_HG01_Anim 0");
         }
     }
 }

@@ -25,7 +25,12 @@ namespace Game.Character.Player
             BottomGamePanelMediator.OnReload += Reload;
             base.Start();
         }
-        
+
+        private void OnEnable()
+        {
+            NavMeshAgent.enabled = true;
+        }
+
         public  void Update()
         {
             base.Update();

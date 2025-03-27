@@ -30,6 +30,7 @@ namespace Game.Character.Enemy
             base.Awake();
             _enemyDetector.SetDetectedRadius(_detectedRadius);
         }
+        
         private void Start()
         {
             base.Start();
@@ -58,27 +59,25 @@ namespace Game.Character.Enemy
             }
             else
             {
-                if (_canShoot && _enemyDetector.CharacterView != null)
+                if (CharacterState == CharacterStateType.Run || CharacterState == CharacterStateType.Idle)
                 {
-                    if (CharacterState == CharacterStateType.Run || CharacterState == CharacterStateType.Idle)
+                    if (_canShoot && _enemyDetector.CharacterView != null)
                     {
-                        
-                        if(IsTernedToEnemy(transform, _enemyDetector.CharacterView.transform))
+                        if(CanSeeEnemy(transform, _enemyDetector.CharacterView.transform))
                         {
                             TakeAim(_enemyDetector.CharacterView.transform.position, _enemyDetector.CharacterView.gameObject);
                             _cts?.Cancel();
                         }
                     }
+                    else if(NavMeshAgent.remainingDistance < 0.1F && _cts == null)
+                    {
+                        _cts = new CancellationTokenSource(); 
+                        Pause(_cts.Token).Forget();
+                    }
                 } 
-                else if(NavMeshAgent.remainingDistance < 0.1F && _cts == null)
-                {
-                    _cts = new CancellationTokenSource(); 
-                    Pause(_cts.Token).Forget();
-                }
-                
             }
             base.Update();
-            if (_canShoot && CharacterState == CharacterStateType.TakeAim && IsLookingAtTarget(transform, _enemyDetector.CharacterView.transform))
+            if (_canShoot && CharacterState == CharacterStateType.TakeAim && CanSeeEnemy(transform))
             {
                 Fire();
             }
@@ -89,16 +88,16 @@ namespace Game.Character.Enemy
             }
         }
         
-        private bool IsLookingAtTarget(Transform observer, Transform target, float minDot = 1f)
+        
+        
+        private bool CanSeeEnemy(Transform observer, Transform target = null)
         {
-            var toTarget = (target.position - observer.position).normalized;
-            var dot = Vector3.Dot(observer.forward, toTarget);
-            return dot >= minDot; 
-        }
-
-        private bool IsTernedToEnemy(Transform observer, Transform target)
-        {
-            var direction = (target.position - observer.position + _offset).normalized;
+            var direction = transform.forward;
+            if (target != null)
+            {
+                direction = (target.position - observer.position + _offset).normalized;
+            }
+            
             if (Physics.Raycast(observer.position +_offset, direction.normalized, out RaycastHit hit, _detectedRadius*2))
             {
                 if (hit.collider.tag ==  "Player") 
