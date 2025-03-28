@@ -25,11 +25,6 @@ namespace Game.Character.Player
             base.Start();
         }
 
-        private void OnEnable()
-        {
-            NavMeshAgent.enabled = true;
-        }
-
         public  void Update()
         {
             base.Update();

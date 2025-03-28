@@ -11,9 +11,10 @@ namespace UI.Panels.TopGamePanel
         protected override void ShowStart()
         {
             base.ShowStart();
-            // Target.Lifes.text = Data.lifes.ToString();
-            // Target.Boolets.text = Data.boolets.ToString();
-            // Target.Enemyes.text = Data.enemyes.ToString();
+
+            Target.Lifes.text = Data.lifes.ToString();
+            Target.Boolets.text = Data.boolets.ToString();
+            Target.Enemyes.text = Data.enemyes.ToString();
         }
     }
 }

@@ -58,7 +58,7 @@ MonoBehaviour:
   _enemyType: 010000000200000003000000
   _environment: {fileID: 2758777350757889769}
   _enemySpaseX: 25
-  _enemySpaseZ: 25
+  _enemySpaseZ: 35
 --- !u!1 &7194378265378451581
 GameObject:
   m_ObjectHideFlags: 0

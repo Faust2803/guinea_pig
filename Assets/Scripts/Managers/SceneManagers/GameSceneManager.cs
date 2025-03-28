@@ -26,8 +26,8 @@ namespace Managers.SceneManagers
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
             Init();
-            _uiManager.OpenPanel(PanelType.BottomGamePanelView, new TopGamePanelData{lifes = 5, boolets = 100, enemyes = EnvironmentView.SpawnPoint.Count});
-            _uiManager.OpenPanel(PanelType.TopGamePanel);
+            _uiManager.OpenPanel(PanelType.BottomGamePanelView);
+            _uiManager.OpenPanel(PanelType.TopGamePanel, new TopGamePanelData{lifes = 5, boolets = 100, enemyes = EnvironmentView.SpawnPoint.Count});
         }
 
         protected override void Init()
