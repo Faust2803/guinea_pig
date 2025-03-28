@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -10,9 +9,6 @@ namespace Game.Character.Enemy
     public class EnemyCharacterView : GameCharacterView
     {
         [Space]
-        [SerializeField] private float _lives = 3;
-        [SerializeField] private float _boollets = 10;
-        [Space]
         [SerializeField] private float _detectedRadius = 10;
         [SerializeField] private int _pauzeTime = 2000;
         [SerializeField] private int _shootingPauzeTime = 1000;
@@ -20,10 +16,8 @@ namespace Game.Character.Enemy
         [SerializeField] private Vector3 _offset;
         [SerializeField] private float _minDistance = 4;
         
-        
         private bool _canShoot = true;
         private CancellationTokenSource _cts;
-        
 
         private void Awake()
         {
@@ -36,17 +30,17 @@ namespace Game.Character.Enemy
             base.Start();
         }
 
-        private void OnDrawGizmos()
-        {
-            if (_enemyDetector.CharacterView == null)return;
-            Gizmos.color = Color.green;
-            var direction = _enemyDetector.CharacterView.transform.position - transform.position + _offset;
-            if (direction == Vector3.zero)
-            {
-                direction = transform.forward;
-            }
-            Gizmos.DrawLine(transform.position + _offset, direction * _detectedRadius);
-        }
+        // private void OnDrawGizmos()
+        // {
+        //     if (_enemyDetector.CharacterView == null)return;
+        //     Gizmos.color = Color.green;
+        //     var direction = _enemyDetector.CharacterView.transform.position - transform.position + _offset;
+        //     if (direction == Vector3.zero)
+        //     {
+        //         direction = transform.forward;
+        //     }
+        //     Gizmos.DrawLine(transform.position + _offset, direction * _detectedRadius);
+        // }
 
         public void Update()
         {
@@ -65,6 +59,11 @@ namespace Game.Character.Enemy
                             TakeAim(_enemyDetector.CharacterView.transform.position, _enemyDetector.CharacterView.gameObject);
                             _cts?.Cancel();
                         }
+                        else
+                        {
+                            //Debug.Log("RI CS !TA");
+                            NavMeshAgent.SetDestination(_enemyDetector.CharacterView.transform.position);
+                        }
                     }
                     else if (LastObject == null)
                     {
@@ -79,15 +78,34 @@ namespace Game.Character.Enemy
                     }
                     return;
                 case CharacterStateType.TakeAim:
-                    Debug.Log("TA");
+                    //Debug.Log("TA");
                     RotateToAim();
-                    if (_canShoot && CanSeeEnemy(transform))
+                    if (_canShoot)
                     {
-                        Debug.Log("TA CS");
-                        Fire();
+                        //Debug.Log("TA CS CS");
+                        if (CanSeeEnemy(transform))
+                        {
+                            //Debug.Log("TA CS");
+                            Fire();
+                        }
+                        else
+                        {
+                            //Debug.Log("TA !CS");
+                            if (_enemyDetector.CharacterView != null)
+                            {
+                                NavMeshAgent.enabled = true;
+                                NavMeshAgent.SetDestination(_enemyDetector.CharacterView.transform.position);
+                            }
+                            else
+                            {
+                                LastObject = null;
+                                SetState(CharacterStateType.Idle);
+                            }
+                        }
                     }
                     else if (_enemyDetector.CharacterView == null)
                     {
+                        //Debug.Log("TA NP");
                         TakeNewPoint();
                     }
                     return;
@@ -95,10 +113,12 @@ namespace Game.Character.Enemy
                     //Debug.Log("F");
                     if (_enemyDetector.CharacterView != null)
                     {
+                        //Debug.Log("F RA");
                         RotateToAim();
                     }
                     else
                     {
+                        //Debug.Log("F NP");
                         TakeNewPoint();
                     }
                     return;
@@ -147,19 +167,24 @@ namespace Game.Character.Enemy
         {
             if (_enemyDetector.CharacterView != null)
             {
+                //Debug.Log("SAS C");
                 if (Vector3.Distance(_enemyDetector.CharacterView.transform.position, transform.position) < _minDistance && _enemyDetector.CharacterView != null)
                 {
                     //TakeAim(_enemyDetector.CharacterView.transform.position, _enemyDetector.CharacterView.gameObject);
+                    //Debug.Log("SAS SD");
                     SetState(CharacterStateType.TakeAim);
                 }
                 else
                 {
+                    //Debug.Log("SAS GTT");
                     GoToTarget(_enemyDetector.CharacterView.transform.position, _enemyDetector.CharacterView.gameObject);
                 }
             }
             else
             {
+                //Debug.Log("SAS !C");
                 LastObject = null;
+                SetState(CharacterStateType.Idle);
             }
         }
         
@@ -172,7 +197,6 @@ namespace Game.Character.Enemy
             }
             catch (OperationCanceledException)
             {
-                
             }
         }
         
@@ -186,7 +210,6 @@ namespace Game.Character.Enemy
             }
             catch (OperationCanceledException)
             {
-                
             }
         }
     }

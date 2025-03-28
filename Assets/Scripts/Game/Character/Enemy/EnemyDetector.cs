@@ -35,11 +35,11 @@ namespace Game.Character.Enemy
             }
         }
         
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, _radius);
-            
-        }
+        // private void OnDrawGizmos()
+        // {
+        //     Gizmos.color = Color.red;
+        //     Gizmos.DrawWireSphere(transform.position, _radius);
+        //     
+        // }
     }
 }

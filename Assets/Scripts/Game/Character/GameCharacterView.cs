@@ -49,7 +49,7 @@ namespace Game.Character
         public void IsShoot()
         {
             GameSceneManager.CreateBoolet(WeaponAttachment.transform.position, transform.rotation);
-            Debug.Log("FireCompleated");
+            //Debug.Log("FireCompleated");
             CharacterState = CharacterStateType.FireCompleated;
         }
 
@@ -64,7 +64,7 @@ namespace Game.Character
         
         protected void Fire()
         {
-            Debug.Log("Fire");
+            //Debug.Log("Fire");
             CharacterState = CharacterStateType.Fire;
             NavMeshAgent.enabled = false;
             Animator.SetTrigger("shoot");
@@ -74,7 +74,7 @@ namespace Game.Character
 
         protected void Reload()
         {
-            Debug.Log("Reload");
+            //Debug.Log("Reload");
             CharacterState = CharacterStateType.Reload;
             NavMeshAgent.enabled = false;
             Animator.Play("Reloading_HG01_Anim 0");

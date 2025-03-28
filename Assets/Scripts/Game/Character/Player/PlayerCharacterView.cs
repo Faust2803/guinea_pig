@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using UI.Panels.BottomGamePanel;
 using UnityEngine;
 using UnityEngine.AI;
@@ -72,12 +71,9 @@ namespace Game.Character.Player
                         {
                             GoToTarget(hit.point, hit.collider.gameObject);
                         }
-                        
                     }
                 }
             }
-            
-            
         }
 
         private void LateUpdate()

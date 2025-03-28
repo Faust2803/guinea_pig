@@ -21,11 +21,6 @@ namespace UI.Panels
             _moveto  = PanelView.Panel.transform.position.y;
         }
         
-        public virtual void SetData(object data)
-        {
-            _data = data;
-        }
-        
         public void SetType(PanelType windowType)
         {
             _panelType = windowType;

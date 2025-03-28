@@ -22,23 +22,23 @@ namespace Managers.SceneManagers
         private void Start()
         {
             //await _playerManager.UpdatePlayerData();
-           
-           _uiManager.OpenPanel(PanelType.BottomGamePanelView);
-           _uiManager.OpenPanel(PanelType.TopGamePanel);
-
+            
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
             Init();
+            _uiManager.OpenPanel(PanelType.BottomGamePanelView, new TopGamePanelData{lifes = 5, boolets = 100, enemyes = EnvironmentView.SpawnPoint.Count});
+            _uiManager.OpenPanel(PanelType.TopGamePanel);
         }
 
         protected override void Init()
         {
             EnvironmentView = LoadEnvironmentPrefab(EnvironmentType.Environment1);
-            _playerCharacter = CreateCharacter(CharacterType.InGameCharacter);
+            _playerCharacter = CreateCharacter(CharacterType.InGameCharacter,
+                new CharacterData { transform = EnvironmentView.PlayerSpawnPoint, lifes = 5, boollets = 100});
             for (var i = 0; i < EnvironmentView.SpawnPoint.Count; i++)
             {
                 var enemy = CreateCharacter(EnvironmentView.EnemyType[i],
-                    new CharacterData { transform = EnvironmentView.SpawnPoint[i] });
+                    new CharacterData { transform = EnvironmentView.SpawnPoint[i], lifes = 1});
                 _enemyCharacterList.Add(enemy);
             }
         }

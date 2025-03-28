@@ -20,5 +20,10 @@ namespace UI
         protected Action _afterCloseCallback;
         protected object _data;
         
+        public virtual void SetData(object data)
+        {
+            _data = data;
+        }
+        
     }
 }
