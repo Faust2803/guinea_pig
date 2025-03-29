@@ -9,7 +9,7 @@ namespace Game.Environment
         [SerializeField] private Transform _playerSpawnPoint;
         [Space]
         [SerializeField] private List<Transform> _spawnPoint;
-        [SerializeField] private List<CharacterType> _enemyType;
+        [SerializeField] private List<CharacterModelType> _enemyType;
         [SerializeField] private GameObject _environment;
         [Space]
         [SerializeField] private float _enemySpaseX = 25;
@@ -19,7 +19,7 @@ namespace Game.Environment
         public GameObject Environment => _environment;
         public float EnemySpaseX => _enemySpaseX;
         public float EnemySpaseZ => _enemySpaseZ;
-        public List<CharacterType> EnemyType => _enemyType;
+        public List<CharacterModelType> EnemyType => _enemyType;
 
     }
 }

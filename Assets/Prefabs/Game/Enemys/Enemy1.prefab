@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 85870148452666392}
   _navMeshAgent: {fileID: 5716337646868655564}
+  _collider: {fileID: 1415145943920762794}
   _weaponAttachment: {fileID: 2645637733150790328}
   _layerMask:
     serializedVersion: 2

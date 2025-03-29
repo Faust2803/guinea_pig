@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &178925624214035561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9152344612484219936}
+  m_Layer: 0
+  m_Name: VictoryCameraPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9152344612484219936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178925624214035561}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.011289113, y: 0.97688687, z: -0.05335813, w: -0.2066824}
+  m_LocalPosition: {x: 1.48, y: 0.99, z: 4.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7830203463683870049}
+  m_LocalEulerAnglesHint: {x: 6.253, y: 203.892, z: 0}
+--- !u!1 &2172178077119390314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7143875210025694448}
+  m_Layer: 0
+  m_Name: DathCameraPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7143875210025694448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2172178077119390314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.39261657, y: 0.588092, z: -0.39261657, w: 0.588092}
+  m_LocalPosition: {x: -3.78, y: 11.64, z: -1.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7830203463683870049}
+  m_LocalEulerAnglesHint: {x: 67.455, y: 90, z: 0}
 --- !u!1 &3799655575553446172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1089,8 @@ Transform:
   - {fileID: 7830203463683870063}
   - {fileID: 7830203463683870001}
   - {fileID: 2549624039880427674}
+  - {fileID: 7143875210025694448}
+  - {fileID: 9152344612484219936}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8117583199093232115
@@ -1065,12 +1129,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 8117583199093232115}
   _navMeshAgent: {fileID: 8129718920633106013}
+  _collider: {fileID: 9102131581873827189}
   _weaponAttachment: {fileID: 2549624039880427674}
   _layerMask:
     serializedVersion: 2
     m_Bits: 16384
+  _removeAfterDed: 5000
   _camSpeedPosition: 2
   _camSpeedRotation: 1.5
+  _dathPosition: {fileID: 7143875210025694448}
+  _victoryPosition: {fileID: 9152344612484219936}
 --- !u!195 &8129718920633106013
 NavMeshAgent:
   m_ObjectHideFlags: 0

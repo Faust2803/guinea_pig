@@ -19,9 +19,9 @@ namespace Managers.SceneManagers
 
         protected abstract void Init();
         
-        protected CharacterView CreateCharacter(CharacterType type, CharacterData data = null)
+        protected CharacterView CreateCharacter(CharacterModelType modelType, CharacterData data = null)
         {
-            var playerCharacter = LoadCharacterPrefab(type);
+            var playerCharacter = LoadCharacterPrefab(modelType);
             if (playerCharacter == null) return null;
             if (data != null)
             {
@@ -30,9 +30,9 @@ namespace Managers.SceneManagers
             return playerCharacter;
         }
         
-        private CharacterView LoadCharacterPrefab(CharacterType type)
+        private CharacterView LoadCharacterPrefab(CharacterModelType modelType)
         {
-            var view = _factoryCharacter.Create(type);
+            var view = _factoryCharacter.Create(modelType);
             view.gameObject.transform.SetParent(_gameArea,false);
             return view;
         }

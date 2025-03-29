@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 85870148452666392}
   _navMeshAgent: {fileID: 5770615492715937813}
+  _collider: {fileID: 7212221540322549115}
   _weaponAttachment: {fileID: 4030102157600590505}
   _layerMask:
     serializedVersion: 2

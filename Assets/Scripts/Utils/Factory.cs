@@ -9,7 +9,7 @@ namespace Util
 {
     public class FactoryWindow : PlaceholderFactory<WindowType, BaseWindowView> { }
     public class FactoryPanel : PlaceholderFactory<PanelType, BasePanelView> { }
-    public class FactoryCharacter : PlaceholderFactory<CharacterType, CharacterView> { }
+    public class FactoryCharacter : PlaceholderFactory<CharacterModelType, CharacterView> { }
     public class FactoryEnvironment : PlaceholderFactory<EnvironmentType, EnvironmentView> { }
     public class FactoryBoolet : PlaceholderFactory<BooletView> { }
 }

@@ -15,6 +15,23 @@ namespace UI.Panels.TopGamePanel
             Target.Lifes.text = Data.lifes.ToString();
             Target.Boolets.text = Data.boolets.ToString();
             Target.Enemyes.text = Data.enemyes.ToString();
+
+            Data.player.OnLostLife += OnLostLife;
+            Data.player.OnDeathEnemy += TurnOffDeathEnemy;
         }
+
+        private void OnLostLife()
+        {
+            Data.lifes--;
+            Target.Lifes.text = Data.lifes.ToString();
+        }
+        
+        private void TurnOffDeathEnemy()
+        {
+            Data.enemyes--;
+            Target.Enemyes.text = Data.enemyes.ToString();
+        }
+        
+        
     }
 }

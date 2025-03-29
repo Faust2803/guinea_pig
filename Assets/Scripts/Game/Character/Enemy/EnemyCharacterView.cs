@@ -127,13 +127,24 @@ namespace Game.Character.Enemy
                     ShootingPause().Forget();
                     SelectAfterSootingAction();
                     return;
-                case CharacterStateType.Hit:
                 case CharacterStateType.Death:
+                    return;
+                case CharacterStateType.Hit:
                 case CharacterStateType.Reload:
                     //Debug.Log("Other");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+        }
+        
+        public override void TurnOffDeathPlayer(GameCharacterView character, int emainingActiveEnemy)
+        {
+            if (_enemyDetector.CharacterView == character)
+            {
+                _enemyDetector.CharacterView = null;
+                LastObject = null;
+                SetState(CharacterStateType.Idle);
             }
         }
 
@@ -202,15 +213,9 @@ namespace Game.Character.Enemy
         
         private async UniTask ShootingPause()
         {
-            try
-            {
-                _canShoot = false;
-                await UniTask.Delay(_shootingPauzeTime); 
-                _canShoot = true;
-            }
-            catch (OperationCanceledException)
-            {
-            }
+            _canShoot = false;
+            await UniTask.Delay(_shootingPauzeTime); 
+            _canShoot = true;
         }
     }
 }

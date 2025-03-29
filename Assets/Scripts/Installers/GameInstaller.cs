@@ -19,12 +19,12 @@ namespace Installers
         public override void InstallBindings()
         {
             //Bind Factory
-            Container.BindFactory< CharacterType, CharacterView, FactoryCharacter>().FromMethod(InitCharacter);
+            Container.BindFactory< CharacterModelType, CharacterView, FactoryCharacter>().FromMethod(InitCharacter);
             Container.BindFactory< EnvironmentType, EnvironmentView, FactoryEnvironment>().FromMethod(InitEnvironment);
             Container.BindFactory< BooletView, FactoryBoolet>().FromMethod(InitBoolet);
         }
 
-        private CharacterView InitCharacter(DiContainer container, CharacterType character)
+        private CharacterView InitCharacter(DiContainer container, CharacterModelType character)
         {
             var level = _characterConfig.CharacterPrefab[(int)character];
             return Container.InstantiatePrefabForComponent<CharacterView>(level);

@@ -1,12 +1,18 @@
 ﻿namespace Game.Character
 {
-    public enum CharacterType
+    public enum CharacterModelType
     {
         InGameCharacter,
         Enemy1,
         Enemy2,
         Enemy3,
         LobbyPlayerCharacter
+    }
+    
+    public enum CharacterType
+    {
+        Player,
+        Enemy
     }
     
     public enum CharacterStateType
@@ -18,6 +24,7 @@
         FireCompleated,
         Hit,
         Death,
+        Victory,
         Reload
     }
 }

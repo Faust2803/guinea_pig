@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
 using Managers.SceneManagers;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,17 +9,22 @@ namespace Game.Character
     public abstract class GameCharacterView : CharacterView
     {
         [SerializeField] private NavMeshAgent _navMeshAgent;
-        [SerializeField] protected Transform _weaponAttachment;
-        [SerializeField] protected LayerMask _layerMask ;
+        [SerializeField] private Collider _collider;
+        [SerializeField] private Transform _weaponAttachment;
+        [SerializeField] private LayerMask _layerMask;
+        [Space]
+        [SerializeField] private int _removeAfterDed = 7000;
+        
         
         protected float CharacterMoveSpeed { get; set; }
-        public GameObject LastObject { get;  set; }
-        public CharacterStateType CharacterState { get;  private set; }
-        [Inject] public GameSceneManager GameSceneManager {get;}
+        protected GameObject LastObject { get;  set; }
+        protected CharacterStateType CharacterState { get;  private set; }
+
+        [Inject] protected GameSceneManager GameSceneManager {get;}
         
-        public Transform WeaponAttachment => _weaponAttachment;
-        public LayerMask LayerMask => _layerMask;
-        public NavMeshAgent NavMeshAgent => _navMeshAgent;
+        protected Transform WeaponAttachment => _weaponAttachment;
+        protected LayerMask LayerMask => _layerMask;
+        protected NavMeshAgent NavMeshAgent => _navMeshAgent;
 
         public void Awake()
         {
@@ -40,9 +45,15 @@ namespace Game.Character
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "Boolet")
+            if (other.gameObject.tag == "Boolet" && CharacterState != CharacterStateType.Victory)
             {
-                
+                Lives--;
+                LostLife(); 
+                Debug.Log($"lives = {Lives}");
+                if (Lives == 0 )
+                {
+                    Dad();
+                }
             }
         }
         
@@ -105,6 +116,37 @@ namespace Game.Character
             NavMeshAgent.enabled = true;
             NavMeshAgent.SetDestination(transform.position);
             CharacterState = CharacterStateType.Idle;
+        }
+        
+        protected virtual void Dad()
+        {
+            Debug.Log("Die");
+            CharacterState = CharacterStateType.Death;
+            NavMeshAgent.enabled = false;
+            Animator.SetBool("isShoot", false);
+            Animator.SetBool("die", true);
+            Animator.Play("Die_HG01_Anim 0");
+            _collider.enabled = false;
+            DeathPause().Forget();
+            GameSceneManager.TurnOffDeathCharacter(this);
+        }
+
+        protected void Victory()
+        {
+            Debug.Log("Victory");
+            CharacterState = CharacterStateType.Victory;
+            NavMeshAgent.enabled = false;
+            Animator.SetBool("isShoot", false);
+            Animator.SetBool("victory", true);
+            Animator.Play("Victory_HG01_Anim 0");
+            _collider.enabled = false;
+        }
+        
+        private async UniTask DeathPause()
+        {
+            await UniTask.Delay(_removeAfterDed); 
+            gameObject.SetActive(false);
+            GameSceneManager.CheckEndLevel();
         }
 
         protected void SetState(CharacterStateType state)

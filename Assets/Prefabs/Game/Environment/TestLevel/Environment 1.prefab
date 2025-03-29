@@ -53,9 +53,7 @@ MonoBehaviour:
   _playerSpawnPoint: {fileID: 4996890692090630928}
   _spawnPoint:
   - {fileID: 5125215083321469426}
-  - {fileID: 1754626485657702969}
-  - {fileID: 1570377122770585196}
-  _enemyType: 010000000200000003000000
+  _enemyType: 01000000
   _environment: {fileID: 2758777350757889769}
   _enemySpaseX: 30
   _enemySpaseZ: 30
