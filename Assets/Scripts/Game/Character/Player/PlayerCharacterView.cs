@@ -16,6 +16,7 @@ namespace Game.Character.Player
         
         private Camera _camera;
         private Transform _cameraTransform;
+        private BottomGamePanelMediator _bottomGamePanelMediator;
         
         public Camera Camera => _camera;
         
@@ -23,9 +24,14 @@ namespace Game.Character.Player
         {
             _camera = Camera.main;
             _cameraTransform = _camera.gameObject.transform.parent.transform;
-            BottomGamePanelMediator.OnFire += Fire;
-            BottomGamePanelMediator.OnReload += Reload;
             base.Start();
+        }
+
+        public void SetUiButtons(BottomGamePanelMediator bottomGamePanelMediator)
+        {
+            _bottomGamePanelMediator = bottomGamePanelMediator;
+            _bottomGamePanelMediator.OnFire += Fire;
+            _bottomGamePanelMediator.OnReload += Reload;
         }
 
         public  void Update()
@@ -87,8 +93,8 @@ namespace Game.Character.Player
         protected override void Dad(GameCharacterView shooter)
         {
             base.Dad(shooter);
-            BottomGamePanelMediator.OnFire -= Fire;
-            BottomGamePanelMediator.OnReload -= Reload;
+            _bottomGamePanelMediator.OnFire -= Fire;
+            _bottomGamePanelMediator.OnReload -= Reload;
         }
 
         private void LateUpdate()
@@ -117,8 +123,8 @@ namespace Game.Character.Player
 
         private void OnDestroy()
         {
-            BottomGamePanelMediator.OnFire -= Fire;
-            BottomGamePanelMediator.OnReload -= Reload;
+            _bottomGamePanelMediator.OnFire -= Fire;
+            _bottomGamePanelMediator.OnReload -= Reload;
         }
     }
 }

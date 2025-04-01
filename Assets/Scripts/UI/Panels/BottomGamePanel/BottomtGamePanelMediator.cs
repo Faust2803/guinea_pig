@@ -9,8 +9,8 @@ namespace UI.Panels.BottomGamePanel
 {
     public class BottomGamePanelMediator : BasePanelMediator<BottomGamePanelView, PanelData>
     {
-        public static event Action OnFire;
-        public static event Action OnReload;
+        public event Action OnFire;
+        public event Action OnReload;
 
         private int _sootingDelay = 1000;
         protected override void ShowStart()

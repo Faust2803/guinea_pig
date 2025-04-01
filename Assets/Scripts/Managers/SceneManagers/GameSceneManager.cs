@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using Game;
 using Game.Character;
+using Game.Character.Player;
 using Game.Environment;
 using UI.Panels;
+using UI.Panels.BottomGamePanel;
 using UI.Panels.TopGamePanel;
 using UI.Windows;
 using UI.Windows.GameResultWindow;
@@ -16,7 +18,7 @@ namespace Managers.SceneManagers
     {
         [Inject] protected FactoryBoolet _factoryBoolet;
         
-        private CharacterView _playerCharacter;
+        private PlayerCharacterView _playerCharacter;
         private List<CharacterView>  _enemyCharacterList = new List<CharacterView>();
         private Stack<BooletView> _booletPool = new Stack<BooletView>();
         public EnvironmentView EnvironmentView { get; private set; }
@@ -26,6 +28,7 @@ namespace Managers.SceneManagers
         
         private Dictionary<CharacterView, int> _score = new Dictionary<CharacterView, int>();
         private TopGamePanelMediator _topGamePanel;
+        private BottomGamePanelMediator _bottomGamePanel;
         
         // Need add to config
         private int _killScoreFactor = 10;
@@ -37,11 +40,12 @@ namespace Managers.SceneManagers
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
             Init();
-            _uiManager.OpenPanel(PanelType.BottomGamePanel);
+            _bottomGamePanel = _uiManager.OpenPanel(PanelType.BottomGamePanel)as BottomGamePanelMediator;
             _topGamePanel = _uiManager.OpenPanel(PanelType.TopGamePanel, 
                 new TopGamePanelData{lifes = _playerCharacter.Lives, boolets = 100, enemyes = EnvironmentView.SpawnPoint.Count, player = _playerCharacter}
                 ) as TopGamePanelMediator;
             _topGamePanel.OnExit += OnExit;
+            _playerCharacter.SetUiButtons(_bottomGamePanel);
             _score.Clear();
         }
 
@@ -50,7 +54,7 @@ namespace Managers.SceneManagers
             EnvironmentView = LoadEnvironmentPrefab(EnvironmentType.Environment1);
             _playerCharacter = CreateCharacter(CharacterModelType.InGameCharacter,
                 new CharacterData { transform = EnvironmentView.PlayerSpawnPoint, lifes = 5, boollets = 100, type = CharacterType.Player}
-                );
+                ) as PlayerCharacterView;
             _playerCounter = 1;
             for (var i = 0; i < EnvironmentView.SpawnPoint.Count; i++)
             {
