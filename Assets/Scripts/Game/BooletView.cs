@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Game.Character;
 using Managers.SceneManagers;
 using UnityEngine;
 using Zenject;
@@ -17,6 +18,16 @@ namespace Game
         private float _speed;
         private bool _hit;
         private CancellationTokenSource _cts;
+
+        public GameCharacterView Shooter {get; private set; }
+
+        public void SetData(GameCharacterView character,  Vector3 position, Quaternion rotation)
+        {
+            transform.position = position;
+            transform.rotation = rotation;
+            Shooter = character;
+            gameObject.SetActive(true);
+        }
 
         private void OnEnable()
         {
@@ -36,13 +47,17 @@ namespace Game
             {
                 
             }
-            
         }
         
         private void Remove()
         {
-            GameSceneManager.RemoveBoolet(gameObject);
-            _cts.Cancel();
+            if (GameSceneManager)
+            {
+                GameSceneManager.RemoveBoolet(this);
+                _cts.Cancel();
+                Shooter = null;
+                gameObject.SetActive(false);
+            }
         }
         
         private void FixedUpdate()
@@ -56,7 +71,6 @@ namespace Game
             {
                 Remove();
             }
-            
         }
     }
 }

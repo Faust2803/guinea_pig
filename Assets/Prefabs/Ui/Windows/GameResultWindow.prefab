@@ -351,7 +351,7 @@ MonoBehaviour:
   _saveAreaPanelTransform: {fileID: 2393506265955045791}
   _closeButton: {fileID: 0}
   _isWin: {fileID: 4305765205902479537}
-  _boolets: {fileID: 3786422894198890616}
+  _bullets: {fileID: 3786422894198890616}
   _enemyes: {fileID: 8791764553975273850}
   _lives: {fileID: 2768093545203799952}
   _score: {fileID: 7013578043776946910}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 3589769228638565355}
   - component: {fileID: 3786422894198890616}
   m_Layer: 0
-  m_Name: Boolets
+  m_Name: Bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1145,7 +1145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9220781783204030640, guid: e953069beca3ba2459cafef06fc5a9ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.000061
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

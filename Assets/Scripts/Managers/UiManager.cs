@@ -93,7 +93,7 @@ namespace Managers
             _currentWindow = null;
         }
 
-        public void OpenPanel(PanelType panelType, object data = null)
+        public BasePanelMediator OpenPanel(PanelType panelType, object data = null)
         {
             BasePanelMediator panel;
             if (_allPanels.ContainsKey(panelType))
@@ -103,16 +103,17 @@ namespace Managers
             else
             {
                 panel = GetPanel(panelType);
-                if (panel == null) return;
+                if (panel == null) return null;
                 _allPanels.Add(panelType, panel);
             }
             panel.SetData(data);
             panel.Show();
+            return panel;
         }
         
-        public void ForceOpenPanel(PanelType panelType, object data = null)
+        public BasePanelMediator ForceOpenPanel(PanelType panelType, object data = null)
         {
-            OpenPanel(panelType, data);
+            return OpenPanel(panelType, data);
         }
         
         public void CloseWindow(Action callback = null)

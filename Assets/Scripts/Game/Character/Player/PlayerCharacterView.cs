@@ -84,9 +84,9 @@ namespace Game.Character.Player
             }
         }
 
-        protected override void Dad()
+        protected override void Dad(GameCharacterView shooter)
         {
-            base.Dad();
+            base.Dad(shooter);
             BottomGamePanelMediator.OnFire -= Fire;
             BottomGamePanelMediator.OnReload -= Reload;
         }

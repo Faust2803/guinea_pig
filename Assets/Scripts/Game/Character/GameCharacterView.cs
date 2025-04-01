@@ -52,14 +52,14 @@ namespace Game.Character
                 Debug.Log($"lives = {Lives}");
                 if (Lives == 0 )
                 {
-                    Dad();
+                    Dad(other.gameObject.GetComponent<BooletView>().Shooter);
                 }
             }
         }
         
         public void IsShoot()
         {
-            GameSceneManager.CreateBoolet(WeaponAttachment.transform.position, transform.rotation);
+            GameSceneManager.CreateBoolet(WeaponAttachment.transform.position, transform.rotation, this);
             //Debug.Log("FireCompleated");
             CharacterState = CharacterStateType.FireCompleated;
         }
@@ -118,7 +118,7 @@ namespace Game.Character
             CharacterState = CharacterStateType.Idle;
         }
         
-        protected virtual void Dad()
+        protected virtual void Dad(GameCharacterView shooter)
         {
             Debug.Log("Die");
             CharacterState = CharacterStateType.Death;
@@ -128,7 +128,7 @@ namespace Game.Character
             Animator.Play("Die_HG01_Anim 0");
             _collider.enabled = false;
             DeathPause().Forget();
-            GameSceneManager.TurnOffDeathCharacter(this);
+            GameSceneManager.TurnOffDeathCharacter(this, shooter);
         }
 
         protected void Victory()

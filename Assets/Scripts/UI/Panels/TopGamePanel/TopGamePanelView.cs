@@ -10,7 +10,9 @@ namespace UI.Panels.TopGamePanel
         [SerializeField] private TextMeshProUGUI  _lifes;
         [SerializeField] private TextMeshProUGUI  _boolets;
         [SerializeField] private TextMeshProUGUI  _enemyes;
-       
+        [SerializeField] private TextMeshProUGUI  _score;
+        [Space]
+        [SerializeField] private Button _endButton;
         
         private Tweener _tweener;
 
@@ -22,6 +24,8 @@ namespace UI.Panels.TopGamePanel
        public TextMeshProUGUI  Lifes => _lifes;
        public TextMeshProUGUI  Boolets => _boolets;
        public TextMeshProUGUI  Enemyes => _enemyes;
+       public TextMeshProUGUI  Score => _score;
+       public Button EndButton => _endButton;
 
     }
 }

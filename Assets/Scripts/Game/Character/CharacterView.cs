@@ -1,18 +1,14 @@
 ﻿using System;
-using Managers.SceneManagers;
 using UnityEngine;
-using UnityEngine.AI;
-using Zenject;
 
 namespace Game.Character
 {
     public abstract class CharacterView : MonoBehaviour
     {
-
         [SerializeField] protected Animator _animator;
         
         protected Animator Animator => _animator;
-        protected float Lives { get; set;}
+        public int Lives { get; set;}
         protected float Boollets { get; set;}
         public CharacterType CharacterType { get; set;}
         

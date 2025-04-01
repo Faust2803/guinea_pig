@@ -8,5 +8,6 @@ namespace UI.Panels
         public int boolets;
         public int enemyes;
         public CharacterView player;
+        public int Score;
     }
 }

@@ -27,6 +27,13 @@ namespace UI.Windows.GameResultWindow
 
             Target.LobbyButton.onClick.AddListener(OnLobbyClicked);
             Target.RepeatButton.onClick.AddListener(OnRepeatClicked);
+
+            Target.IsWin.text = Data.IsWin ? "You won" : "You lose";
+            Target.Lives.text = $"Life Count {Data.Lives.ToString()}";
+            Target.Score.text = $"Score received {Data.Score.ToString()}";
+            Target.Enemyes.text = $"Enemyes destroyed {Data.Enemyes.ToString()}";
+            Target.Bullets.text = $"Bullet used {Data.Bullets.ToString()}";
+            
         }
         
         protected override void CloseStart()
@@ -35,8 +42,6 @@ namespace UI.Windows.GameResultWindow
             Target.LobbyButton.onClick.RemoveListener(OnLobbyClicked);
             Target.RepeatButton.onClick.RemoveListener(OnRepeatClicked);
         }
-
-        
 
         private  void OnLobbyClicked ()
         {
