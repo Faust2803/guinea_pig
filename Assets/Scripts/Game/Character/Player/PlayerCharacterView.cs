@@ -43,7 +43,7 @@ namespace Game.Character.Player
                     RotateToAim();
                     break;
                 case CharacterStateType.Fire:
-                    if (LastObject.tag == "Enemy")
+                    if (LastObject != null && LastObject.tag == "Enemy")
                     {
                         RotateToAim();
                     }
