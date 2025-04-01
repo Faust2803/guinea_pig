@@ -6,7 +6,7 @@
         BottomLobbyPanel,
         TopLobbyPanel,
         GamePanel,
-        BottomGamePanelView,
+        BottomGamePanel,
         TopGamePanel
     }
 }

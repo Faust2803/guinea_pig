@@ -11,32 +11,50 @@ namespace UI.Windows.GameResultWindow
 {
     public class GameResultWindowMediator : BaseWindowMediator<GameResultWindowView, GameResultData>
     {
-        private const string ResultTextFormat = "{0} km";
-
-        [Inject] UiManager ui;
         [Inject] SceneLoadManagers scenes;
         [Inject] PlayerManager playerManager;
         [Inject] ISoundManager sounds;
-
-
+        
         public override void SetData(object data)
         {
             base.SetData(data);
             sounds.StopSound(Managers.SoundManager.Enums.SoundId.JumperMusic);
         }
+        
+        protected override void ShowStart()
+        {
+            base.ShowStart();
+
+            Target.LobbyButton.onClick.AddListener(OnLobbyClicked);
+            Target.RepeatButton.onClick.AddListener(OnRepeatClicked);
+        }
+        
+        protected override void CloseStart()
+        {
+            base.CloseStart();
+            Target.LobbyButton.onClick.RemoveListener(OnLobbyClicked);
+            Target.RepeatButton.onClick.RemoveListener(OnRepeatClicked);
+        }
 
         
 
-        // private async void OnLobbyClicked ()
-        // {
-        //     _uiManager.ClosePanel(PanelType.GamePanel);
-        //     scenes.LoadScene(Scene.Lobby);
-        // }
-        //
-        // private async void OnRepeatClicked ()
-        // {
-        //    
-        // }
+        private  void OnLobbyClicked ()
+        {
+            scenes.LoadScene(Scene.Lobby);
+            _uiManager.CloseAllPanels();
+            CloseSelf();
+        }
+        
+        private void OnRepeatClicked ()
+        {
+            scenes.ReloadScene();
+            _uiManager.CloseAllPanels();
+            CloseSelf();
+            
+        }
+        
+       
+
 
         
     }

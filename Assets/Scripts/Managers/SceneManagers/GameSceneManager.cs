@@ -3,6 +3,7 @@ using Game;
 using Game.Character;
 using Game.Environment;
 using UI.Panels;
+using UI.Windows;
 using UnityEngine;
 using Util;
 using Zenject;
@@ -29,7 +30,7 @@ namespace Managers.SceneManagers
             _audio.PlaySound(SoundManager.Enums.SoundId.JumperMusic, isLoop: true, false);
             _audio.UpdateVolumeSound(SoundManager.Enums.SoundId.JumperMusic, 0.5f);
             Init();
-            _uiManager.OpenPanel(PanelType.BottomGamePanelView);
+            _uiManager.OpenPanel(PanelType.BottomGamePanel);
             _uiManager.OpenPanel(PanelType.TopGamePanel, new TopGamePanelData{lifes = 5, boolets = 100, enemyes = EnvironmentView.SpawnPoint.Count, player = _playerCharacter});
         }
 
@@ -108,11 +109,13 @@ namespace Managers.SceneManagers
             if (_playerCounter == 0)
             {
                 Debug.Log("defeat");
+                _uiManager.OpenWindow(WindowType.GameResultWindow);
                 return;
             }
             if (_enemyCounter == 0)
             {
                 Debug.Log("victory");
+                _uiManager.OpenWindow(WindowType.GameResultWindow);
                 return;
             }
         }

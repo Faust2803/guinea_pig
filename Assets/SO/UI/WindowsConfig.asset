@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WindowsConfig
   m_EditorClassIdentifier: 
   WindowsPrefab:
-  - {fileID: 2798389819012078762, guid: 66f7699a7b646544fb1bb4f8a54bab4c, type: 3}
+  - {fileID: 2739506990042971288, guid: 41bbe8b44a055c441953f142697413b2, type: 3}
   - {fileID: 5956868408103590295, guid: 14744bbaaebc32749b273998210e8d4f, type: 3}
   - {fileID: 2739506990042971288, guid: f1b0460761f284e3dae13fa6edcdd0a4, type: 3}
   - {fileID: 5956868408103590295, guid: dfa7b21c3bbfc9f44bd29167efcc9624, type: 3}

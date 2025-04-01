@@ -4,12 +4,9 @@
     {
 
         public bool IsWin;
+        public int Boolets;
+        public int Enemyes;
+        public int Lives;
         public int Score;
-
-        public GameResultData (bool win, int score)
-        {
-            IsWin = win;
-            Score = score;
-        }
     }
 }

@@ -1,4 +1,6 @@
 ﻿
+using Cysharp.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -13,17 +15,32 @@ namespace Managers.SceneManagers
             LoadScene(Scene.Boot);
         }
 
-        public void LoadScene(Scene scene)
+        public async UniTask LoadScene(Scene scene)
         {
             if (activeSceneName != scene.ToString())
             {
-                SceneManager.LoadScene(scene.ToString());
+                await Load(scene.ToString());
             }
         }
 
-        public void ReloadScene()
+        public async UniTask ReloadScene()
         {
-            SceneManager.LoadScene(activeSceneName);
+            await Load(activeSceneName);
+        }
+
+        private async UniTask Load(string sceneName)
+        {
+            var operation = SceneManager.LoadSceneAsync(sceneName);
+            operation.allowSceneActivation = false;
+            
+            while (operation.progress < 0.9f)
+            {
+                Debug.Log($"load progress {operation.progress}");
+                await UniTask.Delay(10); 
+            }
+            
+            await UniTask.Delay(500);
+            operation.allowSceneActivation = true;
         }
     }
     
