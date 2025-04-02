@@ -1,13 +1,23 @@
+using System;
 using Game.Character;
 using Game.Environment;
-using Managers.SoundManager.Base;
 using UI.Panels;
+using UnityEngine;
 
 
 namespace Managers.SceneManagers
 {
     public class LobbyBaseSceneManager : BaseSceneManager
     {
+        private void Awake()
+        {
+#if UNITY_ANDROID
+            Input.gyro.enabled = false; // Отключает гироскоп
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = 30;
+#endif
+        }
+
         private void Start()
         {
             //await _playerManager.UpdatePlayerData();

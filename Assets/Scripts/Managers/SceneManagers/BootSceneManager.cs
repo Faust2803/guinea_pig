@@ -17,7 +17,12 @@ namespace Managers.SceneManagers
 
         private void Awake()
         {
-            //Application.targetFrameRate = -1;
+#if UNITY_ANDROID
+            Input.gyro.enabled = false; // Отключает гироскоп
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = 30;
+#endif
+            
         }
 
         private async void Start()

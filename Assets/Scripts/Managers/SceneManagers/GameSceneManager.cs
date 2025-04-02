@@ -33,6 +33,18 @@ namespace Managers.SceneManagers
         // Need add to config
         private int _killScoreFactor = 10;
         
+        private void Awake()
+        {
+            QualitySettings.vSyncCount = 0;
+#if UNITY_ANDROID
+            Input.gyro.enabled = false;
+            Application.targetFrameRate = 90;
+#endif
+#if UNITY_EDITOR
+            Application.targetFrameRate = -1;
+#endif
+        }
+        
         private void Start()
         {
             //await _playerManager.UpdatePlayerData();
