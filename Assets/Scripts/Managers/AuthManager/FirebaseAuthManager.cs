@@ -47,7 +47,8 @@ namespace Auth
                     result = await SignInWithPhoneAsync(username);
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                    result = await SignInAnonymouslyAsync();
+                    break;
             }
             return result;
         }

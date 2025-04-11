@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparentMaterial: {fileID: 2100000, guid: 0d6ae15dd10000d4e944ce041b493ccc, type: 2}
+  _renderers:
+  - {fileID: 6112681825510635007}
 --- !u!54 &5992389160892565057
 Rigidbody:
   m_ObjectHideFlags: 0

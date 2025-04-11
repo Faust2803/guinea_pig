@@ -5,6 +5,7 @@
         LobbyEnvironment,
         Environment1,
         Environment2,
-        Environment3
+        Environment3,
+        Environment4
     }
 }

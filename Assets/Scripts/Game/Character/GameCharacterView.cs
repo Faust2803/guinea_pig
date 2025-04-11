@@ -26,7 +26,7 @@ namespace Game.Character
         protected LayerMask LayerMask => _layerMask;
         protected NavMeshAgent NavMeshAgent => _navMeshAgent;
 
-        public void Awake()
+        protected virtual void Awake()
         {
             NavMeshAgent.enabled = false;
         }
@@ -38,7 +38,7 @@ namespace Game.Character
             Animator.Play("IdleNormal02_HG01_Anim 0");
         }
 
-        public void Update()
+        protected virtual void Update()
         {
             Animator.SetFloat("speed", NavMeshAgent.velocity.magnitude);
         }

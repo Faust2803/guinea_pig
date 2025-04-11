@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 3547340697245544368}
   m_Layer: 0
   m_Name: Building01
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8594709255939603379
 Transform:
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparentMaterial: {fileID: 2100000, guid: 0d6ae15dd10000d4e944ce041b493ccc, type: 2}
+  _renderers:
+  - {fileID: 7425774243399680220}
 --- !u!54 &3547340697245544368
 Rigidbody:
   m_ObjectHideFlags: 0

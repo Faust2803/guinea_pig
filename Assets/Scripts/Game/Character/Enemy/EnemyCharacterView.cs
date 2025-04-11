@@ -19,15 +19,10 @@ namespace Game.Character.Enemy
         private bool _canShoot = true;
         private CancellationTokenSource _cts;
 
-        private void Awake()
+        protected override void Awake()
         {
             base.Awake();
             _enemyDetector.SetDetectedRadius(_detectedRadius);
-        }
-        
-        private void Start()
-        {
-            base.Start();
         }
 
         // private void OnDrawGizmos()
@@ -42,7 +37,7 @@ namespace Game.Character.Enemy
         //     Gizmos.DrawLine(transform.position + _offset, direction * _detectedRadius);
         // }
 
-        public void Update()
+        protected override void Update()
         {
             base.Update();
             switch (CharacterState)
