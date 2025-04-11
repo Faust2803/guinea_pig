@@ -11,10 +11,11 @@ namespace Game.Character
         [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] private Collider _collider;
         [SerializeField] private Transform _weaponAttachment;
-        [SerializeField] private LayerMask _layerMask;
+        [SerializeField] private LayerMask _layerMask ;
         [Space]
         [SerializeField] private int _removeAfterDed = 7000;
         
+        //private int _layerMask = ~LayerMask.GetMask("IgnoreRaycast");
         
         protected float CharacterMoveSpeed { get; set; }
         protected GameObject LastObject { get;  set; }
@@ -23,7 +24,7 @@ namespace Game.Character
         [Inject] protected GameSceneManager GameSceneManager {get;}
         
         protected Transform WeaponAttachment => _weaponAttachment;
-        protected LayerMask LayerMask => _layerMask;
+        protected int MyLayerMask => _layerMask;
         protected NavMeshAgent NavMeshAgent => _navMeshAgent;
 
         protected virtual void Awake()
@@ -31,7 +32,7 @@ namespace Game.Character
             NavMeshAgent.enabled = false;
         }
 
-        public void Start()
+        protected virtual void Start()
         {
             CharacterMoveSpeed = NavMeshAgent.acceleration;
             CharacterState = CharacterStateType.Idle;

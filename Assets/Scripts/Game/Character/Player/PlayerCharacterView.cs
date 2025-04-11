@@ -20,7 +20,7 @@ namespace Game.Character.Player
         
         public Camera Camera => _camera;
         
-        private void Start()
+        protected override void Start()
         {
             _camera = Camera.main;
             _cameraTransform = _camera.gameObject.transform.parent.transform;
@@ -34,7 +34,7 @@ namespace Game.Character.Player
             _bottomGamePanelMediator.OnReload += Reload;
         }
 
-        public  void Update()
+        protected  override void Update()
         {
             base.Update();
             switch (CharacterState)
@@ -64,7 +64,7 @@ namespace Game.Character.Player
             if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 RaycastHit hit;
-                if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100))
+                if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out hit, 100, MyLayerMask))
                 {
                     if(hit.collider.gameObject.tag == "Enemy")
                     {

@@ -1133,7 +1133,7 @@ MonoBehaviour:
   _weaponAttachment: {fileID: 2549624039880427674}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 127937
   _removeAfterDed: 5000
   _camSpeedPosition: 2
   _camSpeedRotation: 1.5

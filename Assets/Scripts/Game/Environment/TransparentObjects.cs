@@ -7,14 +7,14 @@ public class TransparentObjects : MonoBehaviour
     [SerializeField] private List<Renderer> _renderers;
     
     private List<Material> _myMaterials   = new List<Material>();
-
+    private int _layer;
     private void Awake()
     {
         for (var i = 0; i < _renderers.Count; i++)
         {
             _myMaterials.Add(_renderers[i].material);
         }
-       
+        _layer = gameObject.layer;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,7 +24,7 @@ public class TransparentObjects : MonoBehaviour
         {
             _renderers[i].material = _transparentMaterial;
         }
-        
+        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
     }
 
     private void OnTriggerExit(Collider other)
@@ -33,5 +33,6 @@ public class TransparentObjects : MonoBehaviour
         {
             _renderers[i].material = _myMaterials[i];
         }
+        gameObject.layer = _layer;
     }
 }

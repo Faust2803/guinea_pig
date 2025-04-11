@@ -15,18 +15,11 @@ namespace UI.Windows
 
         private bool _closeLock;
         
-        
-
         public virtual void Mediate(BaseWindowView value)
         {
             WindowView =  value;
             if(WindowView.AnimationPanel)
                 _moveto  = WindowView.AnimationPanel.transform.position.y;
-        }
-        
-        public virtual void SetData(object data)
-        {
-            _data = data;
         }
         
         public void SetType(WindowType windowType)
