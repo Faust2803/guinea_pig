@@ -19,6 +19,7 @@ namespace UI.Panels.BootPanel
         protected override void ShowStart()
         {
             base.ShowStart();
+            Debug.Log(Data);
             Target.LoadObject.SetActive(true);
             Target.ProgressText = "0";
 

@@ -31,7 +31,7 @@ namespace Managers.SceneManagers
             await _auth.Init();
             await _databaseManage.Init();
             _playerManager.Init();
-            _uiManager.OpenPanel(PanelType.BootPanel);
+            _uiManager.OpenPanel(PanelType.BootPanel, new PanelData());
            
            
         }
